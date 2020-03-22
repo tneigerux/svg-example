@@ -1,0 +1,21 @@
+[
+  {
+    "url": "/posts/a-post/",
+    "title": "A post page",
+    "index": "There&#39;s much here sample post page Better get work common frontmatter data files posts section are abstracted into postsjson file that don&#39;t need repeat every file Handy looks like this:{ &quot;layout&quot; : &quot;layouts/postmd&quot; &quot;tags&quot; &quot;post&quot; &quot;templateEngineOverride&quot;: &quot;njkmd&quot;}"
+  },
+  {
+    "url": "/posts/another-post/",
+    "title": "Another post page",
+    "index": "Another simple pageSince post pages are tagged they form collection can easily inspected iterated over See that home page"
+  },
+  {
+    "url": "/about/",
+    "title": "Get Yours",
+    "index": "HostingThis site deployed by hosted by NetlifyLatest deploy status: Oneclick deploy get your own instance this Eleventy starter project cloned deploying Netlify very quickly just click button below follow instructions👆 Wait what happens when that buttonGood question Here&#39;s will Netlify clone git repository into GitHub account asked required permissions add repo They&#39;ll create new Netlify configure use shiny repo Right away &#39;ll able changes simply pushing repoThat&#39;s really"
+  },
+  {
+    "url": "/",
+    "title": "EleventyOne",
+    "index": "This site starting pointFrom this point should already have:Eleventy with skeleton site date format filter Nunjucks based Luxon tiny CSS pipeline PostCSS inline JS pipeline (Test consolelog message)JS search index generatorNetlify Dev testing Netlify redirectsServerless (FaaS) development FunctionsPost pages pages found posts post page March 21 2018 Another 28 Links from external data sourceThese links were sourced hawksworxcom build time findthat URL shortener powered by Netlify Keeping Sass simple speedy Eleventy Adding JAMstack site Contentful GitHub help make JAMstack_Conf reality Get more control over continuous deployment deploy skipping PrerequisiteNode NPMRunning locally# install dependenciesnpm install# External sources can stashed locallynpm run seed# will then available locally building withnpm startAdd some helpersNetlify adds ability use redirects proxies serverless functions# CLI order get Devnpm g netlifycli# local server added sugar front Eleventynetlify dev functions included via Dev By running netlify dev &#39;ll able execute any your directly like this:/netlify/functions/hello/netlify/functions/fetchjokeRedirects proxiesNetlify&#39;s Redirects API provide friendlier URLs proxies these URLs/api/hello/api/fetchjoke"
+  }]
