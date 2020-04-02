@@ -16,7 +16,7 @@
 }
 
 html {
-  background-color: $accent-color;
+  background-color: $page-color;
 }
 
 body {
@@ -45,18 +45,23 @@ body {
     width: 600px;
   };
   @media (min-width: $wide) {
-    width: 700px;
+    width: 100%;
   };
 }
 
+.logo {
+  padding: 40px;
+  float: left;
+}
 
 h1, h2, h3 {
   color: $text-color;
   font-weight: 600;
-  margin-top: 2em;
+  margin-top: 0em;
   margin-bottom:0.2em;
   line-height: 1;
 }
+
 h1 {
   font-size: 3em;
   margin-top:0.4em;
@@ -107,19 +112,22 @@ a:focus {
   border-bottom-style:none;
 }
 
+header {
+  background: $dark-color;
+  position: fixed;
+  width: 100%;
+}
+
 .nav {
-  padding-top: 3em;
 
   li {
     display: inline;
+    float: left;
   }
 
   a:link,
   a:visited {
     display: inline-block;
-    border-top-style: solid;
-    border-top-width: 1px;
-    border-top-color: mix($text-color, $accent-color, 40%);
     border-bottom-style: none;
     padding-top: 0.8em;
     padding-bottom: 2em;
