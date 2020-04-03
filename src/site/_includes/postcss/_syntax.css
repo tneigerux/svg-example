@@ -43,8 +43,6 @@
      background-color: mix($text-color,$accent-color, 80%);
  }
 
-
-
  .token.comment,
  .token.prolog,
  .token.doctype,
