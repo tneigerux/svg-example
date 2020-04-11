@@ -14,9 +14,16 @@ If you have access, you can see more about it's purpose here: [BitBucket atendit
 
 ## Local Development
 
-TK
+### OS X Instructions
 
-You'll need node.js installed before you start.
+Consider if you should install a node version manager. Suggest ["n"](https://github.com/tj/n) if you decide to.
+
+1. Install [Node](https://nodejs.org) - which includes ```npm```.
+1. In terminal, cd into the clone folder.
+1. ```npm install```
+1. ```npm run start```
+1. Point your browser to: [localhost:8080](http://localhost:8080)
+1. Edit files in ```src/sites```
 
 ## Production
 
