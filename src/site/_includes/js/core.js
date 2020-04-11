@@ -8,3 +8,9 @@ function btnHandler(selector, callback) {
   }, false);
 }
 
+let comboValue = window.pageYOffset || document.documentElement.scrollTop;
+let pageY = window.pageYOffset
+let sT = document.documentElement.scrollTop;
+console.log(comboValue);
+console.log(pageY);
+console.log(sT);
