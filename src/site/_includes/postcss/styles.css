@@ -23,16 +23,18 @@ body {
   text-align: center;
   background-color: $page-color;
   color: mix($text-color, $page-color, 90%);
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.8;
   min-height: 100vh;
   background:  $page-color;
-  background: url(/images/bg-grid.png), linear-gradient(320deg, $page-color 0%, $accent-color 100%);
+  background: none;
+  
 
   @media (min-width: $narrow) {
     font-size: 18px;
+    background: url(/images/desktop-hero-wisteria.jpg);
   };
 }
 
@@ -55,6 +57,7 @@ body {
 }
 
 h1, h2, h3 { 
+  font-family: 'Questrial', sans-serif;
   color: $text-color;
   padding: 0 4em;
   font-weight: 600;
@@ -75,6 +78,10 @@ h1 {
   @media (min-width: $wide) {
     font-size: 6em;
   };
+}
+
+h3 {
+  font-family: 'Roboto', sans-serif;
 }
 
 p {
