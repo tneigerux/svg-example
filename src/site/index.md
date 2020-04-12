@@ -4,8 +4,16 @@ subtitle: A Bluetooth and iOS App powered event driven conditional alert and rem
 layout: layouts/base.njk
 ---
 
-## COMING SOON
+# Welcome
 
-Atendit is a new type of alert and reminder system which leverages our unique Atendit Sensor to signal to your iPhone when an event has occured. Using our iOS App, you can configure these signals to meet your unique needs. 
+Atendit is a unique new product that delivers event driven conditional reminders.
 
-Currently our alpha product is available to investors only.
+Put simply, our Atendit sensor, which will be available on Amazon soon, attaches to any door in a home or business. It’s approximately the size of the U.S. quarter.
+
+Our customers then use our free Atendit mobile app in conjunction with it, establishing their own unique CONDITIONAL REMINDERS.
+
+When the sensor is activated by the door opening EVENT, the user’s CONDITIONS are checked against, and if there’s a match the REMINDER is displayed using the phone’s notification system.
+
+Communication between the Sensor and the Smartphone is via Bluetooth LE (Low Energy).
+
+Examples of a commercial and residential usage scenario are shown below.
