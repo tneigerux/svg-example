@@ -51,7 +51,9 @@ body {
   };
 }
 
+
 .logo {
+  fill: $accent-color;
   padding: 40px;
   float: left;
 }
