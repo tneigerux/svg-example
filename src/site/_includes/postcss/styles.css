@@ -54,8 +54,8 @@ body {
 
 .logo {
   fill: $accent-color;
-  padding: 40px;
   float: left;
+  border: 1px solid pink;
 }
 
 h1, h2, h3 { 
