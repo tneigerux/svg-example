@@ -23,7 +23,9 @@
       {% include "header.njk" %}
       {{ content | safe }}
       <section class="sidebar">
-        
+        {%- for element in collections.elements -%}
+          <h2>{{ element.data.title }}</h2>
+        {%- endfor -%}
       </section>
       <img alt="iOS App Store" src="/images/app-store-ios.png">
       {% include "footer.njk" %}
