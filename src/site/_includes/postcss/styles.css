@@ -56,7 +56,8 @@ body {
 .logo {
   fill: $page-color;
   float: left;
-  border: 1px solid pink;
+  height: 75px;
+  margin-top: -15px;
   background-image: url(/images/sprite-sheet.svg#sensor-shape);
 }
 
