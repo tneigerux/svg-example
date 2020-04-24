@@ -24,7 +24,9 @@
       {{ content | safe }}
       <section class="sidebar">
         {%- for element in collections.elements -%}
-          <h2>{{ element.templateContent | safe }}</h2>
+          <div class="actions">
+            {{ element.templateContent | safe }}
+          </div>
         {%- endfor -%}
       </section>
       <img alt="iOS App Store" src="/images/app-store-ios.png">
