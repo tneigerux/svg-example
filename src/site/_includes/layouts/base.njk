@@ -21,7 +21,9 @@
 
     <div class="container">
       {% include "header.njk" %}
-      {{ content | safe }}
+      <div class="hero">
+        {{ content | safe }}
+      </div>
       <section class="sidebar">
         {%- for element in collections.elements -%}
           <div class="actions">

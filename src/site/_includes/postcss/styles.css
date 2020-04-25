@@ -17,7 +17,6 @@
 
 html {
   background-color: $page-color;
-  background-image: url(/images/sprite-sheet.svg#sensor-shape);
 }
 
 body {
@@ -52,13 +51,11 @@ body {
   };
 }
 
-
 .logo {
   fill: $page-color;
   float: left;
   height: 75px;
   margin-top: -15px;
-  background-image: url(/images/sprite-sheet.svg#sensor-shape);
 }
 
 h1, h2, h3 { 
@@ -202,6 +199,21 @@ pre {
   }
 }
 
+.hero {
+  width: 50%;
+  border: 1px blue solid;
+}
+
+.sidebar {
+  float: left;
+  width: 500px;
+  border: 1px green solid;
+  display: block;
+
+  h3 {
+    background: url("/images/sprite-sheet.svg#v-email") no-repeat;
+  }
+}
 
 footer {
   margin-top: 6em;
