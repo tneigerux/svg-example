@@ -23,6 +23,7 @@
       {% include "header.njk" %}
       <div class="hero">
         {{ content | safe }}
+        <img alt="iOS App Store" src="/images/app-store-ios.png">
       </div>
       <section class="sidebar">
         {%- for element in collections.elements -%}
@@ -31,7 +32,6 @@
           </div>
         {%- endfor -%}
       </section>
-      <img alt="iOS App Store" src="/images/app-store-ios.png">
       {% include "footer.njk" %}
     </div>
 

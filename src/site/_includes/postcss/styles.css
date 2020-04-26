@@ -22,7 +22,6 @@ html {
 body {
   text-align: center;
   background-color: $page-color;
-  color: ;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 16px;
@@ -84,19 +83,20 @@ h1 {
 }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 2.25em;
   margin: 0.5em 0;
   padding: 0px;
 }
 
 h3 {
   font-family: 'Roboto', sans-serif;
-  font-size: 1.125em;
+  font-size: 1.8em;
   line-height: 1em;
 }
 
 p {
-  font-size: 0.84em;
+  font-size: 1.2em;
+  line-height: 1.4em;
   color: $text-color;
   padding: 0;
   margin-bottom: 1em;
@@ -209,8 +209,8 @@ pre {
 }
 
 .hero {
-  width: 50%;
-  border: 1px blue solid;
+  width: 55%;
+  float: left;
 }
 
 .sidebar {
@@ -223,11 +223,12 @@ pre {
     border: 1px blue solid;
     padding: 0 0.4em 54px 0.4em;
     margin-bottom: 10px;
-    background: antiquewhite;
 
     h3 {
-      padding-left: 120px;
-      margin: 0 28px;
+      padding-left: 3.9em;
+      margin: 1.0em 0 1.0em 0.3em;
+      line-height: 1.3em;
+      display: inline-block;
       height: 84px;
       background: url("/images/sprite-sheet.svg#v-linkedin") no-repeat;
     }
@@ -251,7 +252,7 @@ pre {
 }
 
 footer {
-  
+  clear: both;
   margin-top: 6em;
   padding-top: 4em;
   padding-bottom: 6em;
