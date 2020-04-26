@@ -23,7 +23,8 @@
       {% include "header.njk" %}
       <div class="hero">
         {{ content | safe }}
-        <img alt="iOS App Store" src="/images/app-store-ios.png">
+        <img class="app-store" height="80" alt="iOS App Store" src="/images/app-store-ios.png">
+        <img class="usage comm" width="2000" height="1000" alt="Commercial Animation" src="/images/key-visual-comm-ani-g.gif">
       </div>
       <section class="sidebar">
         {%- for element in collections.elements -%}
@@ -32,6 +33,7 @@
           </div>
         {%- endfor -%}
       </section>
+      
       {% include "footer.njk" %}
     </div>
 
