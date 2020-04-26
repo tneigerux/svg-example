@@ -69,7 +69,7 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 3.0em;
   color: $contrast-color;
   margin-top:0.4em;
   margin-bottom:0.2em;
@@ -83,13 +83,22 @@ h1 {
   };
 }
 
+h2 {
+  font-size: 1.5em;
+  margin: 0.5em 0;
+  padding: 0px;
+}
+
 h3 {
   font-family: 'Roboto', sans-serif;
+  font-size: 1.125em;
+  line-height: 1em;
 }
 
 p {
+  font-size: 0.84em;
   color: $text-color;
-  padding: 0 4em;
+  padding: 0;
   margin-bottom: 1em;
 }
 
@@ -206,16 +215,43 @@ pre {
 
 .sidebar {
   float: left;
-  width: 500px;
-  border: 1px green solid;
+  width: 440px;
+  margin: 8px;
   display: block;
 
-  h3 {
-    background: url("/images/sprite-sheet.svg#v-email") no-repeat;
-  }
+  .actions {
+    border: 1px blue solid;
+    padding: 0 0.4em 54px 0.4em;
+    margin-bottom: 10px;
+    background: antiquewhite;
+
+    h3 {
+      padding-left: 120px;
+      margin: 0 28px;
+      height: 84px;
+      background: url("/images/sprite-sheet.svg#v-linkedin") no-repeat;
+    }
+    
+    h3:first-child {
+      background: url("/images/sprite-sheet.svg#v-linkedin") no-repeat;
+    }
+    
+    h3:nth-child(2) {
+      background: url("/images/sprite-sheet.svg#v-linkedin") no-repeat;
+    }
+
+    h3:nth-child(3) {
+      background: url("/images/sprite-sheet.svg#v-linkedin") no-repeat;
+    }
+
+    h3:last-child {
+      background: url("/images/sprite-sheet.svg#v-linkedin") no-repeat;
+    }
+  }  
 }
 
 footer {
+  
   margin-top: 6em;
   padding-top: 4em;
   padding-bottom: 6em;
