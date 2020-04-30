@@ -280,4 +280,23 @@ footer {
     color: $text-color;
     border-bottom: solid 1px $text-color;
   }
+
+  .footer-body {
+    color: blue;
+  }
+
+  .footer-footer {
+    height: 100px;
+    background: $accent-color;
+    
+    p {
+      color: $page-color;
+      margin-top: 1.0em;
+      float: left;
+    }
+
+    svg {
+      float: left;
+    }
+  }
 }
