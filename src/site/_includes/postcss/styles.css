@@ -267,7 +267,6 @@ pre {
 
 footer {
   clear: both;
-  height: 400px;
   background: white;
 
   a:link,
@@ -281,8 +280,23 @@ footer {
     border-bottom: solid 1px $text-color;
   }
 
+  .list-builder {
+    color: #E9FFD2;
+  }
+
   .footer-body {
     color: blue;
+    height: 320px;
+    text-align: center;
+
+    .app-icons {
+      display: inline-block;
+      padding: 4.0em 1.0em;
+    }
+
+    .app-store {
+      margin: 0.5em;
+    }
   }
 
   .footer-footer {
@@ -291,7 +305,7 @@ footer {
     
     p {
       color: $page-color;
-      margin-top: 1.0em;
+      padding: 1.3em 1.0em;
       float: left;
     }
 
