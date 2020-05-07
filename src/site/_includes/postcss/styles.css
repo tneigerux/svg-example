@@ -306,11 +306,17 @@ footer {
     p {
       color: $page-color;
       padding: 1.3em 1.0em;
+      margin: 0;
       float: left;
     }
 
-    svg {
-      float: left;
+    .social-icons {
+      float: right;
+      margin-right: 40px;
     }
-  }
+
+    svg {
+        
+      }
+    }
 }
