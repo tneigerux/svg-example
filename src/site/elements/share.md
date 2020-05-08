@@ -1,5 +1,5 @@
 ---
-title: share
+class: share
 ---
 
 ## Share your thoughts

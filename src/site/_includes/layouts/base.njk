@@ -30,7 +30,7 @@
       </div>
       <section class="sidebar">
         {%- for element in collections.elements -%}
-          <div class="actions">
+          <div class="actions {{ element.data.class }}">
             {{ element.templateContent | safe }}
           </div>
         {%- endfor -%}
