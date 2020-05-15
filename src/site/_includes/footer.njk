@@ -1,11 +1,6 @@
 <footer>
   <div class="list-builder">
-    <form name="email-sub" id="email-sub" data-netlify="true" method="POST">
-      <h3>Subscribe to our email updates:</h3>
-      <label>email address</label>
-      <input required id="email" type="email" name="email" />
-      <button type="submit">Add</button>
-    </form>
+    {% include "layouts/esub-form.njk" %}
   </div>
   <div class="footer-body">
     <div class="app-icons">
