@@ -419,6 +419,7 @@ footer {
     padding: 0 0.4em;
 
     form {
+      display: block;
       
       h3 {
         line-height: 1.4em;
@@ -435,6 +436,38 @@ footer {
     .close-me {
       display: none;
       clear: both;
+    }
+  }
+
+  .footer-body {
+    height: 300px;
+    padding-top: 2em;
+
+    .app-icons {
+      display: block;
+      width: 278px;
+      margin: 0 auto;
+    }
+  }
+
+  .footer-footer {
+    background-color: $accent-color;
+
+    p {
+      color: $page-color;
+      padding-top: 0.5em;
+      padding-left: 0.5em;
+      font-size: 0.6em;
+      text-align: center;
+      line-height: 1.8em;
+    }
+
+    .social-icons {
+      clear: both;
+    }
+
+    svg {
+      width: 31%;
     }
   }
 
@@ -457,6 +490,7 @@ footer {
       
       form {
         width: 1000px;
+        margin: 0 auto;
 
         h3 {
           float: left;
@@ -468,18 +502,19 @@ footer {
         button {
           float: left;
           font-size: 1.4em;
+          margin: .5em .3em .3em .3em;
         }
       }
     }
 
     .footer-body {
-      color: blue;
       height: 320px;
       text-align: center;
 
       .app-icons {
         display: inline-block;
-        padding: 4.0em 1.0em;
+        padding: 0;
+        width: 100%;
       }
 
       .app-store {
@@ -489,18 +524,22 @@ footer {
 
     .footer-footer {
       height: 100px;
-      background: $accent-color;
       
       p {
-        color: $page-color;
         padding: 1.3em 1.0em;
         margin: 0;
         float: left;
+        color: $page-color;
+        padding-top: 0.5em;
+        padding-left: 0.5em;
+        font-size: 1.2em;
+        
       }
 
       .social-icons {
         float: right;
         margin-right: 40px;
+        margin-top: -4em;
       }
 
       svg {
