@@ -51,7 +51,7 @@ body {
   width: 100%;
   text-align: left;
   margin: 0;
-  padding: 0 1em;
+  padding: 0;
 
   @media (min-width: $mid) {
     width: 100%;
@@ -261,10 +261,10 @@ input, button {
 input {
 
   width: 90%;
+  border: 2px $read-fg-color solid;
+  font-size: 1.3em;
 
   @media (min-width: $wide) {
-    border: 2px $read-fg-color solid;
-    font-size: 1.3em;
     padding: 0.35em;
     width: 16em;
   }
@@ -363,7 +363,8 @@ input {
       }
 
       p {
-        font-size: 1.2em;    
+        font-size: 1.2em;
+        padding-bottom: 0;
       }
 
       h3 {
@@ -408,38 +409,54 @@ input {
 }
 
 footer {
-  
+
   clear: both;
   background: white;
 
-  a:link,
-  a:visited {
-    color: mix($text-color, $accent-color, 90%);
-    border-bottom: solid 1px mix($accent-color, $page-color, 70%);
-  }
-  a:hover,
-  a:focus {
-    color: $text-color;
-    border-bottom: solid 1px $text-color;
-  }
-
   .list-builder {
-    height: 250px;
     background: #E9FFD2;
+    height: 250px;
+    padding: 0 0.4em;
+
+    form {
+      
+      h3 {
+        line-height: 1.4em;
+      }
+
+      button {
+        font-size: 0.8em;
+        display: block;
+        width: 180px;
+        margin: 0 auto;
+      }
+    }
 
     .close-me {
       display: none;
+      clear: both;
+    }
+  }
+
+  @media (min-width: $wide) {
+    
+    a:link,
+    a:visited {
+      color: mix($text-color, $accent-color, 90%);
+      border-bottom: solid 1px mix($accent-color, $page-color, 70%);
+    }
+    a:hover,
+    a:focus {
+      color: $text-color;
+      border-bottom: solid 1px $text-color;
     }
 
-    @media (min-width: $wide) {
-      
+    .list-builder {          
       height: 70px;
       padding: 1.0em;
-
+      
       form {
         width: 1000px;
-        margin: 0 auto;
-
 
         h3 {
           float: left;
@@ -450,44 +467,45 @@ footer {
 
         button {
           float: left;
+          font-size: 1.4em;
         }
       }
     }
-  }
 
-  .footer-body {
-    color: blue;
-    height: 320px;
-    text-align: center;
+    .footer-body {
+      color: blue;
+      height: 320px;
+      text-align: center;
 
-    .app-icons {
-      display: inline-block;
-      padding: 4.0em 1.0em;
+      .app-icons {
+        display: inline-block;
+        padding: 4.0em 1.0em;
+      }
+
+      .app-store {
+        margin: 0.5em;
+      }
     }
 
-    .app-store {
-      margin: 0.5em;
-    }
-  }
+    .footer-footer {
+      height: 100px;
+      background: $accent-color;
+      
+      p {
+        color: $page-color;
+        padding: 1.3em 1.0em;
+        margin: 0;
+        float: left;
+      }
 
-  .footer-footer {
-    height: 100px;
-    background: $accent-color;
-    
-    p {
-      color: $page-color;
-      padding: 1.3em 1.0em;
-      margin: 0;
-      float: left;
-    }
+      .social-icons {
+        float: right;
+        margin-right: 40px;
+      }
 
-    .social-icons {
-      float: right;
-      margin-right: 40px;
-    }
-
-    svg {
-        width: 100px;
+      svg {
+          width: 100px;
+        }
       }
     }
 }
