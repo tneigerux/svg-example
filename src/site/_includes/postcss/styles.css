@@ -110,10 +110,10 @@ h3 {
 }
 
 p {
-
   color: $text-color;
-  font-size: 1em;
+  font-size: 0.8em;
   line-height: 1.2em;
+  padding-bottom: 0.4em;
 
   @media (min-width: $wide) {
     font-size: 1.2em;
@@ -298,26 +298,31 @@ input {
 
 .sidebar {
 
+  margin: 0;
+
   a {
     border-bottom: none;
   }
   
   p {
-    font-size: 0.9em;
+    font-size: 0.6em;
+    padding-bottom: 0.8em;
   }
   
   h2 {
-    font-size: 1.4em;
+    font-size: 1em;
     width: 100%;
   }
   
   h3 {
     background: url("/images/sprite-sheet.svg#v-email") no-repeat;
     background-size: 60px 60px !important;
-    height: 130px;
-    width: 55%;
-    margin-top: 10px;
+    width: 75%;
+    height: 93px;
+    line-height: 1.4em;
+    margin: 10px 0;
     padding-left: 2.4em;
+    margin-bottom: 1em;
   }
 
   h3:first-of-type {
@@ -345,7 +350,7 @@ input {
     width: 440px;
     float: left;
     padding-top: 2em;
-    margin: 0;
+    margin: 8px;
     display: block;
 
     .actions {
@@ -363,9 +368,9 @@ input {
 
       h3 {
         display: inline-block;
-        line-height: 1.2em;
+        padding-left: 3.9em;
         margin: 1.0em 0 1.0em 0.3em;
-        padding-left: 4em;
+        line-height: 1.3em;
         background-size: 90px 83px !important;
         font-size: 1.8em;
         line-height: 1.3em;
