@@ -1,5 +1,5 @@
 ---
-title: Atendit
+title: atendit
 subtitle: A Bluetooth and iOS App powered event driven conditional reminder, notification, and alert system.
 layout: layouts/base.njk
 ---
