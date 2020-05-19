@@ -6,7 +6,7 @@ layout: layouts/base.njk
 
 # Welcome
 
-atendit is a unique new product that delivers event driven conditional reminders, notices, and alerts.
+atendit is a unique new product that delivers **event** driven **conditional reminders, notices, and alerts.**
 
 The atendit Sensor, which will be available on Amazon soon, attaches to any door in a home or business. It’s approximately the size of a U.S. quarter.
 
