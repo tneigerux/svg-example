@@ -12,7 +12,7 @@ The atendit Sensor, which will be available on Amazon soon, attaches to any door
 
 Our customers then use our free atendit mobile app, in conjunction with the Sensor, to establish their own unique **conditional reminders, notices,** and **alerts.**
 
-When you open the door (**event**) the Sensor is activcated, the user’s **conditions** are checked, and if there’s a match the **reminder** is displayed using the phone’s notification system.
+When you open the door (**event**) the Sensor is activcated, the user’s **conditions** are checked. If there’s a match the **reminder, notice, or alert** is displayed on your phone.
 
 Communication between the Sensor and the Smartphone is via Bluetooth LE (Low Energy).
 
