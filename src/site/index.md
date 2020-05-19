@@ -10,7 +10,7 @@ atendit is a unique new product that delivers event driven conditional reminders
 
 The atendit Sensor, which will be available on Amazon soon, attaches to any door in a home or business. It’s approximately the size of a U.S. quarter.
 
-Our customers then use our free atendit mobile app, in conjunction with the Sensor, to establish their own unique CONDITIONAL REMINDERS
+Our customers then use our free atendit mobile app, in conjunction with the Sensor, to establish their own unique CONDITIONAL REMINDERS, NOTICES, AND ALERTS.
 
 When the sensor is activated by the door opening EVENT, the user’s CONDITIONS are checked, and if there’s a match the REMINDER is displayed using the phone’s notification system.
 
