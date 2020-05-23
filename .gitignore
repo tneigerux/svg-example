@@ -1,5 +1,15 @@
+# OS files
+
 .DS_Store
+
+# OS variant node file added with npm install
 
 node_modules
 
+# IDE options
+
 .vscode
+
+# Compiled files
+
+dist

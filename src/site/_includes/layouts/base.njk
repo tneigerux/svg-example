@@ -3,25 +3,54 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.png" sizes="16x16">  
+    <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32">  
+    <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.png" sizes="96x96">  
+    <link rel="apple-touch-icon" href="older-iPhone.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/iPhone-6-Plus.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/iPad-Retina.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="/images/favicons/iPad-Pro.png">
+
     <link rel="stylesheet" href="/css/styles.css">
-    <title>{{ title }}</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Questrial|Roboto&display=swap" rel="stylesheet">
+    <title>{{ title }} - {{ subtitle }}</title>
   </head>
   <body {% if bodyClass %}class="{{ bodyClass }}"{% endif %}>
 
     <div class="container">
       {% include "header.njk" %}
-      
+      <div class="hero">
+        {{ content | safe }}
+        <img class="app-store" height="80" alt="Soon - iOS App Store" src="/images/app-store-ios.png">
+        <div class="usage">
+          <img class="usage-art comm" width="2000" height="1000" alt="Commercial Animation" src="/images/key-visual-comm-ani-g.gif">
+        </div>
+      </div>
+      <section class="sidebar">
+        {%- for element in collections.elements -%}
+          <div class="actions {{ element.data.class }}">
+            {{ element.templateContent | safe }}
+          </div>
+        {%- endfor -%}
+      </section>
+
+      <div class="email-modal">
+        {% include "layouts/esub-form.njk" %}
+      </div>
       {% include "footer.njk" %}
     </div>
 
     {% set js %}
       {% include "js/core.js" %}
-      {% include "js/hello.js" %}
+      {% include "js/clicks.js" %}
     {% endset %}
     <script>{{ js | jsmin | safe }}</script>
 
+    <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/7537504.js"></script>
+    <!-- End of HubSpot Embed Code -->
+
   </body>
 </html>
-
-
-

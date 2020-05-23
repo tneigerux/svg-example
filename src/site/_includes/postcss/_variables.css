@@ -1,11 +1,16 @@
 /* breakpoints for media queries */
-$narrow: 400px;
-$mid: 740px;
-$wide: 1200px;
+$narrow:  238px;
+$mid:     740px;
+$wide:   1200px;
 
 /* colors */
-  $page-color:   #fff;
-  $text-color:   #fff;
-$accent-color:   #691b93;
-  $dark-color:   #000;
+    $page-color:   #fff;
+    $text-color:   #48662a;
+  $accent-color:   #691b93;
+$contrast-color:   #30ACC8;
+    $dark-color:   #d9d9d9;
+  $tap-fg-color:   #185664;
+  $tap-bg-color:   #ACDEE9;
+ $read-fg-color:   #243315;
+$inactive-color:   #cfcfcf;
 
