@@ -274,6 +274,7 @@ input {
 
   width: 100%;
   background-color: #eee;
+  padding: 0 0.5em;
 
   @media (min-width: $mid) {
     background-color: transparent;
