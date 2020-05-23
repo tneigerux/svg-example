@@ -334,6 +334,7 @@ input {
 
   h3:first-of-type {
     background: url("/images/sprite-sheet.svg#v-email") no-repeat;
+    cursor: pointer;
   }
 
   h3:nth-of-type(2) {
@@ -533,12 +534,10 @@ footer {
       height: 100px;
       
       p {
-        padding: 1.3em 1.0em;
+        padding: 2.4em 1em 0 0.5em;
         margin: 0;
         float: left;
         color: $page-color;
-        padding-top: 0.5em;
-        padding-left: 0.5em;
         font-size: 1.2em;
         
       }
@@ -546,7 +545,7 @@ footer {
       .social-icons {
         float: right;
         margin-right: 40px;
-        margin-top: -4em;
+        margin-top: -4.5em;
       }
 
       svg {

@@ -5,3 +5,5 @@ layout: layouts/base.njk
 ---
 
 Options for the home and for work.
+
+[link to somewhere else](http://www.google.com)
