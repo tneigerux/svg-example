@@ -19,3 +19,17 @@ eventHandler('document', 'keydown', function(){
   if (event.which == 27) 
     hiddenForm[0].style.display = "none";
 });
+
+function showImg(evt, imgId){
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tab-img");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active-tab", "");
+  }
+  document.getElementById(imgId).style.display = "block";
+  evt.currentTarget.className += " active-tab";
+}

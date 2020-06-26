@@ -423,6 +423,13 @@ input {
   }
 }
 
+.usage > .tab-img{
+  display: none;
+}
+.tab-img:first-child{
+  display: block;
+}
+
 footer {
 
   clear: both;
