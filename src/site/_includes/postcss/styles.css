@@ -423,12 +423,42 @@ input {
   }
 }
 
+/* switch gif tabs */
+
 .usage > .tab-img{
   display: none;
 }
+
 .tab-img:first-child{
   display: block;
 }
+
+.gif-tabs{
+  display: flex;
+  align-items: flex-start;
+}
+
+.gif-tablink{
+  width: 324px;
+  height: 73px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 22px;
+}
+
+.gif-tablink > span{
+  font-family: Questrial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 49px;
+}
+
+.active-gif-tab{
+  background:linear-gradient(-315deg, #C4C4C4, #C4C4C4 82%, white 82%, white);
+}
+/* / switch gif tabs */
 
 footer {
 
