@@ -281,6 +281,11 @@ input {
   width: 100%;
   background-color: #eee;
   padding: 0 0.5em;
+  height: 1772px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
 
   @media (min-width: $mid) {
     background-color: transparent;
@@ -433,9 +438,23 @@ input {
   display: block;
 }
 
+.git-tab-section{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: flex-end;
+}
+
 .gif-tabs{
   display: flex;
   align-items: flex-start;
+  margin-bottom: 129px;
+  flex-direction: column;
+
+  @media (min-width: $mid) {
+    flex-direction: row;
+  }
+  
 }
 
 .gif-tablink{
@@ -458,6 +477,7 @@ input {
 .active-gif-tab{
   background:linear-gradient(-315deg, #C4C4C4, #C4C4C4 82%, white 82%, white);
 }
+
 /* / switch gif tabs */
 
 footer {
