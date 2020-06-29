@@ -108,10 +108,10 @@ h2 {
 
 h3 {
   font-family: 'Roboto', sans-serif;
-  font-size: 1.0em;
+  font-size: calc(24px + 12 * ((100vw - 320px) / (1440 - 320)));
 
   @media (min-width: $wide) {
-    font-size: 1.8em;
+    font-size: 36px;
     line-height: 1em;
   }
 }
@@ -535,9 +535,13 @@ footer {
       color: $page-color;
       padding-top: 0.5em;
       padding-left: 0.5em;
-      font-size: 0.6em;
+      font-size: calc(18px + 6 * ((100vw - 320px) / (1440 - 320)));
       text-align: center;
       line-height: 1.8em;
+
+      @media (min-width: $wide) {
+        font-size: 24px;
+      }
     }
 
     .social-icons {
@@ -608,7 +612,6 @@ footer {
         margin: 0;
         float: left;
         color: $page-color;
-        font-size: 1.2em;
         
       }
 
