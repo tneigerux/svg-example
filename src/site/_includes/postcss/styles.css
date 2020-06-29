@@ -54,10 +54,10 @@ body {
 }
 
 .container {
-  /* width: 100%; */
-  max-width: 1440px;
+  width: 100%;
+  /* max-width: 1440px; */
   text-align: left;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
 
   @media (min-width: $mid) {
@@ -366,7 +366,7 @@ input {
       font-size: 24px;
     }
     h3 {
-
+      font-size: calc(24px + 12*(100vw - 320px)/1120)
     }
 
     @media (min-width: $wide) {
@@ -475,7 +475,8 @@ input {
   font-family: Questrial;
   font-style: normal;
   font-weight: normal;
-  font-size: calc(30px + 18 * ((100vw - 320px) / (1440 - 320)));
+  font-size: 48px;
+  /* font-size: calc(30px + 18 * ((100vw - 320px) / (1440 - 320))); */
   line-height: 49px;
 }
 
