@@ -41,11 +41,10 @@ body {
   background-color: $page-color;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  font-size: 2em;
   line-height: 1.8;
   min-height: 100vh;
   background: none;
-
+  
   @media (min-width: $wide) {
     font-size: 18px;
     background: url(/images/desktop-hero-wisteria.jpg);
@@ -53,17 +52,23 @@ body {
   };
 }
 
-.container {
-  width: 100%;
-  /* max-width: 1440px; */
-  text-align: left;
-  margin: 0;
-  padding: 0;
+.main-section{
+  height: 1440px;
+}
 
+.container {
+  /* width: 100%; */
+  max-width: 1440px;
+  text-align: left;
+  margin: 0 auto;
+  padding: 0;
+  height: 3140px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: flex-start;
   @media (min-width: $mid) {
     width: 100%;
-    padding: 0;
-    margin: 0;
   };
 
   @media (min-width: $wide) {
@@ -92,38 +97,38 @@ h1 {
   font-size: calc(40px + 56 * ((100vw - 320px) / (1440 - 320)));
 
   @media (min-width: $wide) {
-    font-size: 96px;
+    font-size: 96px;/* max font-size */
   }
 }
 
 
 h2 {
-  font-size: calc(34px + 14 * ((100vw - 320px) / (1440 - 320)));
+  font-size: calc(34px + 14 * ((100vw - 320px) / (1440 - 320)));/*calculated font-size*/
   margin: 0.5em 0;
   padding: 0px;
   @media (min-width: $wide) {
-    font-size: 48px;
+    font-size: 48px;/* max font-size */
   }
 }
 
 h3 {
   font-family: 'Roboto', sans-serif;
-  font-size: calc(24px + 12 * ((100vw - 320px) / (1440 - 320)));
+  font-size: calc(24px + 12 * ((100vw - 320px) / (1440 - 320)));/*calculated font-size*/
 
   @media (min-width: $wide) {
-    font-size: 36px;
+    font-size: 36px;/* max font-size */
     line-height: 1em;
   }
 }
 
 p {
   color: $text-color;
-  font-size: calc(16px + 20 * ((100vw - 320px) / (1440 - 320)));
+  font-size: calc(16px + 20 * ((100vw - 320px) / (1440 - 320))); /*calculated font-size*/
   line-height: 1.2em;
   padding-bottom: 0.4em;
 
   @media (min-width: $wide) {
-    font-size: 36px;
+    font-size: 36px; /* max font-size */
     line-height: 1.4em;
     padding: 0;
     margin-bottom: 1em;
@@ -370,6 +375,9 @@ input {
     }
 
     @media (min-width: $wide) {
+      p{
+        font-size: calc(16px + 8 * ((100vw - 320px) / (1440 - 320)));
+      }
       h3 {
         font-size: 36px;
       }
@@ -487,7 +495,7 @@ input {
 /* / switch gif tabs */
 
 footer {
-
+margin-top: auto;
   clear: both;
   background: white;
 
@@ -535,7 +543,7 @@ footer {
       color: $page-color;
       padding-top: 0.5em;
       padding-left: 0.5em;
-      font-size: calc(18px + 6 * ((100vw - 320px) / (1440 - 320)));
+      font-size: calc(16px + 8 * ((100vw - 320px) / (1440 - 320)));
       text-align: center;
       line-height: 1.8em;
 

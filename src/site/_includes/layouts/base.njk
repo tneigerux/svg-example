@@ -21,6 +21,7 @@
 
     <div class="container">
       {% include "header.njk" %}
+      <div class="main-section">
       <div class="hero">
         {{ content | safe }}        
         <div class="usage">
@@ -37,6 +38,7 @@
           </div>
         {%- endfor -%}
       </section>
+      </div>
 
       <div class="email-modal">
         {% include "layouts/esub-form.njk" %}
@@ -45,6 +47,16 @@
       {% include "footer.njk" %}
     </div>
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-161602475-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-161602475-1');
+  </script>
+  
     {% set js %}
       {% include "js/core.js" %}
       {% include "js/clicks.js" %}
