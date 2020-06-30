@@ -287,7 +287,7 @@ input {
   width: 100%;
   background-color: #eee;
   padding: 0 0.5em;
-  height: 1772px;
+  /* height: 1772px; */ /*no gif on design*/
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -440,6 +440,11 @@ input {
   }
 }
 
+.app-store-hero{
+  margin-top: 85px;
+  margin-bottom: 229px;
+}
+
 /* switch gif tabs */
 
 .tab-img{
@@ -495,27 +500,40 @@ input {
 /* / switch gif tabs */
 
 footer {
-margin-top: auto;
-  clear: both;
+  margin-top: auto;
   background: white;
+  height: 400px;
 
   .list-builder {
     background: #E9FFD2;
-    height: 250px;
-    padding: 0 0.4em;
-
+    height: 100px;
+    padding: 0 200px;
+    width: 100%;
     form {
-      display: block;
-      
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
       h3 {
-        line-height: 1.4em;
+        line-height: 42px;
+        word-wrap: wrap;
+        text-align: right;
+        width: 323px;
+      }
+      input{
+        height: 49px;
+        width: 435px;
+        margin: 25px;
+      }
+      button {
+        font-size: 24px;
+        width: 180px;
       }
 
-      button {
-        font-size: 0.8em;
-        display: block;
-        width: 180px;
-        margin: 0 auto;
+      @media (min-width: $mid) {
+        flex-direction: row;
       }
     }
 
@@ -526,19 +544,24 @@ margin-top: auto;
   }
 
   .footer-body {
-    height: 300px;
-    padding-top: 2em;
-
-    .app-icons {
-      display: block;
-      width: 278px;
-      margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    @media (min-width: $wide) {
+      padding: 0 409px;
     }
   }
 
   .footer-footer {
     background-color: $accent-color;
-
+    height: 100px;
+    width: 100%;
+    padding: 0 43px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     p {
       color: $page-color;
       padding-top: 0.5em;
@@ -561,77 +584,4 @@ margin-top: auto;
     }
   }
 
-  @media (min-width: $wide) {
-    
-    a:link,
-    a:visited {
-      color: mix($text-color, $accent-color, 90%);
-      border-bottom: solid 1px mix($accent-color, $page-color, 70%);
-    }
-    a:hover,
-    a:focus {
-      color: $text-color;
-      border-bottom: solid 1px $text-color;
-    }
-
-    .list-builder {          
-      height: 70px;
-      padding: 1.0em;
-      
-      form {
-        width: 1000px;
-        margin: 0 auto;
-
-        h3 {
-          float: left;
-          width: 240px;
-          text-align: right;
-          margin-right: 0.4em;
-        }
-
-        button {
-          float: left;
-          font-size: 1.4em;
-          margin: .5em .3em .3em .3em;
-        }
-      }
-    }
-
-    .footer-body {
-      height: 320px;
-      text-align: center;
-
-      .app-icons {
-        display: inline-block;
-        padding: 0;
-        width: 100%;
-      }
-
-      .app-store {
-        margin: 0.5em;
-      }
-    }
-
-    .footer-footer {
-      height: 100px;
-      
-      p {
-        padding: 2.4em 1em 0 0.5em;
-        margin: 0;
-        float: left;
-        color: $page-color;
-        
-      }
-
-      .social-icons {
-        float: right;
-        margin-right: 40px;
-        margin-top: -4.5em;
-      }
-
-      svg {
-          width: 100px;
-        }
-      }
-    }
 }
