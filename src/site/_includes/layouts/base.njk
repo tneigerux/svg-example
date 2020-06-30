@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
 
     <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.png" sizes="16x16">  
     <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32">  
@@ -21,13 +21,14 @@
 
     <div class="container">
       {% include "header.njk" %}
+      <div class="main-section">
       <div class="hero">
         {{ content | safe }}        
         <div class="usage">
           <img id="comm-an" class="usage-art comm tab-img" width="2000" height="1000" alt="Commercial Animation" src="/images/key-visual-comm-ani-g.gif">
           <img id="resi-an" class="usage-art comm tab-img" width="2000" height="1000" alt="Residental Animation" src="/images/key-visual-resi-ani-g.gif">
         </div>
-        <img class="app-store" height="80" alt="Soon - iOS App Store" src="/images/app-store-ios.png">
+        <img class="app-store app-store-hero" height="80" alt="Soon - iOS App Store" src="/images/app-store-ios.png">
         {% include "tabsection.njk" %}
       </div>
       <section class="sidebar">
@@ -37,6 +38,7 @@
           </div>
         {%- endfor -%}
       </section>
+      </div>
 
       <div class="email-modal">
         {% include "layouts/esub-form.njk" %}
@@ -45,6 +47,16 @@
       {% include "footer.njk" %}
     </div>
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-161602475-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-161602475-1');
+  </script>
+  
     {% set js %}
       {% include "js/core.js" %}
       {% include "js/clicks.js" %}

@@ -41,11 +41,10 @@ body {
   background-color: $page-color;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  font-size: 2em;
   line-height: 1.8;
   min-height: 100vh;
   background: none;
-
+  
   @media (min-width: $wide) {
     font-size: 18px;
     background: url(/images/desktop-hero-wisteria.jpg);
@@ -53,16 +52,23 @@ body {
   };
 }
 
-.container {
-  width: 100%;
-  text-align: left;
-  margin: 0;
-  padding: 0;
+.main-section{
+  height: 1440px;
+}
 
+.container {
+  /* width: 100%; */
+  max-width: 1440px;
+  text-align: left;
+  margin: 0 auto;
+  padding: 0;
+  height: 3140px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: flex-start;
   @media (min-width: $mid) {
     width: 100%;
-    padding: 0;
-    margin: 0;
   };
 
   @media (min-width: $wide) {
@@ -83,46 +89,46 @@ h1, h2, h3 {
   }
 }
 
-h1 {
-  
-  font-size: 1.5em;
+h1 { 
   color: $contrast-color;
   margin-top: 0;
   margin-bottom: 0.2em;
   line-height: 1;
+  font-size: calc(40px + 56 * ((100vw - 320px) / (1440 - 320)));
 
-  @media (min-width: $mid) {
-    font-size: 5em;
-  };
   @media (min-width: $wide) {
-    font-size: 6em;
-  };
+    font-size: 96px;/* max font-size */
+  }
 }
 
+
 h2 {
-  font-size: 2.25em;
+  font-size: calc(34px + 14 * ((100vw - 320px) / (1440 - 320)));/*calculated font-size*/
   margin: 0.5em 0;
   padding: 0px;
+  @media (min-width: $wide) {
+    font-size: 48px;/* max font-size */
+  }
 }
 
 h3 {
   font-family: 'Roboto', sans-serif;
-  font-size: 1.0em;
+  font-size: calc(24px + 12 * ((100vw - 320px) / (1440 - 320)));/*calculated font-size*/
 
   @media (min-width: $wide) {
-    font-size: 1.8em;
+    font-size: 36px;/* max font-size */
     line-height: 1em;
   }
 }
 
 p {
   color: $text-color;
-  font-size: 0.8em;
+  font-size: calc(16px + 20 * ((100vw - 320px) / (1440 - 320))); /*calculated font-size*/
   line-height: 1.2em;
   padding-bottom: 0.4em;
 
   @media (min-width: $wide) {
-    font-size: 1.2em;
+    font-size: 36px; /* max font-size */
     line-height: 1.4em;
     padding: 0;
     margin-bottom: 1em;
@@ -281,7 +287,7 @@ input {
   width: 100%;
   background-color: #eee;
   padding: 0 0.5em;
-  height: 1772px;
+  /* height: 1772px; */ /*no gif on design*/
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -325,12 +331,8 @@ input {
   p {
     font-size: 0.6em;
     padding-bottom: 0.8em;
-  }
-  
-  h2 {
-    font-size: 1em;
-    width: 100%;
-  }
+  } 
+
   
   h3 {
     background: url("/images/sprite-sheet.svg#v-email") no-repeat;
@@ -363,6 +365,24 @@ input {
   .share h3:last-child {
     background: url("/images/sprite-sheet.svg#v-fb-m") no-repeat;
   }
+
+  .actions {
+    p {
+      font-size: 24px;
+    }
+    h3 {
+      font-size: calc(24px + 12*(100vw - 320px)/1120)
+    }
+
+    @media (min-width: $wide) {
+      p{
+        font-size: calc(16px + 8 * ((100vw - 320px) / (1440 - 320)));
+      }
+      h3 {
+        font-size: 36px;
+      }
+    }
+  }
   
   @media (min-width: $wide) {
   
@@ -374,15 +394,8 @@ input {
 
     .actions {
       border: 1px lightgray dashed;
-      padding: 0 0.4em 54px 0.4em;
       margin-bottom: 10px;
-
-      h2 {
-          font-size: 2.25em;    
-      }
-
       p {
-        font-size: 1.2em;
         padding-bottom: 0;
       }
 
@@ -393,7 +406,6 @@ input {
         margin: 1.0em 0 1.0em 0.3em;
         line-height: 1.3em;
         background-size: 90px 83px !important;
-        font-size: 1.8em;
         line-height: 1.3em;
         height: 84px;
         width: 100%;
@@ -428,10 +440,16 @@ input {
   }
 }
 
+.app-store-hero{
+  margin-top: 85px;
+  margin-bottom: 229px;
+}
+
 /* switch gif tabs */
 
-.usage > .tab-img{
+.tab-img{
   display: none;
+  max-width: 100%;
 }
 
 .tab-img:first-child{
@@ -471,6 +489,7 @@ input {
   font-style: normal;
   font-weight: normal;
   font-size: 48px;
+  /* font-size: calc(30px + 18 * ((100vw - 320px) / (1440 - 320))); */
   line-height: 49px;
 }
 
@@ -481,27 +500,40 @@ input {
 /* / switch gif tabs */
 
 footer {
-
-  clear: both;
+  margin-top: auto;
   background: white;
+  height: 400px;
 
   .list-builder {
     background: #E9FFD2;
-    height: 250px;
-    padding: 0 0.4em;
-
+    height: 100px;
+    padding: 0 200px;
+    width: 100%;
     form {
-      display: block;
-      
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
       h3 {
-        line-height: 1.4em;
+        line-height: 42px;
+        word-wrap: wrap;
+        text-align: right;
+        width: 323px;
+      }
+      input{
+        height: 49px;
+        width: 435px;
+        margin: 25px;
+      }
+      button {
+        font-size: 24px;
+        width: 180px;
       }
 
-      button {
-        font-size: 0.8em;
-        display: block;
-        width: 180px;
-        margin: 0 auto;
+      @media (min-width: $mid) {
+        flex-direction: row;
       }
     }
 
@@ -512,26 +544,35 @@ footer {
   }
 
   .footer-body {
-    height: 300px;
-    padding-top: 2em;
-
-    .app-icons {
-      display: block;
-      width: 278px;
-      margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    @media (min-width: $wide) {
+      padding: 0 409px;
     }
   }
 
   .footer-footer {
     background-color: $accent-color;
-
+    height: 100px;
+    width: 100%;
+    padding: 0 43px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     p {
       color: $page-color;
       padding-top: 0.5em;
       padding-left: 0.5em;
-      font-size: 0.6em;
+      font-size: calc(16px + 8 * ((100vw - 320px) / (1440 - 320)));
       text-align: center;
       line-height: 1.8em;
+
+      @media (min-width: $wide) {
+        font-size: 24px;
+      }
     }
 
     .social-icons {
@@ -543,78 +584,4 @@ footer {
     }
   }
 
-  @media (min-width: $wide) {
-    
-    a:link,
-    a:visited {
-      color: mix($text-color, $accent-color, 90%);
-      border-bottom: solid 1px mix($accent-color, $page-color, 70%);
-    }
-    a:hover,
-    a:focus {
-      color: $text-color;
-      border-bottom: solid 1px $text-color;
-    }
-
-    .list-builder {          
-      height: 70px;
-      padding: 1.0em;
-      
-      form {
-        width: 1000px;
-        margin: 0 auto;
-
-        h3 {
-          float: left;
-          width: 240px;
-          text-align: right;
-          margin-right: 0.4em;
-        }
-
-        button {
-          float: left;
-          font-size: 1.4em;
-          margin: .5em .3em .3em .3em;
-        }
-      }
-    }
-
-    .footer-body {
-      height: 320px;
-      text-align: center;
-
-      .app-icons {
-        display: inline-block;
-        padding: 0;
-        width: 100%;
-      }
-
-      .app-store {
-        margin: 0.5em;
-      }
-    }
-
-    .footer-footer {
-      height: 100px;
-      
-      p {
-        padding: 2.4em 1em 0 0.5em;
-        margin: 0;
-        float: left;
-        color: $page-color;
-        font-size: 1.2em;
-        
-      }
-
-      .social-icons {
-        float: right;
-        margin-right: 40px;
-        margin-top: -4.5em;
-      }
-
-      svg {
-          width: 100px;
-        }
-      }
-    }
 }
