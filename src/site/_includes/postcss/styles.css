@@ -123,7 +123,7 @@ h3 {
 
 p {
   color: $text-color;
-  font-size: calc(16px + 20 * ((100vw - 320px) / (1440 - 320))); /*calculated font-size*/
+  font-size: calc(20px + 16 * ((100vw - 320px) / (1440 - 320))); /*calculated font-size*/
   line-height: 1.2em;
   padding-bottom: 0.4em;
 
@@ -341,8 +341,9 @@ input {
     height: 93px;
     line-height: 1.4em;
     margin: 10px 0;
-    padding-left: 2.4em;
+    padding-left: 104px;
     margin-bottom: 1em;
+
   }
 
   h3:first-of-type {
@@ -367,20 +368,12 @@ input {
   }
 
   .actions {
+    padding: 10px;
     p {
-      font-size: 24px;
+      font-size: calc(18px + 6 * ((100vw - 320px) / (1440 - 320)));
     }
     h3 {
       font-size: calc(24px + 12*(100vw - 320px)/1120)
-    }
-
-    @media (min-width: $wide) {
-      p{
-        font-size: calc(16px + 8 * ((100vw - 320px) / (1440 - 320)));
-      }
-      h3 {
-        font-size: 36px;
-      }
     }
   }
   
@@ -397,11 +390,12 @@ input {
       margin-bottom: 10px;
       p {
         padding-bottom: 0;
+        font-size: 24px;
       }
 
       h3 {
         display: inline-block;
-        padding-left: 3.9em;
+        padding-left: 104px;
         padding-right: 20px;
         margin: 1.0em 0 1.0em 0.3em;
         line-height: 1.3em;
@@ -409,6 +403,7 @@ input {
         line-height: 1.3em;
         height: 84px;
         width: 100%;
+        font-size: 36px;
       }
     }  
   }
@@ -441,8 +436,11 @@ input {
 }
 
 .app-store-hero{
-  margin-top: 85px;
-  margin-bottom: 229px;
+  margin-top: 85px;  
+  display: none; /*temp*/
+  @media (min-width: $mid) {
+    display: block;
+  }
 }
 
 /* switch gif tabs */
@@ -457,24 +455,20 @@ input {
 }
 
 .git-tab-section{
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  justify-content: flex-end;
-}
-
-.gif-tabs{
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 129px;
-  flex-direction: column;
-
-  @media (min-width: $mid) {
-    flex-direction: row;
-  }
   
+  width: 100%;
+  max-width: 100%;
+  padding: 10px 0;
+  margin-top: 20px;
+  @media (min-width: $wide) {
+    margin-top: 229px;
+  }
 }
-
+.gif-tab-col{
+  display: flex;
+  justify-content: flex-start;
+  flex: 0 1 50%;
+}
 .gif-tablink{
   width: 324px;
   height: 73px;
@@ -482,6 +476,7 @@ input {
   justify-content: flex-start;
   align-items: center;
   padding-left: 22px;
+  max-width: 50%;
 }
 
 .gif-tablink > span{
@@ -489,7 +484,7 @@ input {
   font-style: normal;
   font-weight: normal;
   font-size: 48px;
-  /* font-size: calc(30px + 18 * ((100vw - 320px) / (1440 - 320))); */
+  font-size: calc(24px + 24 * ((100vw - 320px) / (1440 - 320)));
   line-height: 49px;
 }
 
@@ -503,11 +498,11 @@ footer {
   margin-top: auto;
   background: white;
   height: 400px;
-
+  width: 100%;
   .list-builder {
     background: #E9FFD2;
-    height: 100px;
-    padding: 0 200px;
+    
+    padding: 0 50px;
     width: 100%;
     form {
       display: flex;
@@ -515,24 +510,27 @@ footer {
       justify-content: center;
       align-items: center;
       height: 100%;
-      width: 100%;
-      h3 {
-        line-height: 42px;
-        word-wrap: wrap;
-        text-align: right;
-        width: 323px;
-      }
-      input{
-        height: 49px;
-        width: 435px;
-        margin: 25px;
-      }
-      button {
-        font-size: 24px;
-        width: 180px;
-      }
+      width: 100%;      
 
-      @media (min-width: $mid) {
+      @media (min-width: $mid) {        
+        h3 {
+          line-height: 42px;
+          word-wrap: wrap;
+          text-align: right;
+          width: 323px;
+        }
+        input{
+          height: 49px;
+          width: 435px;
+          margin: 25px;
+        }
+        button {
+          font-size: 24px;
+          width: 180px;
+        }
+
+        height: 100px;
+        padding: 0 200px;
         flex-direction: row;
       }
     }
@@ -548,16 +546,22 @@ footer {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    max-width: 100%;
     height: 200px;
-    @media (min-width: $wide) {
-      padding: 0 409px;
-    }
+      img {
+        max-width: 45%;
+      }
+
+      @media (min-width: $wide) {
+        padding: 0 409px;
+      }
   }
 
   .footer-footer {
     background-color: $accent-color;
     height: 100px;
     width: 100%;
+    max-width: 100%;
     padding: 0 43px;
     display: flex;
     justify-content: space-between;
@@ -576,11 +580,15 @@ footer {
     }
 
     .social-icons {
-      clear: both;
-    }
-
-    svg {
-      width: 31%;
+      display: flex;
+      justify-content: space-between;
+      max-width: 50%;
+      a {
+        max-width: 100%;
+        svg{
+          max-width: 100%;
+        }
+      }
     }
   }
 
