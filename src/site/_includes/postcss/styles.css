@@ -52,6 +52,7 @@ body {
   };
 }
 
+
 .main-section{
   height: 1440px;
 }
@@ -179,19 +180,15 @@ header {
   }
 }
 
-.logo {
-  padding-left: 4em;
-  margin: 0 auto;
-  margin-top: -23px;
-  width: 120px;
+.logo-lockup {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 
-  @media (min-width: $wide) {
-    fill: $page-color;
-    background-color: transparent;
-    height: 75px;
-    margin-top: -15px;
-    padding-left: 32em;
-  }
+.logo {
+  margin: -12.5px auto 0;
 }
 
 .nav {
