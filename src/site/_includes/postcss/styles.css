@@ -52,6 +52,7 @@ body {
   };
 }
 
+
 .main-section{
   height: 1440px;
 }
@@ -168,30 +169,29 @@ a:focus {
 
 header {
   background: $page-color;
-  width: 100%;
+  padding: 30px 0;
+  @media (min-width: $wide) {
+    padding: 46px 0 0 0;
+  }
+}
+
+.logo-lockup {
   height: 50px;
-  margin-top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 
   @media (min-width: $wide) {
-    height: 50px;
-    margin-top: 2em;
     background: $dark-color;
   }
 }
 
 .logo {
-  padding-left: 4em;
-  margin: 0 auto;
-  margin-top: -23px;
-  width: 120px;
+    margin: 0 auto;
+    @media (min-width: $wide) {
+      margin: -12.5px auto 0;
+    }
 
-  @media (min-width: $wide) {
-    fill: $page-color;
-    background-color: transparent;
-    height: 75px;
-    margin-top: -15px;
-    padding-left: 32em;
-  }
 }
 
 .nav {
