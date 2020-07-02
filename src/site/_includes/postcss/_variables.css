@@ -14,3 +14,7 @@ $contrast-color:   #30ACC8;
  $read-fg-color:   #243315;
 $inactive-color:   #cfcfcf;
 
+
+/* screen variable */
+
+$screen-var: ((100vw - 320px) / (1440 - 320));

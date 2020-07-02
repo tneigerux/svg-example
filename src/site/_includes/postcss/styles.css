@@ -44,7 +44,7 @@ body {
   line-height: 1.8;
   min-height: 100vh;
   background: none;
-  
+
   @media (min-width: $wide) {
     font-size: 18px;
     background: url(/images/desktop-hero-wisteria.jpg);
@@ -55,6 +55,13 @@ body {
 
 .main-section{
   height: 1440px;
+  width: 100%;
+
+  @media (min-width: $wide) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  };
 }
 
 .container {
@@ -95,7 +102,7 @@ h1 {
   margin-top: 0;
   margin-bottom: 0.2em;
   line-height: 1;
-  font-size: calc(40px + 56 * ((100vw - 320px) / (1440 - 320)));
+  font-size: calc(40px + 56 * $screen-var);
 
   @media (min-width: $wide) {
     font-size: 96px;/* max font-size */
@@ -104,7 +111,7 @@ h1 {
 
 
 h2 {
-  font-size: calc(34px + 14 * ((100vw - 320px) / (1440 - 320)));/*calculated font-size*/
+  font-size: calc(30px + 18 * $screen-var);/*calculated font-size*/
   margin: 0.5em 0;
   padding: 0px;
   @media (min-width: $wide) {
@@ -114,17 +121,17 @@ h2 {
 
 h3 {
   font-family: 'Roboto', sans-serif;
-  font-size: calc(24px + 12 * ((100vw - 320px) / (1440 - 320)));/*calculated font-size*/
+  font-size: calc(24px + 12 * $screen-var);/*calculated font-size*/
 
   @media (min-width: $wide) {
     font-size: 36px;/* max font-size */
-    line-height: 1em;
+    line-height: 42px;
   }
 }
 
 p {
   color: $text-color;
-  font-size: calc(20px + 16 * ((100vw - 320px) / (1440 - 320))); /*calculated font-size*/
+  font-size: calc(20px + 16 * $screen-var); /*calculated font-size*/
   line-height: 1.2em;
   padding-bottom: 0.4em;
 
@@ -191,7 +198,6 @@ header {
     @media (min-width: $wide) {
       margin: -12.5px auto 0;
     }
-
 }
 
 .nav {
@@ -265,26 +271,15 @@ label {
   display: none;
 }
 
-input, button {
-  float: left;
-  margin: 0.5em 0.3em 0.3em 0.3em;
-}
 
 input {
-
-  width: 90%;
   border: 2px $read-fg-color solid;
-  font-size: 1.3em;
-
-  @media (min-width: $wide) {
-    padding: 0.35em;
-    width: 16em;
-  }
+  font-size: 24px;
+  padding: 12px;
 }
 
 .hero {
-
-  width: 100%;
+  flex: 1;
   background-color: #eee;
   padding: 0 0.5em;
   /* height: 1772px; */ /*no gif on design*/
@@ -294,14 +289,15 @@ input {
   justify-content: flex-start;
 
   @media (min-width: $mid) {
-    background-color: transparent;
-    width: 63%;
+    background-color: transparent;    
     float: left;
-    border: 1px lightgray dashed;
-    margin: 8px;
+    border: 1px lightgray dashed;    
     padding: 8px 20px;
   }
 
+  @media (min-width: $wide) {
+    margin: 0 20px 0 0;
+  }
 }
 
 .app-store {
@@ -321,29 +317,49 @@ input {
 }
 
 .sidebar {
+  margin: 0 !important;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 
-  margin: 0;
+  @media (min-width: $mid){    
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  @media (min-width: $wide) {  
+    width: 440px;
+    float: left;
+    margin: 8px;
+    display: block;    
+  }
+}
 
+.sidebar > .actions {
+  flex: 0 1 100%;
+  padding: 0 10px;
   a {
     border-bottom: none;
   }
-  
-  p {
-    font-size: 0.6em;
-    padding-bottom: 0.8em;
-  } 
 
+  p {
+    font-size: calc(18px + 6 * $screen-var);
+  }
   
+  h3 {
+    font-size: calc(24px + 12 * $screen-var)
+  }
+
   h3 {
     background: url("/images/sprite-sheet.svg#v-email") no-repeat;
     background-size: 60px 60px !important;
-    width: 75%;
-    height: 93px;
-    line-height: 1.4em;
-    margin: 10px 0;
+    line-height: 42px;  
     padding-left: 104px;
-    margin-bottom: 1em;
-
+    height: 70px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
   }
 
   h3:first-of-type {
@@ -367,45 +383,37 @@ input {
     background: url("/images/sprite-sheet.svg#v-fb-m") no-repeat;
   }
 
-  .actions {
-    padding: 10px;
+  @media (min-width: $mid) {
+    flex: 0 1 50%;
+    padding: 0 10px;
     p {
-      font-size: calc(18px + 6 * ((100vw - 320px) / (1440 - 320)));
+      margin-bottom: 30px;
     }
-    h3 {
-      font-size: calc(24px + 12*(100vw - 320px)/1120)
-    }
+    /* h3 {
+      height: 70px;
+      margin-bottom: 20px;
+    } */
   }
-  
-  @media (min-width: $wide) {
-  
-    width: 440px;
-    float: left;
-    padding-top: 2em;
-    margin: 8px;
-    display: block;
 
-    .actions {
+  @media (min-width: $wide){
+      width: 100%;
       border: 1px lightgray dashed;
       margin-bottom: 10px;
+
       p {
         padding-bottom: 0;
         font-size: 24px;
-      }
-
+      }  
       h3 {
-        display: inline-block;
-        padding-left: 104px;
-        padding-right: 20px;
-        margin: 1.0em 0 1.0em 0.3em;
-        line-height: 1.3em;
+        padding-right: 20px;    
+        padding-left: 104px;    
         background-size: 90px 83px !important;
-        line-height: 1.3em;
-        height: 84px;
+        height: 90px;
+        margin-bottom: 50px;
+        line-height: 42px;
         width: 100%;
         font-size: 36px;
       }
-    }  
   }
 }
 
@@ -425,7 +433,7 @@ input {
     width: 12.4em;
   }
 
-  .close-me {
+  .cancel-submit-btn {
     width: 11px;
     float: left;
     background: transparent;
@@ -482,10 +490,12 @@ input {
 .gif-tablink > span{
   font-family: Questrial;
   font-style: normal;
-  font-weight: normal;
-  font-size: 48px;
-  font-size: calc(24px + 24 * ((100vw - 320px) / (1440 - 320)));
+  font-weight: normal;  
+  font-size: calc(24px + 24 * $screen-var);
   line-height: 49px;
+  @media (min-width: $wide){
+    font-size: 48px !important;
+  }
 }
 
 .active-gif-tab{
@@ -494,102 +504,146 @@ input {
 
 /* / switch gif tabs */
 
+/* footer */
+
 footer {
   margin-top: auto;
   background: white;
   height: 400px;
   width: 100%;
-  .list-builder {
-    background: #E9FFD2;
-    
-    padding: 0 50px;
-    width: 100%;
-    form {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      width: 100%;      
 
-      @media (min-width: $mid) {        
-        h3 {
-          line-height: 42px;
-          word-wrap: wrap;
-          text-align: right;
-          width: 323px;
-        }
-        input{
-          height: 49px;
-          width: 435px;
-          margin: 25px;
-        }
-        button {
-          font-size: 24px;
-          width: 180px;
-        }
-
-        height: 100px;
-        padding: 0 200px;
-        flex-direction: row;
-      }
-    }
-
-    .close-me {
-      display: none;
-      clear: both;
-    }
-  }
-
-  .footer-body {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 100%;
-    height: 200px;
-      img {
-        max-width: 45%;
-      }
-
-      @media (min-width: $wide) {
-        padding: 0 409px;
-      }
-  }
-
-  .footer-footer {
-    background-color: $accent-color;
+  @media (min-width: $mid){
+    padding: 0;
     height: 100px;
-    width: 100%;
-    max-width: 100%;
-    padding: 0 43px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    p {
-      color: $page-color;
-      padding-top: 0.5em;
-      padding-left: 0.5em;
-      font-size: calc(16px + 8 * ((100vw - 320px) / (1440 - 320)));
-      text-align: center;
-      line-height: 1.8em;
+  } 
+}
 
-      @media (min-width: $wide) {
-        font-size: 24px;
-      }
+.list-builder {
+  background: #E9FFD2;    
+  padding: 15px 10px;
+  width: 100%;  
+  height: 265px;
+  @media (min-width: $wide){
+    padding: 0;
+    height: 100px;
+  }  
+}
+
+.cancel-submit-btn {
+  display: none;
+  clear: both;
+}
+
+.footer-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  height: 200px;    
+    @media (min-width: $mid) {
+      flex-direction: row;
     }
+    @media (min-width: $wide) {
 
-    .social-icons {
-      display: flex;
-      justify-content: space-between;
-      max-width: 50%;
-      a {
-        max-width: 100%;
-        svg{
-          max-width: 100%;
-        }
-      }
+    }
+}
+
+
+.footer-footer {
+  background-color: $accent-color;  
+  width: 100%;
+  max-width: 100%;
+  padding: 0 43px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  :first-child { order: 2; }
+  :last-child { order: 1; }
+
+  @media (min-width: $mid) {
+    height: 100px;
+    :first-child { order: 1; }
+    :last-child { order: 2; }
+    flex-direction: row;
+  }
+}
+
+.footer-sign-section > p {
+  color: $page-color;
+  padding-top: 0.5em;
+  padding-left: 0.5em;
+  font-size: calc(16px + 8 * $screen-var);
+  text-align: center;
+  line-height: 1.8em;
+
+  @media (min-width: $wide) {
+    font-size: 24px;
+  }
+}
+
+.footer-footer > .footer-sign{
+  max-width: 100%;
+}
+
+.footer-footer > .social-icons {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  padding: 20px 0;
+
+  @media (min-width: $mid) {
+    padding: 0;
+  }
+  a {
+    max-width: 100%;
+    border-bottom: none;
+    svg{
+      max-width: 100%;
     }
   }
-
 }
+/* form */
+#email-sub {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 100%;      
+  padding: 0;
+  input {
+    width: 100%;
+  }
+  h3 {
+    text-align: center;
+  }
+  @media (min-width: $mid) {      
+           
+  }
+  @media (min-width: $wide){
+    height: 100%;
+    padding: 0 200px;
+    flex-direction: row;
+    align-items: center;
+    h3 {
+      word-wrap: nowrap;
+      text-align: right;
+    }
+    input{
+      height: 49px;
+      width: 435px;
+      margin: 25px;
+    }   
+    button {
+      height: 49px;
+      width: 185px;
+    }      
+  }
+}
+
+/* / form */
+/* / footer */
