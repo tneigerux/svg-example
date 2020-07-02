@@ -57,8 +57,13 @@ body {
   height: 1440px;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+
+  @media (min-width: $wide) {
+    flex-direction: row;
+  };
 }
 
 .container {
@@ -316,13 +321,13 @@ input {
 }
 
 .sidebar {
-
   margin: 0 !important;
   display: flex;
   flex-direction: column;
   width: 100%;
 
   @media (min-width: $mid){    
+    flex-direction: row;
     justify-content: center;
     align-items: flex-start;
   }
@@ -335,7 +340,7 @@ input {
   }
 }
 
-.actions {
+.sidebar > .actions {
 
   a {
     border-bottom: none;
@@ -379,25 +384,27 @@ input {
   }
 
   @media (min-width: $mid) {
-    width: 50%;
+    flex: 0 1 50%;
+    padding: 0 10px;
+    h3 {
+      line-height: 70px;
+    }
   }
 
   @media (min-width: $wide){
       width: 100%;
       border: 1px lightgray dashed;
       margin-bottom: 10px;
+
       p {
         padding-bottom: 0;
         font-size: 24px;
       }  
       h3 {
-        display: inline-block;
         padding-left: 104px;
         padding-right: 20px;
-        margin: 1.0em 0 1.0em 0.3em;
-        line-height: 1.3em;
+        margin: 1.0em 0 1.0em 0.3em;        
         background-size: 90px 83px !important;
-        line-height: 1.3em;
         height: 84px;
         width: 100%;
         font-size: 36px;
@@ -528,13 +535,14 @@ footer {
   align-items: center;
   width: 100%;
   max-width: 100%;
-  height: 200px;
-    img {
-      max-width: 45%;
-    }
+  height: 200px;    
     @media (min-width: $wide) {
 
     }
+}
+
+.footer-body > img {
+  max-width: 45%;
 }
 
 .footer-footer {
@@ -590,7 +598,6 @@ footer {
     flex-direction: row;
     align-items: center;
     h3 {
-      line-height: 42px;
       word-wrap: nowrap;
       text-align: right;
     }
