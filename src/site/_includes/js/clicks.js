@@ -7,7 +7,7 @@ eventHandler('.sidebar .actions h3', 'click', function(){
 
 // Close the address collector with no entry.
 
-eventHandler('.close-me', 'click', function(){
+eventHandler('.cancel-submit-btn', 'click', function(){
   let hiddenForm = document.getElementsByClassName('email-modal');
   hiddenForm[0].style.display = "none";
 });

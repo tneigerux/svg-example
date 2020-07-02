@@ -95,7 +95,7 @@ h1 {
   margin-top: 0;
   margin-bottom: 0.2em;
   line-height: 1;
-  font-size: calc(40px + 56 * ((100vw - 320px) / (1440 - 320)));
+  font-size: calc(40px + 56 * $screen-var);
 
   @media (min-width: $wide) {
     font-size: 96px;/* max font-size */
@@ -104,7 +104,7 @@ h1 {
 
 
 h2 {
-  font-size: calc(34px + 14 * ((100vw - 320px) / (1440 - 320)));/*calculated font-size*/
+  font-size: calc(34px + 14 * $screen-var);/*calculated font-size*/
   margin: 0.5em 0;
   padding: 0px;
   @media (min-width: $wide) {
@@ -114,7 +114,7 @@ h2 {
 
 h3 {
   font-family: 'Roboto', sans-serif;
-  font-size: calc(24px + 12 * ((100vw - 320px) / (1440 - 320)));/*calculated font-size*/
+  font-size: calc(24px + 12 * $screen-var);/*calculated font-size*/
 
   @media (min-width: $wide) {
     font-size: 36px;/* max font-size */
@@ -124,7 +124,7 @@ h3 {
 
 p {
   color: $text-color;
-  font-size: calc(20px + 16 * ((100vw - 320px) / (1440 - 320))); /*calculated font-size*/
+  font-size: calc(20px + 16 * $screen-var); /*calculated font-size*/
   line-height: 1.2em;
   padding-bottom: 0.4em;
 
@@ -265,21 +265,11 @@ label {
   display: none;
 }
 
-input, button {
-  float: left;
-  margin: 0.5em 0.3em 0.3em 0.3em;
-}
 
 input {
-
-  width: 90%;
   border: 2px $read-fg-color solid;
-  font-size: 1.3em;
-
-  @media (min-width: $wide) {
-    padding: 0.35em;
-    width: 16em;
-  }
+  font-size: 24px;
+  padding: 12px;
 }
 
 .hero {
@@ -370,58 +360,56 @@ input {
     background: url("/images/sprite-sheet.svg#v-fb-m") no-repeat;
   }
 
-  .actions {
-    padding: 10px;
-
-    p {
-      font-size: calc(18px + 6 * ((100vw - 320px) / (1440 - 320)));
-    }
-    h3 {
-      font-size: calc(24px + 12*(100vw - 320px)/1120)
-    }
-
-    @media (min-width: $mid) {
-      width: 50%;
-    }
-
-    @media (min-width: $wide){
-        width: 100%;
-        border: 1px lightgray dashed;
-        margin-bottom: 10px;
-        p {
-          padding-bottom: 0;
-          font-size: 24px;
-        }  
-        h3 {
-          display: inline-block;
-          padding-left: 104px;
-          padding-right: 20px;
-          margin: 1.0em 0 1.0em 0.3em;
-          line-height: 1.3em;
-          background-size: 90px 83px !important;
-          line-height: 1.3em;
-          height: 84px;
-          width: 100%;
-          font-size: 36px;
-        }
-    }
-  }
-
   @media (min-width: $mid){
-
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
   }
   
-  @media (min-width: $wide) {
-  
+  @media (min-width: $wide) {  
     width: 440px;
     float: left;
     padding-top: 2em;
     margin: 8px;
     display: block;    
+  }
+}
+
+.actions {
+  padding: 10px;
+
+  p {
+    font-size: calc(18px + 6 * $screen-var);
+  }
+  h3 {
+    font-size: calc(24px + 12*(100vw - 320px)/1120)
+  }
+
+  @media (min-width: $mid) {
+    width: 50%;
+  }
+
+  @media (min-width: $wide){
+      width: 100%;
+      border: 1px lightgray dashed;
+      margin-bottom: 10px;
+      p {
+        padding-bottom: 0;
+        font-size: 24px;
+      }  
+      h3 {
+        display: inline-block;
+        padding-left: 104px;
+        padding-right: 20px;
+        margin: 1.0em 0 1.0em 0.3em;
+        line-height: 1.3em;
+        background-size: 90px 83px !important;
+        line-height: 1.3em;
+        height: 84px;
+        width: 100%;
+        font-size: 36px;
+      }
   }
 }
 
@@ -441,7 +429,7 @@ input {
     width: 12.4em;
   }
 
-  .close-me {
+  .cancel-submit-btn {
     width: 11px;
     float: left;
     background: transparent;
@@ -500,7 +488,7 @@ input {
   font-style: normal;
   font-weight: normal;
   font-size: 48px;
-  font-size: calc(24px + 24 * ((100vw - 320px) / (1440 - 320)));
+  font-size: calc(24px + 24 * $screen-var);
   line-height: 49px;
 }
 
@@ -510,102 +498,117 @@ input {
 
 /* / switch gif tabs */
 
+/* footer */
+
 footer {
   margin-top: auto;
   background: white;
   height: 400px;
   width: 100%;
-  .list-builder {
-    background: #E9FFD2;
-    
-    padding: 0 50px;
-    width: 100%;
-    form {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      width: 100%;      
-
-      @media (min-width: $mid) {        
-        h3 {
-          line-height: 42px;
-          word-wrap: wrap;
-          text-align: right;
-          width: 323px;
-        }
-        input{
-          height: 49px;
-          width: 435px;
-          margin: 25px;
-        }
-        button {
-          font-size: 24px;
-          width: 180px;
-        }
-
-        height: 100px;
-        padding: 0 200px;
-        flex-direction: row;
-      }
-    }
-
-    .close-me {
-      display: none;
-      clear: both;
-    }
-  }
-
-  .footer-body {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 100%;
-    height: 200px;
-      img {
-        max-width: 45%;
-      }
-
-      @media (min-width: $wide) {
-        padding: 0 409px;
-      }
-  }
-
-  .footer-footer {
-    background-color: $accent-color;
-    height: 100px;
-    width: 100%;
-    max-width: 100%;
-    padding: 0 43px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    p {
-      color: $page-color;
-      padding-top: 0.5em;
-      padding-left: 0.5em;
-      font-size: calc(16px + 8 * ((100vw - 320px) / (1440 - 320)));
-      text-align: center;
-      line-height: 1.8em;
-
-      @media (min-width: $wide) {
-        font-size: 24px;
-      }
-    }
-
-    .social-icons {
-      display: flex;
-      justify-content: space-between;
-      max-width: 50%;
-      a {
-        max-width: 100%;
-        svg{
-          max-width: 100%;
-        }
-      }
-    }
-  }
-
 }
+
+.list-builder {
+  background: #E9FFD2;    
+  padding: 15px 10px;
+  width: 100%;  
+  height: 265px;
+  @media (min-width: $wide){
+    height: 100px;
+  }  
+}
+
+.list-builder > input{
+    width: 100%;
+    @media (min-width: $wide){
+      width: 435px;
+    }  
+}
+
+.cancel-submit-btn {
+  display: none;
+  clear: both;
+}
+
+.footer-body {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  height: 200px;
+    img {
+      max-width: 45%;
+    }
+    @media (min-width: $wide) {
+
+    }
+}
+
+.footer-footer {
+  background-color: $accent-color;
+  height: 100px;
+  width: 100%;
+  max-width: 100%;
+  padding: 0 43px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;   
+}
+
+.footer-footer > p {
+  color: $page-color;
+  padding-top: 0.5em;
+  padding-left: 0.5em;
+  font-size: calc(16px + 8 * $screen-var);
+  text-align: center;
+  line-height: 1.8em;
+
+  @media (min-width: $wide) {
+    font-size: 24px;
+  }
+}
+
+.footer-footer > .social-icons {
+  display: flex;
+  justify-content: space-between;
+  max-width: 50%;
+  a {
+    max-width: 100%;
+    svg{
+      max-width: 100%;
+    }
+  }
+}
+
+#email-sub {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 100%;      
+  padding: 0;
+  @media (min-width: $mid) {      
+    h3 {
+      line-height: 42px;
+      word-wrap: nowrap;
+      text-align: right;
+    }
+    input{
+      height: 49px;
+      width: 435px;
+      margin: 25px;
+    }
+    button {
+      font-size: 24px;
+      width: 180px;
+    }        
+  }
+  @media (min-width: $wide){
+    height: 100px;
+    padding: 0 200px;
+    flex-direction: row;
+  }
+}
+
+/* / footer */
