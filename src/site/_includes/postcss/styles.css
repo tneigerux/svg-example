@@ -44,7 +44,7 @@ body {
   line-height: 1.8;
   min-height: 100vh;
   background: none;
-  
+
   @media (min-width: $wide) {
     font-size: 18px;
     background: url(/images/desktop-hero-wisteria.jpg);
@@ -55,6 +55,10 @@ body {
 
 .main-section{
   height: 1440px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .container {
@@ -191,7 +195,6 @@ header {
     @media (min-width: $wide) {
       margin: -12.5px auto 0;
     }
-
 }
 
 .nav {
@@ -273,8 +276,7 @@ input {
 }
 
 .hero {
-
-  width: 100%;
+  flex: 1;
   background-color: #eee;
   padding: 0 0.5em;
   /* height: 1772px; */ /*no gif on design*/
@@ -288,12 +290,12 @@ input {
     
     float: left;
     border: 1px lightgray dashed;
-    margin: 8px;
+    margin: 0 20px 0 0;
     padding: 8px 20px;
   }
 
   @media (min-width: $wide) {
-    width: 63%;
+    
   }
 }
 
@@ -315,28 +317,44 @@ input {
 
 .sidebar {
 
-  margin: 0;
+  margin: 0 !important;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @media (min-width: $mid){    
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  @media (min-width: $wide) {  
+    width: 440px;
+    float: left;
+    margin: 8px;
+    display: block;    
+  }
+}
+
+.actions {
 
   a {
     border-bottom: none;
   }
-  
-  p {
-    font-size: 0.6em;
-    padding-bottom: 0.8em;
-  } 
 
+  p {
+    font-size: calc(18px + 6 * $screen-var);
+  }
   
+  h3 {
+    font-size: calc(24px + 12*(100vw - 320px)/1120)
+  }
+
   h3 {
     background: url("/images/sprite-sheet.svg#v-email") no-repeat;
     background-size: 60px 60px !important;
-    width: 75%;
-    height: 93px;
-    line-height: 1.4em;
+    line-height: 42px;
     margin: 10px 0;
     padding-left: 104px;
-    margin-bottom: 1em;
-
   }
 
   h3:first-of-type {
@@ -358,32 +376,6 @@ input {
 
   .share h3:last-child {
     background: url("/images/sprite-sheet.svg#v-fb-m") no-repeat;
-  }
-
-  @media (min-width: $mid){
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-  }
-  
-  @media (min-width: $wide) {  
-    width: 440px;
-    float: left;
-    padding-top: 2em;
-    margin: 8px;
-    display: block;    
-  }
-}
-
-.actions {
-  padding: 10px;
-
-  p {
-    font-size: calc(18px + 6 * $screen-var);
-  }
-  h3 {
-    font-size: calc(24px + 12*(100vw - 320px)/1120)
   }
 
   @media (min-width: $mid) {
@@ -513,6 +505,7 @@ footer {
   width: 100%;  
   height: 265px;
   @media (min-width: $wide){
+    padding: 0;
     height: 100px;
   }  
 }
@@ -579,7 +572,7 @@ footer {
     }
   }
 }
-
+/* form */
 #email-sub {
   display: flex;
   flex-direction: column;
@@ -589,6 +582,13 @@ footer {
   width: 100%;      
   padding: 0;
   @media (min-width: $mid) {      
+           
+  }
+  @media (min-width: $wide){
+    height: 100%;
+    padding: 0 200px;
+    flex-direction: row;
+    align-items: center;
     h3 {
       line-height: 42px;
       word-wrap: nowrap;
@@ -598,17 +598,12 @@ footer {
       height: 49px;
       width: 435px;
       margin: 25px;
-    }
+    }   
     button {
-      font-size: 24px;
-      width: 180px;
-    }        
-  }
-  @media (min-width: $wide){
-    height: 100px;
-    padding: 0 200px;
-    flex-direction: row;
+      height: 49px;
+      width: 185px;
+    }      
   }
 }
-
+/* / form */
 /* / footer */
