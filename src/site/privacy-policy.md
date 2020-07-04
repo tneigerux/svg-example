@@ -1,7 +1,7 @@
 ---
 title: privacy policy title
 subtitle: privacy policy subtitle title.
-layout: layouts/base.njk
+layout: layouts/legacy.njk
 ---
 
 # Privacy policy

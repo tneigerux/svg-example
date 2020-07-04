@@ -1,0 +1,249 @@
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  *,*:before,*:after{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  ::-moz-selection {
+    background-color: $text-color;
+    color: $page-color;
+  }
+  ::selection {
+    background-color: $text-color;
+    color: $page-color;
+  }
+  
+  button {
+    background: $tap-bg-color;
+    border: 4px solid $tap-fg-color;
+    height: 50px;
+    width: 185px;
+    border-radius: 40px;
+    color: $tap-fg-color;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1.4em;
+  }
+  
+  html {
+    background-color: $page-color;
+  }
+  
+  body {
+    text-align: center;
+    background-color: $page-color;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    line-height: 1.8;
+    min-height: 100vh;
+    background: none;
+  
+    @media (min-width: $wide) {
+      font-size: 18px;
+      background: url(/images/desktop-hero-wisteria.jpg);
+      background-size: cover;
+    };
+  }
+  
+  h1, h2, h3 { 
+    font-family: 'Questrial', sans-serif;
+    color: $text-color;
+    font-weight: 200;
+  
+    @media (min-width: $wide) {
+      font-weight: 200;
+      margin-top: 0em;
+      margin-bottom: 0.2em;
+      line-height: 1;
+    }
+  }
+  
+  h1 { 
+    color: $contrast-color;
+    margin-top: 0;
+    margin-bottom: 0.2em;
+    line-height: 1;
+    font-size: calc(40px + 56 * $screen-var);
+  
+    @media (min-width: $wide) {
+      font-size: 96px;/* max font-size */
+    }
+  }
+  
+  
+  h2 {
+    font-size: calc(30px + 18 * $screen-var);/*calculated font-size*/
+    margin: 0.5em 0;
+    padding: 0px;
+    @media (min-width: $wide) {
+      font-size: 48px;/* max font-size */
+    }
+  }
+  
+  h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: calc(24px + 12 * $screen-var);/*calculated font-size*/
+  
+    @media (min-width: $wide) {
+      font-size: 36px;/* max font-size */
+      line-height: 42px;
+    }
+  }
+  
+  p {
+    color: $text-color;
+    font-size: calc(20px + 16 * $screen-var); /*calculated font-size*/
+    line-height: 1.2em;
+    padding-bottom: 0.4em;
+  
+    @media (min-width: $wide) {
+      font-size: 36px; /* max font-size */
+      line-height: 1.4em;
+      padding: 0;
+      margin-bottom: 1em;
+    }
+  }
+  
+  .subtitle {
+    font-size: 1.2em;
+    margin-top: 1em;
+    margin-bottom: 5em;
+  }
+  
+  ul, ol {
+    padding-left: 1em;
+  }
+  
+  a:link,
+  a:visited {
+    color: $text-color;
+    text-decoration: none;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: mix($text-color, $accent-color, 20%)
+  }
+  a:hover,
+  a:focus {
+    color: $text-color;
+    border-bottom-color: $text-color;
+  }
+  
+  .nakedLink a:link,
+  .nakedLink a:visited,
+  .nakedLink a:hover,
+  .nakedLink a:focus {
+    border-bottom-style: none;
+  }
+  
+  header {
+    background: $page-color;
+    padding: 30px 0;
+    @media (min-width: $wide) {
+      padding: 46px 0 0 0;
+    }
+  }
+  
+  .logo-lockup {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  
+    @media (min-width: $wide) {
+      background: $dark-color;
+    }
+  }
+  
+  .logo {
+      margin: 0 auto;
+      @media (min-width: $wide) {
+        margin: -12.5px auto 0;
+      }
+  }
+  
+  .nav {
+  
+    li {
+      display: inline;
+      float: left;
+    }
+  
+    a:link,
+    a:visited {
+      display: inline-block;
+      border-bottom-style: none;
+      padding-top: 0.8em;
+      padding-bottom: 2em;
+      margin-left: 0;
+      margin-right: 0.7em;
+      width: 9em;
+      text-align: left;
+      color: mix($text-color, $accent-color, 80%);
+      text-decoration: none;
+    }
+    a:hover,
+    a:focus {
+        color: $text-color;
+        border-top-color: $text-color;
+        border-bottom-style: none;
+    }
+  
+    small {
+      display: block;
+      font-size: 0.7em;
+      color: mix($text-color,$accent-color, 60%);
+    }
+  }
+  
+  
+  
+  code {
+    font-size: 0.8em;
+    background-color: mix($text-color,$accent-color, 80%);
+    color: rgb(42, 65, 77);
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+  
+  .date {
+    font-size: 0.8em;
+    font-style: italic;
+  }
+  
+  main {
+    margin-top: 4em;
+  }
+  
+  pre {
+    overflow: auto;
+    border-radius: 6px;
+    code {
+      border-style: none;
+      padding-top: 0;
+      padding-bottom: 0;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  
+  label { 
+    display: none;
+  }
+  
+  
+  input {
+    border: 2px $read-fg-color solid;
+    font-size: 24px;
+    padding: 12px;
+  }
+  
