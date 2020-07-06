@@ -8,26 +8,28 @@ layout: layouts/legacy.njk
 
 At Did U Remember To LLC (“DURT”), we understand that you want to know how data about you, i.e., personal data, is used. This DURT Privacy Notice describes how we collect, use, and share personal data and explains your related rights and choices. "We" are referred to here as DURT. "You" may be a visitor to one of our websites including [www.DidURememberTo.com](www.DidURememberTo.com) and [www.atendit.com](www.atendit.com)  **("Sites")**, a user of our mobile applications including atendit™ (“Mobile Apps”), or a user of any of our website or mobile application services ("Services"). To make it easier for You to find information relevant to Your interests, our Privacy Policy is organized as follows:
 
+<div class="privacy-paragraph-list">
+<p class="privacy-paragraph-list__item">Personal Data We Collect<span>2</span></p>
+<p class="privacy-paragraph-list__item">How We Use Personal Data<span>2</span></p>
+<p class="privacy-paragraph-list__item">How We Share Personal Data<span>3</span></p>
 
-* Personal Data We Collect	2
-* How We Use Personal Data	2
-* How We Share Personal Data	3
-* How We Protect Your Personal Data	4
-* Blogs; Forums; Testimonials	4
-* Linked Sites; Third Party Widgets; Your Organization	5
-* Integrations; Notifications; Linked Websites	5
-* Mobile Application; Device Information	5
-* Your Use of the Services	6
-* What is a Cookie?	6
-* What are the Different Types of Cookies used by DURT?	6
-* How Does DURT Use Cookies?	7
-* Other Tracking Technologies.	8
-* Updating this Privacy Policy	8
-* Your choices	8
-* Your Rights	8
-* Data retention	8
-* Who We Are; How to Contact Us	9
+<p class="privacy-paragraph-list__item">How We Protect Your Personal Data<span>4</span></p>
+<p class="privacy-paragraph-list__item">Blogs; Forums; Testimonials<span>4</span></p>
+<p class="privacy-paragraph-list__item">Linked Sites; Third Party Widgets; Your Organization<span>5</span></p>
+<p class="privacy-paragraph-list__item">Integrations; Notifications; Linked Websites<span>5</span></p>
+<p class="privacy-paragraph-list__item">Mobile Application; Device Information<span>5</span></p>
+<p class="privacy-paragraph-list__item">Your Use of the Services<span>6</span></p>
+<p class="privacy-paragraph-list__item">What is a Cookie?<span>6</span></p>
+<p class="privacy-paragraph-list__item">What are the Different Types of Cookies used by DURT?<span>6</span></p>
+<p class="privacy-paragraph-list__item">How Does DURT Use Cookies?<span>7</span></p>
+<p class="privacy-paragraph-list__item">Other Tracking Technologies<span>8</span></p>
 
+<p class="privacy-paragraph-list__item">Updating this Privacy Policy<span>8</span></p>
+<p class="privacy-paragraph-list__item">Your choices<span>8</span></p>
+<p class="privacy-paragraph-list__item">Your Rights<span>8</span></p>
+<p class="privacy-paragraph-list__item">Data retention<span>8</span></p>
+<p class="privacy-paragraph-list__item">Who We Are; How to Contact Us<span>9</span></p>
+</div>
 
 
 **Personal Data We Collect**

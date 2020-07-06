@@ -659,5 +659,20 @@ footer {
   @media (max-width: $container-width) {
     padding: 0 10px;
   };
+
+  .privacy-paragraph-list{
+    background-color: #c0c0c0;
+    padding-left: 30px; 
+    width: 100%;
+  }
+
+  .privacy-paragraph-list__item{
+    color: black;
+    width: 100%;
+  }
+  .privacy-paragraph-list__item span{
+    float: right;
+  }
+
 }
 /*  */
