@@ -617,6 +617,16 @@ footer {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  padding: 0 50px;
+  
+}
+
+.footer-links__col * {
+  color: black;  
+}
+.footer-links__col > a {
+  border-bottom: none;
+  margin-bottom: 51px;
 }
 /* form */
 #email-sub {
