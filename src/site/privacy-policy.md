@@ -139,5 +139,4 @@ We keep your personal data for as long as reasonably necessary for the purposes 
 **Who We Are; How to Contact Us**
 
 Did U Remember To LLC is a Connecticut Limited Liability Company with offices in Stamford, CT.
-If You have a question or complain about our data collection activities and or use of your personal data, please let us know by sending an email to either support@didurememberto.com or, if your concern is of a legal nature, please email legal@didurememberto.com.   
-Last Updated: June 2020
+If You have a question or complain about our data collection activities and or use of your personal data, please let us know by sending an email to either [support@didurememberto.com](mailto:support@didurememberto.com) or, if your concern is of a legal nature, please email [legal@didurememberto.com](mailto:legal@didurememberto.com).   
