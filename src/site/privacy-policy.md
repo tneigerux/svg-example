@@ -1,6 +1,6 @@
 ---
-title: privacy policy title
-subtitle: privacy policy subtitle title.
+title: Privacy-Policy
+subtitle: privacy policy page.
 layout: layouts/legacy.njk
 ---
 
