@@ -15,6 +15,7 @@ $contrast-color:   #30ACC8;
 $inactive-color:   #cfcfcf;
 
 
-/* screen variable */
+/* screen variables */
 
 $screen-var: ((100vw - 320px) / (1440 - 320));
+$container-width: 1440px;

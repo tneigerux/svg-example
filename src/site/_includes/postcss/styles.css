@@ -40,7 +40,7 @@ body {
   text-align: center;
   background-color: $page-color;
   font-family: 'Roboto', sans-serif;
-  font-weight: 300;
+  /* font-weight: 300; */
   line-height: 1.8;
   min-height: 100vh;
   background: none;
@@ -647,3 +647,32 @@ footer {
 
 /* / form */
 /* / footer */
+
+/*  */
+.legacy-info-section{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  @media (max-width: $container-width) {
+    padding: 0 10px;
+  };
+
+  .privacy-paragraph-list{
+    background-color: #c0c0c0;
+    padding-left: 30px; 
+    width: 100%;
+  }
+
+  .privacy-paragraph-list__item{
+    color: black;
+    width: 100%;
+  }
+  .privacy-paragraph-list__item span{
+    float: right;
+  }
+
+}
+/*  */
