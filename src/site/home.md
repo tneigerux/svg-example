@@ -1,8 +1,6 @@
 ---
 title: Home
-subtitle: home page.
+subtitle: home page
 layout: layouts/home.njk
 ---
-
-# Privacy policy
 
