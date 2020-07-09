@@ -179,12 +179,127 @@ a:focus {
   border-bottom-style: none;
 }
 
-header {
+.header {
   background: $page-color;
-  padding: 30px 0;
+  /* padding: 30px 0;
   @media (min-width: $wide) {
     padding: 46px 0 0 0;
+  } */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+
+.header:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* height: 100%; */
+  background-color: #5e5373;
+  z-index: 3;
+}
+
+
+.header__body {
+  height: 80px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;  
+}
+
+.header__line {
+  position: absolute;
+  top: 20;
+  z-index: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  @media (min-width: $wide) {
+    background: $dark-color;
   }
+}
+
+.header__logo {
+  /* flex: 0 0 60px; */
+  position: relative;
+  z-index: 3;
+}
+.header__logo img {
+  max-width: 100%;
+  display: block; /*if rounded*/
+}
+.header__burger {
+  display: none;
+}
+.header__menu {}
+.header__list {
+  display: flex;
+  position: relative;
+  z-index: 2;
+}
+.header__list li {
+  list-style: none;
+  margin: 0 0 0 20px;
+}
+.header__link {
+  color: #0D363F;
+  font-size: 24px;
+  text-decoration: none;
+  border-bottom: none !important;  
+}
+
+@media (max-width: $mid) {
+  .header__body {
+    height: 50px;
+  }
+  .header__logo {
+    flex: 0 0 40px;
+  }
+  .header__burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+  }
+  .header__burger span {
+    position: absolute;
+    background-color: #fff;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    top: 9px;
+  }
+  .header__burger:before,
+  .header__burger:after {
+    content: '';
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+  }
+  .header__burger:before {
+    top: 0;
+  }
+  .header__burger:after {
+    bottom: 0;
+  }
+  .header__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #18b5a4;
+  }
+  
 }
 
 .logo-lockup {
@@ -206,17 +321,7 @@ header {
     } */
 }
 
-.logo-lockup-extended {
-  height: 50px;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
 
-  @media (min-width: $wide) {
-    background: $dark-color;
-  }
-}
 
 .nav {
 
