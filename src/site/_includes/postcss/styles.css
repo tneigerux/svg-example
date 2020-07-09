@@ -46,10 +46,15 @@ body {
   background: none;
 
   @media (min-width: $wide) {
-    font-size: 18px;
-    background: url(/images/desktop-hero-wisteria.jpg);
+    font-size: 18px;    
     background-size: cover;
   };
+}
+
+.home-body {
+  @media (min-width: $wide){
+    background: url(/images/desktop-hero-wisteria.jpg);
+  }
 }
 
 
