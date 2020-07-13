@@ -1,5 +1,4 @@
 @import '_variables.css';
-@import '_navbar.css';
 
 * {
   margin: 0;
@@ -186,15 +185,12 @@ a:focus {
   @media (min-width: $wide) {
     padding: 46px 0 0 0;
   } */
-  height: 50px;
+  margin-top: 46px;
   position: fixed;
   width: 100%;
-  top: 46px;
+  top: 0;
   left: 0;
   z-index: 50;
-  @media (min-width: $wide) {
-    background: $dark-color;
-  }
 }
 
 .header:before{
@@ -210,14 +206,21 @@ a:focus {
 
 
 .header__body {
-  height: 80px;
+  height: 50px;
   width: 100%;
-  padding: 0 80px;
+  
   position: relative;
   z-index: 2;
   display: flex;
   justify-content: space-between;
-  align-items: center;  
+  align-items: center;
+  background: $dark-color;
+   
+  padding: 0 20px;
+
+  @media (min-width: $wide) {
+    padding: 0 80px;
+  }
 }
 
 .header__logo {
@@ -234,31 +237,39 @@ a:focus {
 }
 .header__menu {}
 .header__list {
-  display: flex;
-  position: relative;
-  z-index: 2;
+  display: none;
+  @media (min-width: $mid) {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    flex-grow: 1;
+    z-index: 2;
+  }
 }
 .header__list li {
-  display: inline-block;
-  width: 200px;
-  text-align: center;
-  list-style: none;
-  margin: 0 0 0 30px;
+  list-style: none;  
+  /* @media (min-width: $wide) {
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    margin: 0 0 0 30px;
+  } */
+
+  
+  
 }
 .header__link {
   color: #0D363F;
   font-size: 24px;
   text-decoration: none;
-  border-bottom: none !important;
+  border-bottom: none !important;  
 }
 
 @media (max-width: $mid) {
   .header__body {
     height: 50px;
   }
-  .header__logo {
-    flex: 0 0 40px;
-  }
+  
   .header__burger {
     display: block;
     position: relative;
