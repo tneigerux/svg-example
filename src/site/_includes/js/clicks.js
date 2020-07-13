@@ -20,6 +20,15 @@ eventHandler('document', 'keydown', function(){
     hiddenForm[0].style.display = "none";
 });
 
+// Activate hamburger menu
+
+eventHandler('.header__burger', 'click', function(){
+  document.querySelector('.header__burger').classList.toggle('active');
+  document.querySelector('.header__menu').classList.toggle('active');
+  document.querySelector('body').classList.toggle('lock');
+  //IE9 support?
+});
+
 // Switch gif image on the Welcome page
 
 function showImg(evt, imgId){
