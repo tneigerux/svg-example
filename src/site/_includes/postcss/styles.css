@@ -46,10 +46,15 @@ body {
   background: none;
 
   @media (min-width: $wide) {
-    font-size: 18px;
-    background: url(/images/desktop-hero-wisteria.jpg);
+    font-size: 18px;    
     background-size: cover;
   };
+}
+
+.home-body {
+  @media (min-width: $wide){
+    background: url(/images/desktop-hero-wisteria.jpg);
+  }
 }
 
 
@@ -174,19 +179,170 @@ a:focus {
   border-bottom-style: none;
 }
 
-header {
-  background: $page-color;
-  padding: 30px 0;
+.header {
+  background: $page-color;  
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  @media (min-width: $mid) {
+    margin: 46px 0 0 0;
+  } 
+}
+
+
+.header__body {
+  height: 100%;
+  width: 100%;
+  
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $dark-color;
+   
+  padding: 0 20px;
+
   @media (min-width: $wide) {
-    padding: 46px 0 0 0;
+    padding: 0 80px;
   }
 }
+
+.header__logo {
+  /* flex: 0 0 60px; */
+  position: relative;
+  z-index: 3;
+}
+.header__logo img {
+  max-width: 100%;
+  display: block; /*if rounded*/
+}
+.header__burger {
+  display: none;
+}
+.header__burger:before {
+  top: 0;
+}
+.header__burger:after {
+  bottom: 0;
+}
+.header__burger.active span {
+  transform: scale(0);
+}
+.header__menu {
+  flex-grow: 1;
+  max-width: $container-width;
+}
+
+.header__list {  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  @media (min-width: $mid) {
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;        
+  }
+}
+.header__list li {
+  list-style: none;    
+}
+.header__link {
+  color: #0D363F;
+  font-size: 24px;
+  text-decoration: none;
+  border-bottom: none !important;  
+}
+
+@media (max-width: $mid) {
+  body.lock {
+    overflow: hidden;
+  }
+
+  .header__body {
+    height: 50px;
+  }
+  
+  .header__burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    z-index: 3;
+  }
+  .cart__logo {
+    z-index: 3;
+  }
+  .header__burger span {
+    position: absolute;
+    background-color: #fff;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    top: 9px;
+    transition: all 0.3s ease 0s;
+  }
+  .header__burger:before,
+  .header__burger:after {
+    content: '';
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    transition: all 0.3s ease 0s;
+  }
+  .header__burger:before {
+    top: 0;
+  }
+  .header__burger:after {
+    bottom: 0;
+  }
+
+  .header__burger.active:before {
+    transform: rotate(45deg);
+    top: 9px;
+  }
+  .header__burger.active:after {
+    transform: rotate(-45deg);
+    bottom: 9px;
+  }
+
+  .header__menu {
+    position: fixed;
+    z-index: 2;
+    overflow: auto;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease 0s;
+    background-color: #18b5a4;
+    padding: 70px 0 0 0;
+  }
+
+  .header__menu.active {
+    top: 0;
+  }
+
+  .content-section {
+    padding: 70px 0 0 0;
+  }
+
+}
+
+
 
 .logo-lockup {
   height: 50px;
   width: 100%;
   display: flex;
   justify-content: center;
+  /* align-items: center; */
 
   @media (min-width: $wide) {
     background: $dark-color;
@@ -194,11 +350,13 @@ header {
 }
 
 .logo {
-    margin: 0 auto;
-    @media (min-width: $wide) {
-      margin: -12.5px auto 0;
-    }
+    /* margin: 0 auto;
+    @media (min-width: $mid) {
+      margin: 0;
+    } */
 }
+
+
 
 .nav {
 
@@ -606,6 +764,32 @@ footer {
     }
   }
 }
+
+.footer-links{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  @media (max-width: $mid) {
+    flex-direction: column;
+  }
+
+}
+.footer-links__col{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0 50px;
+  
+}
+
+.footer-links__col * {
+  color: black;  
+}
+.footer-links__col > a {
+  border-bottom: none;
+  margin-bottom: 51px;
+}
 /* form */
 #email-sub {
   display: flex;
@@ -660,19 +844,24 @@ footer {
     padding: 0 10px;
   };
 
-  .privacy-paragraph-list{
+  .privacy-paragraph-list {
     background-color: #c0c0c0;
     padding-left: 30px; 
     width: 100%;
   }
 
-  .privacy-paragraph-list__item{
+  .privacy-paragraph-list__item {
     color: black;
     width: 100%;
   }
-  .privacy-paragraph-list__item span{
+  .privacy-paragraph-list__item span {
     float: right;
   }
 
+}
+
+.logo-lockup-extended > a {
+  color: black;
+  border-bottom: none;
 }
 /*  */
