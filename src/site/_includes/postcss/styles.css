@@ -1117,9 +1117,28 @@ footer {
   margin-bottom: 60px !important;
 }
 
-.help-container {
+.help-image-section {
   background: url(../../images/help.svg) no-repeat;
-  background-size: 100%; 
+  height: 120vh;
+}
+
+.help-qa-section {
+  background-color: white;
+  padding: 30px;
+}
+
+.help-qa-section p {
+  font-family: Questrial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 41px;
+
+  color: #000000;
+}
+
+.qa-sign {
+  color: #000000;
 }
 
 .upper-section {
