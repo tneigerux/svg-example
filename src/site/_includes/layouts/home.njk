@@ -12,12 +12,18 @@
   <body>
     <div class="container home-container">
       {% include "navbar.njk" %}
-      <div class="content-section">
-          {{ content | safe }} 
-      </div>      
+      
       <div class="image-section">
-       
-      </div>
+        <div class="mask-sign-box">
+            <h2>Have your<br>mask?</h2>
+            <h3>We'll make sure you never leave home without it.</h3>
+            <div class="amazon-link">
+              <p>BUY NOW</p>
+              <p>on Amazon</p>
+            </div>
+        </div>        
+      </div> 
+
       {% include "footer-extended.njk" %}
     </div>
 
