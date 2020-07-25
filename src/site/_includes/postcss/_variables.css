@@ -19,3 +19,5 @@ $inactive-color:   #cfcfcf;
 
 $screen-var: ((100vw - 320px) / (1280 - 320));
 $container-width: 1280px;
+
+$first-section-margin-top: -96px;

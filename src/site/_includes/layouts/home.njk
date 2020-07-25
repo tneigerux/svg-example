@@ -14,15 +14,26 @@
       {% include "navbar.njk" %}
       
       <div class="image-section">
-        <div class="mask-sign-box">
+        <div class="image-section__sign-box">
             <h2>Have your<br>mask?</h2>
             <h3>We'll make sure you never leave home without it.</h3>
-            <div class="amazon-link">
-              <p>BUY NOW</p>
-              <p>on Amazon</p>
-            </div>
+            <a style="display:block" href="http://amazon.com">
+              <div class="image-section__amazon-link">
+                <p>BUY NOW</p>
+                <p>on Amazon</p>
+              </div>
+            <a/>
         </div>        
       </div> 
+
+      <div class="product-section">
+        <div class="product-section__img-box">
+          <img src="../../images/product-shot1.svg">
+        </div>
+        <div class="product-section__text-box">
+
+        </div>
+      </div>
 
       {% include "footer-extended.njk" %}
     </div>

@@ -868,26 +868,31 @@ footer {
 }
 /*  */
 
-.home-container {
+.image-section {
   background: url(../../images/woman.svg) no-repeat;
   background-size: 100%; 
+  margin-top: $first-section-margin-top;
 }
 
-.mask-sign-box {
+.image-section__sign-box {
   width: 461px;
   position: relative;
-  top: 350px;
-  left: 143px;
+  margin-top: 500px;
+  margin-left: 143px;
 }
-.mask-sign-box > * {
+.image-section__sign-box > * {
   color: white;
 }
 
-.mask-sign-box > h2{
+.image-section__sign-box > h2{  
   font-size: 64px;
 }
 
-.amazon-link {
+.image-section__sign-box > h3{
+  margin-top: 100px;
+}
+
+.image-section__amazon-link {
   background-color: #6BCADF;
   width: 300px;
   height: 80px;
@@ -900,13 +905,23 @@ footer {
   justify-content: center;
   align-items: center;
 
-  position: relative;
-  top: 37px;
+  margin-top: 37px;
+  margin-bottom: 97px;
   p {
     margin: 0;
     font-size: 24px;
+    font-weight: 700;
     color: #165A69;
   }
+}
+
+.product-section__text-box {
+  width: 590px;
+  background-color: #E1D1E9;
+}
+
+.product-section__text-box * {  
+  color: #243315;
 }
 
 
