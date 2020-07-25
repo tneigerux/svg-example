@@ -866,10 +866,10 @@ footer {
 }
 /*  */
 
+
+
 .image-section {
-  background: url(../../images/woman.svg) no-repeat;
-  background-size: 100%; 
-  margin-top: $first-section-margin-top;
+  background: url(../../images/woman.svg) no-repeat;  
 }
 
 .image-section__sign-box {
@@ -1025,9 +1025,46 @@ footer {
 
 
 
-.app-container {
-  background: url(../../images/iphone.svg) no-repeat;
-  background-size: 100%; 
+
+.app-image-section {
+  background: url(../../images/iphone-11-landscape.svg) no-repeat;
+  margin-top: $first-section-margin-top;
+}
+
+.app-image-section__box {
+  margin-top: 184px;
+  margin-left: 150px;
+}
+
+.app-image-section h1 {
+  width: 434px;
+  font-family: Questrial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 66px;  
+
+  margin-bottom: 36px;
+
+  color: #691B93;
+}
+
+.app-image-section h3 {
+  width: 691px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+
+  margin-bottom: 36px;
+
+  color: #364C1F;
+}
+
+.app-image-section img {
+  border-radius: 30px;
+  margin-bottom: 100px;
 }
 
 .about-container {
@@ -1038,4 +1075,9 @@ footer {
 .help-container {
   background: url(../../images/help.svg) no-repeat;
   background-size: 100%; 
+}
+
+.upper-section {
+  background-size: 100%; 
+  margin-top: $first-section-margin-top;
 }
