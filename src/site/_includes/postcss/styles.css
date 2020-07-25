@@ -71,11 +71,9 @@ body {
 
 .container {
   width: 100%;
-  /* max-width: $container-width; */
   text-align: left;
   margin: 0 auto;
   padding: 0;
-  height: 3140px;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -252,7 +250,7 @@ a:focus {
   list-style: none;    
 }
 .header__link {
-  color: #0D363F;
+  color: #0D363F !important;
   font-size: 24px;
   text-decoration: none;
   border-bottom: none !important;  
@@ -868,27 +866,282 @@ footer {
 }
 /*  */
 
-.home-container {
-  background: url(../../images/woman.svg) no-repeat;
-  background-size: 100%; 
+
+
+.image-section {
+  background: url(../../images/woman.svg) no-repeat;  
 }
 
-.sensor-container {
+.image-section__sign-box {
+  width: 461px;
+  position: relative;
+  margin-top: 500px;
+  margin-left: 143px;
+}
+.image-section__sign-box > * {
+  color: white;
+  font-family: Questrial;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.image-section__sign-box > h2{  
+  font-size: 64px;
+}
+
+.image-section__sign-box > h3{
+  margin-top: 100px;
+}
+
+.image-section__amazon-link {
+  display: block;
+
+  background-color: #6BCADF;
+  width: 300px;
+  height: 80px;
+  
+  border: 4px solid #165A69;
+  border-radius: 40px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 37px;
+  margin-bottom: 97px;
+  p {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: #165A69;
+  }
+}
+
+.product-section {
+  background-color: #E1D1E9;
+  height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 40px;
+  padding-right: 142px;
+}
+
+.product-section__text-box {
+  width: 590px;
+}
+
+.product-section__text-box h2 {  
+  color: #243315;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 40px;
+}
+
+
+.sensor-image-section {
   background: url(../../images/sensor.svg) no-repeat;
   background-size: 100%; 
+  background-position: top;
+  margin-top: $first-section-margin-top;
 }
 
-.app-container {
-  background: url(../../images/iphone.svg) no-repeat;
-  background-size: 100%; 
+.sensor-image-section__sign-box h1{
+  color: #691B93;
+  font-family: Questrial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 66px;
 }
 
-.about-container {
+.sensor-image-section__sign-box h2{
+  color: #364C1F;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 40px;
+}
+
+.sensor-image-section__sign-box {
+  margin: 217px 41px 150px auto !important;
+  width: 691px;
+}
+
+.sensor-image-section__sign-box  h3:nth-of-type(2) {
+  margin-top: 50px;
+}
+
+.sensor-info-section {
+  background-color: white;
+}
+
+.sensor-info-section__inner-box {
+  margin: 60px 40px 200px 40px;
+}
+
+.sensor-info-section__inner-box h2{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 40px;
+
+  color: #364C1F;
+}
+
+.sensor-info-section__inner-box h3{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+
+  color: #364C1F;
+
+  margin-bottom: 21px;
+}
+
+.sensor-info-section__inner-box h2:first-child{
+  font-family: Questrial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 41px;
+
+  margin-bottom: 28px;
+}
+
+.sensor-info-section__inner-box h2:nth-child(2){
+  margin-bottom: 26px;
+}
+
+
+
+
+.app-image-section {
+  background: url(../../images/iphone-11-landscape.svg) no-repeat;
+  margin-top: $first-section-margin-top;
+}
+
+.app-image-section__box {
+  margin-top: 184px;
+  margin-left: 150px;
+}
+
+.app-image-section h1 {
+  width: 434px;
+  font-family: Questrial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 66px;  
+
+  margin-bottom: 36px;
+
+  color: #691B93;
+}
+
+.app-image-section h3 {
+  width: 691px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+
+  margin-bottom: 36px;
+
+  color: #364C1F;
+}
+
+.app-image-section img {
+  border-radius: 30px;
+  margin-bottom: 100px;
+}
+
+.about-image-section {
   background: url(../../images/about.svg) no-repeat;
-  background-size: 100%; 
 }
 
-.help-container {
+.about-image-section__box {
+  width: 833px;  
+  margin-top: 200px;
+  margin-left: 40px;
+}
+
+.about-image-section__box * {
+  color: #364C1F;
+}
+
+.about-image-section__box h2 {
+  font-family: Questrial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 41px;
+
+  margin-bottom: 40px;
+}
+
+.about-image-section__box h3 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+
+  margin-bottom: 30px;
+}
+
+.about-image-section__box p {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.about-image-section__box p:first-of-type {
+  margin-bottom: 150px !important;
+}
+
+.about-image-section__box p:last-of-type {
+  margin-bottom: 60px !important;
+}
+
+.help-image-section {
   background: url(../../images/help.svg) no-repeat;
+  height: 120vh;
+}
+
+.help-qa-section {
+  background-color: white;
+  padding: 30px;
+}
+
+.help-qa-section p {
+  font-family: Questrial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 41px;
+
+  color: #000000;
+}
+
+.qa-sign {
+  color: #000000;
+}
+
+.upper-section {
   background-size: 100%; 
+  margin-top: $first-section-margin-top;
 }

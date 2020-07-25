@@ -12,12 +12,27 @@
   <body>
     <div class="container home-container">
       {% include "navbar.njk" %}
-      <div class="content-section">
-          {{ content | safe }} 
-      </div>      
-      <div class="image-section">
-       
+      
+      <div class="image-section upper-section">
+        <div class="image-section__sign-box">
+            <h1>Have your<br>mask?</h1>
+            <h2>We'll make sure you never leave home without it.</h2>
+            <a class="image-section__amazon-link" href="http://amazon.com">
+                <p>BUY NOW</p>
+                <p>on Amazon</p>
+            <a/>
+        </div>        
+      </div> 
+
+      <div class="product-section">
+
+        <img src="../../images/product-shot1.svg">
+
+        <div class="product-section__text-box">
+          <h2>All smartphones have reminders, but atendit is different. Other reminder systems are limited to the calendar, clock, or GPS. The atendit system leverages our atendit sensor, which uses motion detection & bluetooth to alert, remind, & notify you based on custom rules you tailor using the atendit app.</h2>
+        </div>
       </div>
+
       {% include "footer-extended.njk" %}
     </div>
 
