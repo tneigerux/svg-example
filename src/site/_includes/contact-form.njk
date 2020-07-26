@@ -1,4 +1,4 @@
-<form class="contact-form expand-form">
+<form class="contact-form expand-form form-invisible" name="contact-form" id="contact-form" data-netlify="true" method="POST" onsubmit="document.querySelector('.contact-form').classList.add('form-invisible');document.querySelector('#expand-form').classList.remove('form-invisible');>
     <h3 class="contact-form-sign">Contact Us</h3>
 
     <p>First Name</p>
@@ -11,8 +11,8 @@
     <p>Your message to us:</p>
     <textarea id="subject" class="form-text-area" name="subject" style="height:200px"></textarea>
 
-    <input type="submit" class="submit-button" value="Deliver Message">
+    <input type="submit" class="contact-form-submit" value="Deliver Message">
 
     <p>We also monitor Facebook Messenger and our social DMs if that’s easier for you.</p>
 
-  </form>
+</form>

@@ -3,6 +3,7 @@
     top: 114px;
     right: 0;
   }
+
   
 .contact-form {
   display: flex;
@@ -36,7 +37,7 @@
   margin-bottom: 12px;
 }
 
-.contact-form .submit-button {
+.contact-form .contact-form-submit {
   margin-bottom: 61px;
   width: 300px;
   height: 80px;
@@ -56,4 +57,8 @@
   line-height: 21px;
 
   color: #000000;
+}
+
+.form-invisible {
+  display: none;
 }
