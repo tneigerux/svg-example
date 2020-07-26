@@ -37,10 +37,10 @@ eventHandler('.expand-form', 'click', function(){
   //IE9 support?
 });
 
-// eventHandler('.contact-form', 'submit', function(){
-//   document.querySelector('.contact-form').classList.add('form-invisible');
-//   document.querySelector('#expand-form').classList.remove('form-invisible');
-// });
+eventHandler('.contact-form', 'submit', function(){
+  document.querySelector('.contact-form').classList.add('form-invisible');
+  document.querySelector('#expand-form').classList.remove('form-invisible');
+});
 
 // Switch gif image on the Welcome page - DEPRECATED
 
