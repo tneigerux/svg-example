@@ -105,8 +105,7 @@ h1 {
   margin-top: 0;
   margin-bottom: 0.2em;
   line-height: 1;
-  font-size: calc(40px + 56 * $screen-var);
-
+  font-size: 40px;
   @media (min-width: $wide) {
     font-size: 96px;/* max font-size */
   }
@@ -114,7 +113,7 @@ h1 {
 
 
 h2 {
-  font-size: calc(30px + 18 * $screen-var);/*calculated font-size*/
+  font-size: 30px;/*calculated font-size*/
   margin: 0.5em 0;
   padding: 0px;
   @media (min-width: $wide) {
@@ -124,7 +123,7 @@ h2 {
 
 h3 {
   font-family: 'Roboto', sans-serif;
-  font-size: calc(24px + 12 * $screen-var);/*calculated font-size*/
+  font-size: 24px;/*calculated font-size*/
 
   @media (min-width: $wide) {
     font-size: 36px;/* max font-size */
@@ -869,15 +868,34 @@ footer {
 
 
 .image-section {
-  background: url(../../images/woman.svg) no-repeat;  
+  background: url(../../images/woman.svg) no-repeat;
+  position: relative;  
+  background-size: contain;
+  width: 100%;
+  /* height: 0; */
+  padding-top: 66%; /*for the background to fit the div size*/
+}
+
+.image-section__stripe{
+  position: absolute; 
+  bottom: 0;
+  width: 100%;
 }
 
 .image-section__sign-box {
-  width: 461px;
-  position: relative;
-  margin-top: 500px;
-  margin-left: 143px;
+  width: 30%;
+  position: absolute; 
+  
+  margin-left: 50px;
+  /* margin-top: -500px; */
+  margin-top: -50%;
+  @media (min-width: $wide) {
+    /* margin-top: -700px; */
+    margin-top: -40%;
+    margin-left: 143px;
+  }; 
 }
+
 .image-section__sign-box > * {
   color: white;
   font-family: Questrial;
@@ -885,17 +903,22 @@ footer {
   font-weight: normal;
 }
 
-.image-section__sign-box > h2{  
-  font-size: 64px;
+.image-section__sign-box > h1{  
+  font-size: 36px;
+  @media (min-width: $wide) {
+    font-size: 64px;
+  };  
 }
 
-.image-section__sign-box > h3{
-  margin-top: 100px;
+.image-section__sign-box > h2{  
+  font-size: 24px;
+  @media (min-width: $wide) {
+    margin-top: 50px;
+    font-size: 36px;
+  };
 }
 
 .image-section__amazon-link {
-  display: block;
-
   background-color: #6BCADF;
   width: 300px;
   height: 80px;
@@ -907,9 +930,12 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  margin-top: 37px;
-  margin-bottom: 97px;
+  /* margin-top: 37px; */
+  
+  @media (min-width: $wide) {
+    margin-top: 37px;
+    margin-bottom: 97px;
+  };
   p {
     margin: 0;
     font-size: 24px;
@@ -957,6 +983,14 @@ footer {
   font-weight: normal;
   font-size: 64px;
   line-height: 66px;
+}
+
+.sensor-image-section__sign-box h3{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 40px;
 }
 
 .sensor-image-section__sign-box h2{
@@ -1034,10 +1068,10 @@ footer {
 .app-image-section__box {
   margin-top: 184px;
   margin-left: 150px;
+  max-width: 50%;
 }
 
 .app-image-section h1 {
-  width: 434px;
   font-family: Questrial;
   font-style: normal;
   font-weight: normal;
@@ -1050,7 +1084,7 @@ footer {
 }
 
 .app-image-section h3 {
-  width: 691px;
+
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
@@ -1141,7 +1175,9 @@ footer {
   color: #000000;
 }
 
-.upper-section {
-  background-size: 100%; 
-  margin-top: $first-section-margin-top;
+
+
+.upper-section {  
+    margin-top: $first-section-margin-top;   
+    background-size: cover;
 }
