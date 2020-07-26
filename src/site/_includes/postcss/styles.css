@@ -1186,3 +1186,6 @@ footer {
     margin-top: $first-section-margin-top;   
     background-size: cover;
 }
+
+
+@import '_contact-form.css';
