@@ -1,24 +1,18 @@
- <div class="contact-form-container">
-     <h3 class="contact-form-sign">Contact Us</h3>
-  <form action="action_page.php">
+<form class="contact-form expand-form form-invisible" name="contact-form" id="contact-form" data-netlify="true" method="POST" onsubmit="document.querySelector('.contact-form').classList.add('form-invisible');document.querySelector('#expand-form').classList.remove('form-invisible');>
+    <h3 class="contact-form-sign">Contact Us</h3>
 
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    <p>First Name</p>
+    <input type="text" class="form-input" name="firstname">
 
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    <p>Your email address or phone #</p>
+    <input type="text" class="form-input" name="email">
 
-    <label for="country">Country</label>
-    <select id="country" name="country">
-      <option value="australia">Australia</option>
-      <option value="canada">Canada</option>
-      <option value="usa">USA</option>
-    </select>
 
-    <label for="subject">Subject</label>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+    <p>Your message to us:</p>
+    <textarea id="subject" class="form-text-area" name="subject" style="height:200px"></textarea>
 
-    <input type="submit" value="Submit">
+    <input type="submit" class="contact-form-submit" value="Deliver Message">
 
-  </form>
-</div> 
+    <p>We also monitor Facebook Messenger and our social DMs if that’s easier for you.</p>
+
+</form>

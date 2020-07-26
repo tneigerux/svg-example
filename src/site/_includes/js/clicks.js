@@ -29,7 +29,20 @@ eventHandler('.header__burger', 'click', function(){
   //IE9 support?
 });
 
-// Switch gif image on the Welcome page
+// Show-hide contact-form
+
+eventHandler('.expand-form', 'click', function(){
+  document.querySelector('#expand-form').classList.add('form-invisible');
+  document.querySelector('.contact-form').classList.remove('form-invisible');
+  //IE9 support?
+});
+
+// eventHandler('.contact-form', 'submit', function(){
+//   document.querySelector('.contact-form').classList.add('form-invisible');
+//   document.querySelector('#expand-form').classList.remove('form-invisible');
+// });
+
+// Switch gif image on the Welcome page - DEPRECATED
 
 function showImg(evt, imgId){
   var i, tabcontent, tablinks;
