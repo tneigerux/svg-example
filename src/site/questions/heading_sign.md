@@ -5,4 +5,4 @@ category: sensor
 date: 2016-01-01
 ---
 
-## Questions & Answers
+## FAQs
