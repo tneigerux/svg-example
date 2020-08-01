@@ -21,11 +21,11 @@
     <div class="container home-container">
       {% include "navbar.njk" %}
       
-      <div class="image-section upper-section" style="background: url({{ himgpath himgfilename }}) no-repeat;">
+      <div class="image-section upper-section" style="background: url({{ himgpath }}{{ himgfilename }}) no-repeat;">
         <div class="image-section__sign-box">
             <h1>{{ head }}</h1>
             <h2>{{ subhead }}</h2>
-            <a class="image-section__amazon-link" href="https://www.atendit.com">
+            <a class="image-section__amazon-link" href="{{ ctalink }}">
                 <p>BUY NOW</p>
                 <p>on Amazon</p>
             </a>
