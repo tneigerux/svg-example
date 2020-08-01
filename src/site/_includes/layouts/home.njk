@@ -4,6 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.png" sizes="16x16">  
+    <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32">  
+    <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.png" sizes="96x96">  
+    <link rel="apple-touch-icon" href="older-iPhone.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/iPhone-6-Plus.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/iPad-Retina.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="/images/favicons/iPad-Pro.png">
+
     <link rel="stylesheet" href="/css/styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Questrial|Roboto&display=swap" rel="stylesheet">
@@ -15,15 +23,13 @@
       
       <div class="image-section upper-section">
         <div class="image-section__sign-box">
-            <h1>Have your<br>mask?</h1>
-            <h2>We'll make sure you never leave home without it.</h2>
+            <h1>{{ head }}</h1>
+            <h2>{{ subhead }}</h2>
             <a class="image-section__amazon-link" href="https://www.atendit.com">
                 <p>BUY NOW</p>
                 <p>on Amazon</p>
             </a>
         </div>     
-
-        <img class="image-section__stripe" src="../../images/purp-stripe.svg">  
       </div> 
 
       <div class="product-section">
@@ -31,7 +37,7 @@
         <img src="../../images/product-shot1.svg">
 
         <div class="product-section__text-box">
-          <h2>All smartphones have reminders, but atendit is different. Other reminder systems are limited to the calendar, clock, or GPS. The atendit system leverages our atendit sensor, which uses motion detection & bluetooth to alert, remind, & notify you based on custom rules you tailor using the atendit app.</h2>
+          {{ content | safe }}
         </div>
       </div>
 
