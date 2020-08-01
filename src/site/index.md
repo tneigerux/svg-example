@@ -9,4 +9,4 @@ himgfilename: hero-image-mask.jpg
 ctalink: https://www.amazon.com/dp/B089NB883H
 ---
 
-## All smartphones have reminders, but atendit is different. Other reminder systems are limited to the calendar, clock, or GPS. The atendit system leverages our atendit sensor, which uses motion detection & bluetooth to alert, remind, & notify you based on custom rules you tailor using the atendit app.
+## All smartphones have reminders, but atendit is different. Other reminder systems are limited to the calendar, clock, or GPS. The atendit system leverages our atendit sensor, which uses motion detection & bluetooth to remind, notify & alert you based on custom rules you tailor using the atendit app.
