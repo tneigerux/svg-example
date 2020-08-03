@@ -51,12 +51,6 @@ body {
   };
 }
 
-.home-body {
-  @media (min-width: $wide){
-    background: url(/images/desktop-hero-wisteria.jpg);
-  }
-}
-
 
 .main-section{
   height: 1440px;
@@ -974,7 +968,7 @@ footer {
 
 
 .sensor-image-section {
-  background: url(../../images/sensor.svg) no-repeat;
+  background: url(../../images/bg-sensor-desk.jpg) no-repeat;
   background-size: 100%; 
   background-position: top;
   margin-top: $first-section-margin-top;
@@ -1065,7 +1059,7 @@ footer {
 
 
 .app-image-section {
-  background: url(../../images/iphone-11-landscape.svg) no-repeat;
+  background: url(../../images/bg-help-desk.jpg) no-repeat;
   margin-top: $first-section-margin-top;
 }
 
@@ -1106,7 +1100,7 @@ footer {
 }
 
 .about-image-section {
-  background: url(../../images/about.svg) no-repeat;  
+  background: url(../../images/bg-about-desk.jpg) no-repeat;  
 }
 
 .about-image-section__box {
@@ -1156,7 +1150,7 @@ footer {
 }
 
 .help-image-section {
-  background: url(../../images/help.svg) no-repeat;
+  background: url(../../images/bg-help-desk.jpg) no-repeat;
   height: 120vh;
 }
 
