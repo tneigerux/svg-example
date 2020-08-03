@@ -26,6 +26,7 @@
     width: 100%;
     border-radius: 30px;
     overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
 
 .comparison-table h4 {
@@ -41,7 +42,7 @@
     justify-content: space-between;
 }
 
-.comparison-table__col {
+.comparison-table__cell {
     width: 16.67%;
     min-width: 16.67%;
     max-width: 16.67%;
@@ -49,7 +50,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px;
+    padding: 10px;
 }
 
 .left-col {
@@ -63,7 +64,7 @@
     height: 200px;
 }
 
-.header-row > .comparison-table__col {
+.header-row > .comparison-table__cell {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -76,6 +77,25 @@
     font-size: 20px;
 }
 
-.header-row > .comparison-table__col:nth-child(2), .comparison-table__col:nth-child(3) {
+.header-row > .comparison-table__cell:nth-child(2), .comparison-table__cell:nth-child(3) {
     justify-content: flex-start;
+}
+
+/* EVEN == ODD ?? */
+.comparison-table__row:nth-child(even){
+    .comparison-table__cell:nth-child(odd){
+        background-color: #FFFFFF;
+    }
+    .comparison-table__cell:nth-child(even){
+        background-color: #FAFAFA;
+    }
+}
+
+.comparison-table__row:nth-child(odd){
+    .comparison-table__cell:nth-child(odd){
+        background-color: #EAF7FA;
+    }
+    .comparison-table__cell:nth-child(even){
+        background-color: #D5F0F6;
+    }
 }
