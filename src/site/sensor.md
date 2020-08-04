@@ -5,9 +5,9 @@ layout: layouts/sensor.njk
 ctalink: https://www.amazon.com/dp/B089NB883H
 info: Product Information
 desc: Product Description
-x1: The atendit Sensor is a high-performance, customizable Bluetooth V5.0 Low Energy Beacon with an accelerometer for advanced motion detection functionality. This small and rugged unit comes fully encapsulated with a resin based polymer for protection against dust and liquids and reliable use in harsh environmental conditions.
+proddesc: The atendit Sensor is a high-performance, customized Bluetooth V5.0 Low Energy Beacon with an accelerometer for advanced motion detection functionality. This small and rugged unit comes fully encapsulated with a resin based polymer for protection against dust and liquids and reliable use both indoors and outdoors in harsh environmental conditions.
 maninfo: Manufacturer Information
-maninfodesc: The atendit Sensor is contract manufactured and programmed by EM Microelectronic - Marin SA. Its programming has been custom tailored to match Did U Remember To LLC's specifications.
+maninfodesc: The atendit Sensor is contract manufactured and programmed by EM Microelectronic - Marin SA. Its programming has been custom tailored to match Did U Remember To LLC's specifications. This device has a line of site rang of approximately 33 meters, it weighs 7 grams (1/4 ounce) and measures 32.3 X 22.3 X 5.3 mm ( 1.27 X .88 X .21 inches).
 ---
 
 # The atendit Sensor
