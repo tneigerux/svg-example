@@ -1,9 +1,12 @@
 ---
-title: Atendit - Solutions for the home and for work
-subtitle: A unique reminder stystem
+title: Atendit
+subtitle: Contributors / References
 layout: layouts/base.njk
 ---
 
 Photography
 
 * Sailboat Photo by GEORGE DESIPRIS from Pexels
+* Mask Photo by Anna Shvets from Pexels
+* Scooter Photo by Nathan Salt from Pexels
+* Puppy Photo by Andreas Wohlfahrt from Pexels
