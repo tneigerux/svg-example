@@ -4,6 +4,11 @@
     right: 0;
   }
 
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
   
 .contact-form {
   display: flex;

@@ -37,12 +37,20 @@ eventHandler('.expand-form', 'click', function(){
   //IE9 support?
 });
 
-eventHandler('.contact-form', 'submit', function(){
-  document.querySelector('.contact-form').classList.add('form-invisible');
-  document.querySelector('#expand-form').classList.remove('form-invisible');
+eventHandler('.contact-form', 'submit', () => closeForm());
+eventHandler('.close-form-btn', 'click', () => closeForm());
+document.addEventListener('keydown', (event) => {
+  if (event.code == 'Escape') {
+    closeForm();
+  }
 });
 
 // Switch gif image on the Welcome page - DEPRECATED
+
+function closeForm(){
+  document.querySelector('.contact-form').classList.add('form-invisible');
+  document.querySelector('#expand-form').classList.remove('form-invisible');
+}
 
 function showImg(evt, imgId){
   var i, tabcontent, tablinks;

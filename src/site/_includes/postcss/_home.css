@@ -51,6 +51,9 @@
     justify-content: center;
     align-items: center;
     padding: 10px;
+
+    /* background: linear-gradient(90deg, rgba(101, 109, 131, 0) 51.04%, rgba(101, 109, 131, 0.5) 100%); */
+    box-shadow: -5px 0 10px rgba(101, 109, 131, 0.5);
 }
 
 .left-col {
