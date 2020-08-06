@@ -1,0 +1,17 @@
+.app-feature-section {
+    height: 540px;
+    width: 100%;
+    position: relative;
+}
+
+.app-feature-section__main {
+    content: "";
+    position: absolute;
+    left: 100px;
+    width: 800px;
+    height: 540px;
+    z-index: -1;
+    background-color: #30ACC8;
+    -ms-transform: skewX(-20deg); /* IE 9 */
+    transform: skewX(-20deg);
+}

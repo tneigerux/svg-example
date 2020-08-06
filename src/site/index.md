@@ -6,6 +6,7 @@ layout: layouts/home.njk
 head: Have your mask?
 subhead: We'll make sure you never leave home without it.
 himgfilename: hero-image-mask.jpg
+checkfilename: tweeter.svg
 ctalink: https://www.amazon.com/dp/B089NB883H
 comparisonsign: How is atendit different?
 comparisontext: atendit, unlike any other reminder apps, reminds you as you open the door to leave your home, apartment or office.  Not based on clock time or outside GPS location as other reminders are, atendit reminds you “just in time”.  atendit uses a Sensor, a Bluetooth Low Energy Beacon, that detects movement and briefly transmits that the door has moved triggering the atendit app to immediately issues a Notification containing your reminder information.
