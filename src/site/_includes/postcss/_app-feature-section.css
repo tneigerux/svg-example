@@ -5,17 +5,40 @@
 }
 
 .app-feature-section__main {
+    position: relative;
+    height: 540px;
+    width: 100%;
+}
+
+.app-feature-section__skewed {
+    position: absolute;
     left: 100px;
     width: 800px;
-    height: 540px;
+    height: 100%;
     z-index: -1;
-    background-color: #30ACC8;
     -ms-transform: skewX(-20deg); /* IE 9 */
     transform: skewX(-20deg);
 }
 
-.app-feature-section__bottom {
+.skewed-tab-1 {
+    left: 100px;
+    z-index: -1;
     background-color: #30ACC8;
+}
+.skewed-tab-2 {
+    left: 150px;
+    z-index: -2;
+    background-color: #228FA7;
+}
+.skewed-tab-3 {
+    left: 200px;
+    z-index: -3;
+    background-color: #1A6B7D;
+}
+
+.app-feature-section__bottom {
+    position: relative;
+    background-color: #228FA7;
     padding: 10px;
     width: 100%;
     height: 120px;
@@ -53,7 +76,7 @@
 .bottom-border {
     height: 100%;
     width: 20px;
-    background-color: #30ACC8;
+    background-color: #228FA7;
     -ms-transform: skewX(-20deg); /* IE 9 */
     transform: skewX(-20deg);
 }
