@@ -7,7 +7,15 @@
 .app-feature-section__main {
     position: relative;
     height: 540px;
-    width: 100%;
+    width: 100%;    
+}
+
+.app-feature-section__img {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    z-index: -5;
+    /* rotate -15deg to be added */
 }
 
 .app-feature-section__text {
