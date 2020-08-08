@@ -65,6 +65,33 @@
     background-color: #1A6B7D;
 }
 
+.app-feature-section__stripe {
+    position: absolute;
+    top: 0;
+    height: 14px;
+    width: 50%;
+    z-index: -4;
+}
+
+.upper-left-stripe {
+    left: 0;
+    background-color: #30ACC8;
+}
+
+.upper-right-stripe {
+    right: 0;
+    background: linear-gradient(270deg, #30ACC8 8.34%, #1A6B7D 100%);
+}
+
+.lower-left-stripe {
+    position: absolute;
+    bottom: 0;
+    height: 14px;
+    width: 42%;
+    z-index: 0;
+    background-color: #228FA7;
+}
+
 .app-feature-section__bottom {
     position: relative;
     background-color: #228FA7;
