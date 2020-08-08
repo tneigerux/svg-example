@@ -833,9 +833,15 @@ footer {
   align-items: flex-start;
   justify-content: flex-start;
 
-  @media (max-width: $container-width) {
-    padding: 0 10px;
-  };
+  padding: 93px 20px 40px;
+  * {
+    color: black;
+  }
+  a {
+    text-decoration: none;
+    border-bottom: none;
+    color: black !important;
+  }
 
   .privacy-paragraph-list {
     background-color: #c0c0c0;
