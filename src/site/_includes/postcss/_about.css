@@ -1,0 +1,51 @@
+
+.about-image-section {
+    background: url(../../images/bg-about-desk.jpg) no-repeat;  
+  }
+  
+  .about-image-section__box {
+    max-width: 833px;  
+    margin-top: 200px;
+    margin-left: 40px;
+  }
+  
+  .about-image-section__box * {
+    color: #364C1F;
+  }
+  
+  .about-image-section__box h2 {
+    font-family: Questrial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 41px;
+  
+    margin-bottom: 40px;
+  }
+  
+  .about-image-section__box h3 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+  
+    margin-bottom: 30px;
+  }
+  
+  .about-image-section__box p {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+  }
+/*   
+  .about-image-section__box p:first-of-type {
+    margin-bottom: 150px !important;
+  }
+  
+  .about-image-section__box p:last-of-type {
+    margin-bottom: 60px !important;
+  }
+   */
