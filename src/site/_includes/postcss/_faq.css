@@ -1,0 +1,31 @@
+.help-image-section {
+    background: url(../../images/bg-help-desk.jpg);
+    background-size: cover;
+    padding-top: 96px;
+  }
+  
+  .help-qa-section {
+    /* background-color: white; */
+    padding: 30px;
+  }
+  
+  .help-qa-section p {
+    font-family: Questrial;
+    font-style: normal;
+    font-weight: normal;  
+  
+    color: #000000;
+  }
+
+  .help-qa-section h2 {
+    font-family: Questrial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+
+  }
+  
+  .qa-sign * {
+    color: #000000;
+  }
+  

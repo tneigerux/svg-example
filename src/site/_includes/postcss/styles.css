@@ -127,7 +127,7 @@ h3 {
 
 p {
   color: $text-color;
-  font-size: calc(20px + 16 * $screen-var); /*calculated font-size*/
+  font-size: 18px;
   line-height: 1.2em;
   padding-bottom: 0.4em;
 
@@ -826,38 +826,7 @@ footer {
 /* / footer */
 
 /*  */
-.legacy-info-section{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
 
-  padding: 93px 30px 40px;
-  * {
-    color: black;
-  }
-  a {
-    text-decoration: none;
-    border-bottom: none;
-    color: black !important;
-  }
-
-  .privacy-paragraph-list {
-    background-color: #c0c0c0;
-    padding-left: 30px; 
-    width: 100%;
-  }
-
-  .privacy-paragraph-list__item {
-    color: black;
-    width: 100%;
-  }
-  .privacy-paragraph-list__item span {
-    float: right;
-  }
-
-}
 
 .logo-lockup-extended > a {
   color: black;
@@ -1155,38 +1124,15 @@ footer {
   margin-bottom: 60px !important;
 }
 
-.help-image-section {
-  background: url(../../images/bg-help-desk.jpg) no-repeat;
-  height: 120vh;
-}
-
-.help-qa-section {
-  background-color: white;
-  padding: 30px;
-}
-
-.help-qa-section p {
-  font-family: Questrial;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 40px;
-  line-height: 41px;
-
-  color: #000000;
-}
-
-.qa-sign * {
-  color: #000000;
-}
-
-
 
 .upper-section {  
-    margin-top: $first-section-margin-top;   
-    background-size: cover;
+  margin-top: $first-section-margin-top;   
+  background-size: cover;
 }
-
 
 @import '_contact-form.css';
 @import '_home.css';
 @import '_app-feature-section.css';
+@import '_faq.css';
+@import '_legacy-info.css';
+

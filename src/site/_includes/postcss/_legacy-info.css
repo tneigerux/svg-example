@@ -1,0 +1,32 @@
+.legacy-info-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  
+    padding: 93px 30px 40px;
+    * {
+      color: black;
+    }
+    a {
+      text-decoration: none;
+      border-bottom: none;
+      color: black !important;
+    }
+  
+    .privacy-paragraph-list {
+      background-color: #c0c0c0;
+      padding-left: 30px; 
+      width: 100%;
+    }
+  
+    .privacy-paragraph-list__item {
+      color: black;
+      width: 100%;
+    }
+    .privacy-paragraph-list__item span {
+      float: right;
+    }
+  
+  }
