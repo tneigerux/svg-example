@@ -1,6 +1,7 @@
 
 .about-image-section {
     background: url(../../images/bg-about-desk.jpg) no-repeat;  
+    background-size: cover;
   }
   
   .about-image-section__box {
