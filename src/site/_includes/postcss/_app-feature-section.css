@@ -87,6 +87,28 @@
     background-color: #1A6B7D;
 }
 
+.app-feature-section__img-part {
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    z-index: -5;
+    overflow: hidden;
+    background: #FAFAFA;
+}
+
+.app-feature-section__img {
+    display: block;
+    margin-top: -5%;
+    height: 460px;
+
+    @media (min-width: $wide) {
+        margin-right: 25px;
+    };
+    -ms-transform: rotate(15deg); /* IE 9 */
+    transform: rotate(15deg);
+}
+
 .app-feature-section__stripe {
     position: absolute;
     top: 0;
