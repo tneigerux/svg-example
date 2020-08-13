@@ -24,11 +24,7 @@
       <div class="image-section upper-section" style="background: url({{ himgpath }}{{ himgfilename }}); background-repeat: no-repeat; background-size: contain;">
         <div class="image-section__sign-box">
             <h1>{{ head }}</h1>
-            <h2>{{ subhead }}</h2>
-            <a class="image-section__amazon-link" href="{{ ctalink }}">
-                <p>BUY NOW</p>
-                <p>on Amazon</p>
-            </a>
+            <h2>{{ subhead }}</h2>            
         </div>     
       </div> 
 
@@ -44,6 +40,8 @@
       <div class="comparison-table-section">
           {% include "comparison-table.njk" %}
       </div>
+      
+      {% include "app-feature-section.njk" %}
 
       {% include "footer-extended.njk" %}
     </div>

@@ -127,16 +127,16 @@ h3 {
 
 p {
   color: $text-color;
-  font-size: calc(20px + 16 * $screen-var); /*calculated font-size*/
+  font-size: 18px;
   line-height: 1.2em;
   padding-bottom: 0.4em;
 
-  @media (min-width: $wide) {
-    font-size: 36px; /* max font-size */
+  /* @media (min-width: $wide) {
+    font-size: 36px;
     line-height: 1.4em;
     padding: 0;
     margin-bottom: 1em;
-  }
+  } */
 }
 
 .subtitle {
@@ -826,32 +826,7 @@ footer {
 /* / footer */
 
 /*  */
-.legacy-info-section{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
 
-  @media (max-width: $container-width) {
-    padding: 0 10px;
-  };
-
-  .privacy-paragraph-list {
-    background-color: #c0c0c0;
-    padding-left: 30px; 
-    width: 100%;
-  }
-
-  .privacy-paragraph-list__item {
-    color: black;
-    width: 100%;
-  }
-  .privacy-paragraph-list__item span {
-    float: right;
-  }
-
-}
 
 .logo-lockup-extended > a {
   color: black;
@@ -966,11 +941,10 @@ footer {
   line-height: 40px;
 }
 
-
 .sensor-image-section {
   background: url(../../images/bg-sensor-desk.jpg) no-repeat;
-  background-size: 100%; 
-  background-position: top;
+  background-size: cover; 
+  background-position: center;
   margin-top: $first-section-margin-top;
 }
 
@@ -1069,6 +1043,13 @@ footer {
   max-width: 50%;
 }
 
+.app-image-section__img {
+  border-radius: 30px;
+  width: 150px;
+  height: 150px;
+  padding: 0;
+}
+
 .app-image-section h1 {
   font-family: Questrial;
   font-style: normal;
@@ -1094,92 +1075,20 @@ footer {
   color: #364C1F;
 }
 
-.app-image-section img {
+.app-image-section svg {
   border-radius: 30px;
   margin-bottom: 100px;
 }
 
-.about-image-section {
-  background: url(../../images/bg-about-desk.jpg) no-repeat;  
-}
-
-.about-image-section__box {
-  max-width: 833px;  
-  margin-top: 200px;
-  margin-left: 40px;
-}
-
-.about-image-section__box * {
-  color: #364C1F;
-}
-
-.about-image-section__box h2 {
-  font-family: Questrial;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 40px;
-  line-height: 41px;
-
-  margin-bottom: 40px;
-}
-
-.about-image-section__box h3 {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 28px;
-
-  margin-bottom: 30px;
-}
-
-.about-image-section__box p {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 21px;
-}
-
-.about-image-section__box p:first-of-type {
-  margin-bottom: 150px !important;
-}
-
-.about-image-section__box p:last-of-type {
-  margin-bottom: 60px !important;
-}
-
-.help-image-section {
-  background: url(../../images/bg-help-desk.jpg) no-repeat;
-  height: 120vh;
-}
-
-.help-qa-section {
-  background-color: white;
-  padding: 30px;
-}
-
-.help-qa-section p {
-  font-family: Questrial;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 40px;
-  line-height: 41px;
-
-  color: #000000;
-}
-
-.qa-sign * {
-  color: #000000;
-}
-
-
-
 .upper-section {  
-    margin-top: $first-section-margin-top;   
-    background-size: cover;
+  margin-top: $first-section-margin-top;   
+  background-size: cover;
 }
-
 
 @import '_contact-form.css';
 @import '_home.css';
+@import '_app-feature-section.css';
+@import '_faq.css';
+@import '_legacy-info.css';
+@import '_about.css';
+
