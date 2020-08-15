@@ -9,6 +9,12 @@
   justify-content: space-between;
   align-items: flex-start;
 }
+
+#expand-form {
+  height: 249px;
+  width: 82px;
+  fill: #691B93;
+}
   
 .contact-form {
   display: flex;
