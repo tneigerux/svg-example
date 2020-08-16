@@ -65,7 +65,7 @@
 .left-col-icon {
     margin-right: 5px;
     @media (min-width: $wide) {
-        margin-right: 10px;
+        margin-right: 24px;
     }
 }
 
