@@ -58,7 +58,15 @@
 
 .left-col {
     display: flex;
-    justify-content: space-between !important;
+    justify-content: flex-start !important;
+    
+}
+
+.left-col-icon {
+    margin-right: 5px;
+    @media (min-width: $wide) {
+        margin-right: 10px;
+    }
 }
 
 .header-row {
