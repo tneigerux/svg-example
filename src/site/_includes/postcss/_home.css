@@ -23,7 +23,7 @@
     width: 30%;
     margin-left: 80px;
     margin-top: 50px;
-    @media (min-width: $mid) {
+    @media (min-width: $wide) {
         margin-top: 96px;
         margin-left: 100px;
     }; 
@@ -109,26 +109,26 @@
 
 .comparison-p {
     display: none;
-    @media (min-width: $mid) {
+    @media (min-width: $wide) {
         display: block;
     };
 }
 
 .comparison-p-mobile {
-    @media (min-width: $mid) {
+    @media (min-width: $wide) {
         display: none;
     };
 }
 
 .comparison-table-big {
     display: none;
-    @media (min-width: $mid) {
+    @media (min-width: $wide) {
         display: block;
     };
 }
 
 .comparison-table-small {
-    @media (min-width: $mid) {
+    @media (min-width: $wide) {
         display: none;
     };
 }
