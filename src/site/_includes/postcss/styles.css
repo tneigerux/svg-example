@@ -211,6 +211,9 @@ a:focus {
   max-width: 100%;
   display: block; /*if rounded*/
 }
+.hamburger-logo {
+  fill: #691B93 !important;
+}
 .header__burger {
   display: none;
 }
@@ -261,22 +264,12 @@ a:focus {
   .header__burger {
     display: block;
     position: relative;
-    width: 30px;
-    height: 20px;
     z-index: 3;
   }
   .cart__logo {
     z-index: 3;
   }
-  .header__burger span {
-    position: absolute;
-    background-color: #fff;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    top: 9px;
-    transition: all 0.3s ease 0s;
-  }
+
   .header__burger:before,
   .header__burger:after {
     content: '';
