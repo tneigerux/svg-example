@@ -94,7 +94,10 @@
 
 .comparison-table-section {
     background-color: #F8FFF0;
-    padding: 44px 40px 20px 40px;
+    padding: 20px;
+    @media (min-width: $wide) {
+        padding: 44px 40px 20px 40px;
+    };    
 }
 
 .comparison-table-section h3 {
@@ -163,9 +166,6 @@
 }
 
 .comparison-table__cell {
-    width: 16.67%;
-    min-width: 16.67%;
-    max-width: 16.67%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -184,7 +184,7 @@
 
 .cell-small {
     width: 25%;
-    min-width: 25%;
+    /* min-width: 25%; */
     max-width: 25%;
 }
 
@@ -217,7 +217,12 @@
 }
 
 .header-row h4 {
-    font-size: 20px;
+    
+    /* font-size: 3vw;
+    @media (min-width: $wide) { */
+        font-size: 20px;
+    /* } */
+    
 }
 
 .comparison-table-big .header-row {
