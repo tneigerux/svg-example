@@ -834,63 +834,6 @@ footer {
 }
 /*  */
 
-.image-section {
-  position: relative;  
-  width: 100%;
-  /* background: url("../../images/hero-images/hero-image-mask.jpg");
-  background-repeat: no-repeat;
-  background-size: contain; */
-  /* height: 0; */
-  padding-top: 66%; /*for the background to fit the div size*/
-}
-
-.image-section__stripe{
-  position: absolute; 
-  bottom: 0;
-  width: 100%;
-}
-
-.image-section__sign-box {
-  width: 30%;
-  position: absolute; 
-  
-  margin-left: 80px;
-  /* margin-top: -500px; */
-  margin-top: -50%;
-  @media (min-width: $mid) {
-    /* margin-top: -700px; */
-    margin-top: -40%;
-    margin-left: 100px;
-  }; 
-  @media (min-width: $wide) {
-    /* margin-top: -700px; */
-    margin-top: -40%;
-    margin-left: 143px;
-  }; 
-}
-
-.image-section__sign-box > * {
-  color: white;
-  font-family: Questrial;
-  font-style: normal;
-  font-weight: normal;
-}
-
-.image-section__sign-box > h1{  
-  font-size: 36px;
-  @media (min-width: $wide) {
-    font-size: 64px;
-  };  
-}
-
-.image-section__sign-box > h2{  
-  font-size: 24px;
-  @media (min-width: $wide) {
-    margin-top: 50px;
-    font-size: 36px;
-  };
-}
-
 .image-section__amazon-link {
   background-color: #6BCADF;
   width: 300px;
@@ -1081,7 +1024,9 @@ footer {
 }
 
 .upper-section {  
-  margin-top: $first-section-margin-top;   
+  @media (min-width: $wide) {
+    margin-top: $first-section-margin-top; 
+};     
   background-size: cover;
 }
 
