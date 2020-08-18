@@ -193,7 +193,7 @@ a:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: $dark-color;
+  background: #FFF;
    
   padding: 0 20px;
 
@@ -858,30 +858,6 @@ footer {
     font-weight: 700;
     color: #165A69;
   }
-}
-
-.product-section {
-  background-color: #E1D1E9;
-  height: 480px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-left: 40px;
-  padding-right: 142px;
-}
-
-.product-section__text-box {
-  width: 590px;
-}
-
-.product-section__text-box h2 {  
-  color: #243315;
-
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 30px;
-  line-height: 40px;
 }
 
 .sensor-image-section {

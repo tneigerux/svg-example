@@ -1,6 +1,10 @@
 .app-feature-section {
+    display: none;
     width: 100%;
     position: relative;
+    @media (min-width: $mid) {
+        display: block;
+    }
 }
 
 .app-feature-section__main {

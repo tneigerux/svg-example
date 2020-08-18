@@ -54,6 +54,42 @@
       font-size: 36px;
     };
   }
+
+
+  /* PRODUCT SECTION */
+  
+  .product-section {
+    background-color: #E1D1E9;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    @media (min-width: $wide) {        
+        flex-direction: row;        
+        padding-left: 40px;
+        padding-right: 142px;
+        img {
+            align-self: flex-start;
+        }
+      }   
+      
+  }
+  
+ 
+  
+  .product-section__text-box h2 {  
+    color: #243315;
+  
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 40px;
+    padding: 20px;
+  }
+  
+  /* / PRODUCT SECTION */
   
 
 .comparison-table-section {
@@ -69,6 +105,32 @@
     line-height: 28px;
     margin-bottom: 16px;
     color: #691B93;
+}
+
+.comparison-p {
+    display: none;
+    @media (min-width: $mid) {
+        display: block;
+    };
+}
+
+.comparison-p-mobile {
+    @media (min-width: $mid) {
+        display: none;
+    };
+}
+
+.comparison-table-big {
+    display: none;
+    @media (min-width: $mid) {
+        display: block;
+    };
+}
+
+.comparison-table-small {
+    @media (min-width: $mid) {
+        display: none;
+    };
 }
 
 .comparison-table-section p {
@@ -114,6 +176,18 @@
     box-shadow: -5px 0 10px rgba(101, 109, 131, 0.5);
 }
 
+.cell-big {
+    width: 16.67%;
+    min-width: 16.67%;
+    max-width: 16.67%;
+}
+
+.cell-small {
+    width: 25%;
+    min-width: 25%;
+    max-width: 25%;
+}
+
 .left-col {
     display: flex;
     justify-content: flex-start !important;
@@ -146,7 +220,7 @@
     font-size: 20px;
 }
 
-.header-row {
+.comparison-table-big .header-row {
     .comparison-table__cell:nth-child(2), .comparison-table__cell:nth-child(3) {
         justify-content: flex-start;
     }    
@@ -170,3 +244,4 @@
         background-color: #D5F0F6;
     }
 }
+
