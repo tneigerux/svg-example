@@ -1,10 +1,10 @@
 .image-section {
     width: 100%;
-    background-position: right;
+    background-position: center;
     /* background: url("../../images/hero-images/hero-image-mask.jpg");
     background-repeat: no-repeat;
     background-size: contain; */
-    /* height: 0; */
+    /* height: 0; */    
 }
 
 .image-section__amazon-box {
@@ -22,8 +22,10 @@
 
 .upper-section__sign-box {
     width: 100%;
+    padding: 100px;
     @media (min-width: $wide) {
         margin-top: 96px;
+        
     }; 
 }
 
