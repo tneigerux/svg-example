@@ -1,5 +1,6 @@
 .image-section {
     width: 100%;
+    background-position: right;
     /* background: url("../../images/hero-images/hero-image-mask.jpg");
     background-repeat: no-repeat;
     background-size: contain; */
@@ -19,35 +20,36 @@
     width: 100%;
 }
 
-.image-section__sign-box {
-    width: 30%;
-    margin-left: 80px;
-    margin-top: 50px;
+.upper-section__sign-box {
+    width: 100%;
     @media (min-width: $wide) {
         margin-top: 96px;
-        margin-left: 100px;
-    }; 
-    @media (min-width: $wide) {
-        margin-left: 143px;
     }; 
 }
 
+.upper-section-sign {
+    margin-left: 20px;
+}
 
-.image-section__sign-box > * {
+
+.upper-section-sign {
     color: white;
     font-family: Questrial;
     font-style: normal;
     font-weight: normal;
+    @media (min-width: $wide) {
+        max-width: 40%;
+      };
   }
   
-  .image-section__sign-box > h1{  
+  .upper-section__sign-box > h1{  
     font-size: 36px;
     @media (min-width: $wide) {
       font-size: 64px;
     };  
   }
   
-  .image-section__sign-box > h2{  
+  .upper-section__sign-box > h2{  
     font-size: 24px;
     @media (min-width: $wide) {
       margin-top: 50px;
@@ -65,15 +67,28 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    padding: 20px;
     @media (min-width: $wide) {        
         flex-direction: row;        
         padding-left: 40px;
         padding-right: 142px;
-        img {
-            align-self: flex-start;
-        }
       }   
       
+  }
+
+  .product-section img {
+    max-width: 100%;
+    @media (min-width: $wide) {   
+        align-self: flex-start;
+    }
+  }
+
+  .amazon-link-box {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
   }
   
  
@@ -84,7 +99,7 @@
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 30px;
+    font-size: clamp(14px, 3vw, 30px);
     line-height: 40px;
     padding: 20px;
   }
@@ -216,13 +231,8 @@
     line-height: 23px;
 }
 
-.header-row h4 {
-    
-    /* font-size: 3vw;
-    @media (min-width: $wide) { */
-        font-size: 20px;
-    /* } */
-    
+.comparison-table__cell.cell-small * {    
+    font-size: clamp(12px, 3vw, 20px);    
 }
 
 .comparison-table-big .header-row {
