@@ -53,7 +53,7 @@
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
+    font-size: clamp(12px, 1vw, 18px);
     line-height: 21px;
     /* margin-bottom: 10px; */
     @media (min-width: $wide) {
