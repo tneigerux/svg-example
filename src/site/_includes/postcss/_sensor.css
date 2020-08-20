@@ -8,6 +8,10 @@
     @media (max-width: $narrow){
       background-position: center;
     }
+    @media (min-width: $wide){
+      background-size: cover; 
+      background-position: top 0 left 30%;
+    }
   }
   
   .sensor-image-section__sign-box h1{
