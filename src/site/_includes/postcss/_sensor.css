@@ -1,9 +1,17 @@
 
 .sensor-image-section {
     background: url(../../images/bg-sensor-desk.jpg) no-repeat;
-    background-size: cover; 
-    background-position: center;
+    background-size: contain; 
     margin-top: $first-section-margin-top;
+    background-color: #C2C1BD;    
+    background-position: top 0 left 40%;
+    @media (max-width: $narrow){
+      background-position: center;
+    }
+    @media (min-width: $wide){
+      background-size: cover; 
+      background-position: top 0 left 30%;
+    }
   }
   
   .sensor-image-section__sign-box h1{
@@ -11,30 +19,39 @@
     font-family: Questrial;
     font-style: normal;
     font-weight: normal;
-    font-size: 64px;
+    font-size: 40px;
     line-height: 66px;
+    text-align: right;
+    margin-bottom: 260px;
+    @media (min-width: $narrow){
+      text-align: left;  
+      margin-bottom: 0;
+      font-size: 64px;
+    }
   }
   
   .sensor-image-section__sign-box h3{
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 30px;
+    font-size: clamp(20px, 2vw, 30px);
     line-height: 40px;
+    display: none;
+    @media (min-width: $narrow){
+      display: block;   
+    }
   }
-  
-  .sensor-image-section__sign-box h2{
-    color: #364C1F;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 30px;
-    line-height: 40px;
-  }
+
   
   .sensor-image-section__sign-box {
-    margin: 217px 41px 30px 20px !important;
-    max-width: 691px;
+    margin: 120px 20px 30px auto;
+    @media (min-width: $narrow){
+      max-width: 50%;   
+      margin: 217px 20px 30px auto;   
+    }
+    @media (min-width: $wide){
+      margin: 217px 41px 30px auto;
+    }
   }
   
   .sensor-image-section__sign-box  h3:nth-of-type(2) {
@@ -87,3 +104,6 @@
     margin-bottom: 26px;
   }
   
+  a {
+    border-bottom: none !important;
+  }
