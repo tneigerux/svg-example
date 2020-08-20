@@ -1,12 +1,12 @@
 
 .sensor-image-section {
     background: url(../../images/bg-sensor-desk.jpg) no-repeat;
-    background-size: cover; 
+    background-size: contain; 
     margin-top: $first-section-margin-top;
     background-color: #C2C1BD;    
     background-position: top 0 left 40%;
-    @media (min-width: $wide){
-
+    @media (max-width: $narrow){
+      background-position: center;
     }
   }
   
