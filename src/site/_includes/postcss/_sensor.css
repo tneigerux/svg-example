@@ -87,3 +87,6 @@
     margin-bottom: 26px;
   }
   
+  a {
+    border-bottom: none !important;
+  }
