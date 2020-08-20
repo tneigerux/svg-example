@@ -24,6 +24,8 @@
 .app-feature-section__text {
     position: absolute;
     background: transparent;
+    max-height: 100%;
+    overflow: hidden;
     width: 30%;
     left: 20%;
     display: flex;
@@ -53,11 +55,11 @@
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: clamp(12px, 1vw, 18px);
+    font-size: clamp(12px, 1.5vw, 18px);
     line-height: 21px;
     /* margin-bottom: 10px; */
     @media (min-width: $wide) {
-        margin-bottom: 20px;
+        margin-bottom: clamp(5px, 1vw, 20px);
     };
 }
 
