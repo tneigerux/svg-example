@@ -17,34 +17,13 @@
     <link href="https://fonts.googleapis.com/css?family=Questrial|Roboto&display=swap" rel="stylesheet">
     <title>{{ title }} - {{ subtitle }}</title>
   </head>
-  <body class="home-body" {% if bodyClass %}class="{{ bodyClass }}"{% endif %}>
-
+  <body>
     <div class="container">
-      {% include "header.njk" %}
-      <div class="main-section">
-        <div class="hero">
-          {{ content | safe }}        
-          <div class="usage">
-            <img id="comm-an" class="usage-art comm tab-img" width="2000" height="1000" alt="Commercial Animation" src="/images/key-visual-comm-ani-g.gif">
-            <img id="resi-an" class="usage-art comm tab-img" width="2000" height="1000" alt="Residental Animation" src="/images/key-visual-resi-ani-g.gif">
-          </div>
-          <img class="app-store app-store-hero" height="80" alt="Soon - iOS App Store" src="/images/app-store-ios.png">
-          {% include "tabsection.njk" %}
-        </div>
-        <section class="sidebar">
-          {%- for element in collections.elements -%}
-            <div class="actions {{ element.data.class }}">
-              {{ element.templateContent | safe }}
-            </div>
-          {%- endfor -%}
-        </section>
-      </div>
-
-      <div class="email-modal">
-        {% include "layouts/esub-form.njk" %}
-      </div>
-      
-      {% include "footer.njk" %}
+      {% include "navbar.njk" %}
+      <div class="legacy-info-section">
+          {{ content | safe }} 
+      </div>      
+      {% include "footer-extended.njk" %}
     </div>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->

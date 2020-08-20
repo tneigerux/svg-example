@@ -1,0 +1,89 @@
+
+.sensor-image-section {
+    background: url(../../images/bg-sensor-desk.jpg) no-repeat;
+    background-size: cover; 
+    background-position: center;
+    margin-top: $first-section-margin-top;
+  }
+  
+  .sensor-image-section__sign-box h1{
+    color: #691B93;
+    font-family: Questrial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 66px;
+  }
+  
+  .sensor-image-section__sign-box h3{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 40px;
+  }
+  
+  .sensor-image-section__sign-box h2{
+    color: #364C1F;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 40px;
+  }
+  
+  .sensor-image-section__sign-box {
+    margin: 217px 41px 30px 20px !important;
+    max-width: 691px;
+  }
+  
+  .sensor-image-section__sign-box  h3:nth-of-type(2) {
+    margin-top: 50px;
+  }
+  
+  .sensor-info-section {
+    background-color: white;
+  }
+  
+  .sensor-info-section__inner-box {
+    margin: 60px 40px 200px 40px;
+  }
+  
+  .sensor-info-section__inner-box h2{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 40px;
+  
+    color: #364C1F;
+  }
+  
+  .sensor-info-section__inner-box h3{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+  
+    color: #364C1F;
+  
+    margin-bottom: 21px;
+  }
+  
+  .sensor-info-section__inner-box h2:first-child{
+    font-family: Questrial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 41px;
+  
+    margin-bottom: 28px;
+  }
+  
+  .sensor-info-section__inner-box h2:nth-child(2){
+    margin-bottom: 26px;
+  }
+  

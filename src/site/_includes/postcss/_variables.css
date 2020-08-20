@@ -1,7 +1,9 @@
 /* breakpoints for media queries */
-$narrow:  238px;
+/* $narrow:  238px;
 $mid:     740px;
-$wide:   1200px;
+$wide:   1200px; */
+$narrow:  443px;
+$wide:   1000px;
 
 /* colors */
     $page-color:   #fff;
@@ -14,3 +16,10 @@ $contrast-color:   #30ACC8;
  $read-fg-color:   #243315;
 $inactive-color:   #cfcfcf;
 
+
+/* screen variables */
+
+$screen-var: ((100vw - 320px) / (1280 - 320));
+$container-width: 1280px;
+
+$first-section-margin-top: -96px;

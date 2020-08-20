@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Questrial|Roboto&display=swap" rel="stylesheet">
+    <title>{{ title }} - {{ subtitle }}</title>
+  </head>
+  <body>
+    <div class="container help-container">
+      {% include "navbar.njk" %}
+      
+      <div class="help-image-section upper-section">
+        <img class="expand-form" id="expand-form" src="../../images/form-expand.svg">
+        {% include "contact-form.njk" %}
+
+          <div class="help-qa-section">
+          {%- for item in collections.qa -%}
+              <div class="{{ item.data.class }}">
+                {{ item.templateContent | safe }}
+              </div>
+            {%- endfor -%}
+        </div>
+      </div>       
+
+      {% include "footer-extended.njk" %}
+    </div>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-161602475-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-161602475-1');
+  </script>
+  
+    {% set js %}
+      {% include "js/core.js" %}
+      {% include "js/clicks.js" %}
+    {% endset %}
+    <script>{{ js | jsmin | safe }}</script>
+
+    <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/7537504.js"></script>
+    <!-- End of HubSpot Embed Code -->
+
+  </body>
+</html>

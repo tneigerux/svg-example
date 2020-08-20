@@ -17,34 +17,40 @@
     <link href="https://fonts.googleapis.com/css?family=Questrial|Roboto&display=swap" rel="stylesheet">
     <title>{{ title }} - {{ subtitle }}</title>
   </head>
-  <body class="home-body" {% if bodyClass %}class="{{ bodyClass }}"{% endif %}>
-
-    <div class="container">
-      {% include "header.njk" %}
-      <div class="main-section">
-        <div class="hero">
-          {{ content | safe }}        
-          <div class="usage">
-            <img id="comm-an" class="usage-art comm tab-img" width="2000" height="1000" alt="Commercial Animation" src="/images/key-visual-comm-ani-g.gif">
-            <img id="resi-an" class="usage-art comm tab-img" width="2000" height="1000" alt="Residental Animation" src="/images/key-visual-resi-ani-g.gif">
+  <body>
+    <div class="container home-container">
+      {% include "navbar.njk" %}
+      
+      <div class="image-section upper-section" style="background: url({{ himgpath }}{{ himgfilename }}); background-position: right; background-repeat: no-repeat; background-size: cover;">
+          <div class="upper-section__sign-box">
+            <h1 class="upper-section-sign">{{ head }}</h1>
+            <h2 class="upper-section-sign">{{ subhead }}</h2>                 
           </div>
-          <img class="app-store app-store-hero" height="80" alt="Soon - iOS App Store" src="/images/app-store-ios.png">
-          {% include "tabsection.njk" %}
+
+        <div class="amazon-link-box">
+          <a class="amazon-link" href="{{ ctalink }}">
+                <p>BUY NOW</p>
+                <p>on Amazon</p>
+            </a>  
         </div>
-        <section class="sidebar">
-          {%- for element in collections.elements -%}
-            <div class="actions {{ element.data.class }}">
-              {{ element.templateContent | safe }}
-            </div>
-          {%- endfor -%}
-        </section>
+      </div> 
+
+      <div class="product-section">
+
+        <img src="../../images/product-shot.png">
+
+        <div class="product-section__text-box">
+          {{ content | safe }}
+        </div>        
       </div>
 
-      <div class="email-modal">
-        {% include "layouts/esub-form.njk" %}
+      <div class="comparison-table-section">
+          {% include "comparison-table.njk" %}
       </div>
       
-      {% include "footer.njk" %}
+      {% include "app-feature-section.njk" %}
+
+      {% include "footer-extended.njk" %}
     </div>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
