@@ -24,4 +24,4 @@ Photo by Jessica Lewis from Pexels
 
 Many are original icons, exceptions below.
 
-guarantee by Adrien Coquet from the Noun Project
+* guarantee by Adrien Coquet from the Noun Project
