@@ -108,6 +108,21 @@
     border-bottom: none !important;
   }
 
+
+  .sensor-dimensions-section {
+    display: block;
+
+    @media (min-width: $wide){
+      display: inline-block;      
+    }
+  }
+
+  .sensor-dimensions-section__col {
+    width: 50%;
+  }
+
+
+
   .guarantee-section {    
     padding: 60px;
     background-color: #F8FFF0;
