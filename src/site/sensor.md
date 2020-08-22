@@ -11,6 +11,12 @@ maninfodesc: The atendit Sensor is contract manufactured and programmed by EM Mi
 guaranteesign: The atendittm sensor is guaranteed to perform for a full two years of normal use. 
 guaranteetext: If for any reason it isn’t working just return the sensor to Did U Remember to LLC for an immediate replacement.
 guaranteebottomtext: For replacement directions please email support@atendit.com
+dimension_sign: Product Dimensions
+weight_sign: Item Weight
+inch_dimensions: 1.27 x 0.88 x 0.21 in.
+ounces: 0.25 ounces
+mm_dimensions: 3.23 x 2.23 x 0.53 mm
+grams: 7 grams
 ---
 
 # The atendit Sensor
