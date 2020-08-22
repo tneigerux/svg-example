@@ -15,12 +15,21 @@
 
       <div class="app-image-section upper-section">
         <div class="app-image-section__box">
-          {{ content | safe }}
+          <div class="app-image-section__header-sign">
+              <h1>{{ header }}</h1>
+              <div>
+              <svg class="app-image-section__img"><use xlink:href="/images/sprite-sheet.svg#app-icon"/></svg>
+              </div>
+          </div>
+          <div class="app-image-section__text">
+            <h3>{{ h3text1 }}</h3>
+            <h3>{{ h3text2 }}</h3>
 
-            <svg class="app-image-section__img"><use xlink:href="/images/sprite-sheet.svg#app-icon"/></svg>
+            <img src="/images/app-store-ios.png" width="278" height="80">
+          </div>   
         </div>
       </div> 
-    
+    {% include "app-feature-section.njk" %}
 
       {% include "footer-extended.njk" %}
     </div>
