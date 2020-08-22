@@ -78,7 +78,7 @@ footer {
     line-height: 1.8em;
   
     @media (min-width: $wide) {
-      font-size: 24px;
+      font-size: 24px !important;
       color: $page-color;
     }
   }
