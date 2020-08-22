@@ -1,14 +1,25 @@
-.app-image-section {
-    background: url(../../images/bg-app-desk.jpg) no-repeat;
+.app-image-section {    
+    background-color: #FAFAFA;
     margin-top: $first-section-margin-top;
-    background-size: cover;
-    background-position: right;    
+    
+    @media (min-width: $wide) {
+        background: url(../../images/bg-app-desk.jpg) no-repeat;
+        background-size: contain;
+        background-position: right;    
+        background-color: #FAFAFA;
+      };
   }
   
   .app-image-section__box {
     margin-top: 184px;
-    margin-left: 150px;
-    max-width: 50%;
+    @media (min-width: $wide) {        
+        margin-left: 150px;
+        max-width: 50%;
+    }
+    @media (max-width: $wide) {
+        margin: 184px 27px 0 27px;
+        /* max-width: 50%; */
+    }
   }
 
   .app-image-section__header-sign {
@@ -18,11 +29,26 @@
       h1 {
           max-width: 434px;
       }
+
+      @media (max-width: $wide) {
+        flex-direction: column-reverse;
+      };
   }
 
   .app-image-section__text {
-      margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media (max-width: $wide) {     
+      flex-direction: column-reverse;
+
+      img {
+          margin-bottom: 30px;
+          align-self: center;
+      }
+    };
   }
+
   
   .app-image-section__img {
     border-radius: 30px;
