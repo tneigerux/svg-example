@@ -90,9 +90,7 @@ footer {
   .footer-footer > .social-icons {
     display: flex;
     justify-content: space-between;
-    max-width: 100%;
     padding: 20px 0;
-    width: 100%;
   
     @media (min-width: $wide) {
       padding: 0;
