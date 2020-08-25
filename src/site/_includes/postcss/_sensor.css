@@ -129,22 +129,21 @@
     }    
   }
 
-  .cell-bg-gray {
-    background-color: #A6A6A6;
-  }
-
   .sensor-dimensions-section__table td {
     color: #535353;
     padding: 5px;
-    border-bottom: 1px solid #CFCFCF;
+    border: 1px solid #CFCFCF;
   }
 
-  .cell-top {
-    border-top: 1px solid #CFCFCF;
+  .sensor-dimensions-section__table > tbody > tr:not(:first-child) > td {
+      border-top: none;
   }
-
-  
-
+  .sensor-dimensions-section__table > tbody > tr > td:not(:first-child) {
+      border-left: none;
+  }  
+  .sensor-dimensions-section__table > tbody > tr > td:first-child {
+      background-color: #A6A6A6;
+  }  
 
   .guarantee-section {    
     padding: 60px;
