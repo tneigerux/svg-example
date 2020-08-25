@@ -157,13 +157,17 @@
     @media (min-width: $narrow){
       flex-direction: row;
     }
-    /* TEMPORARY HIDDEN */
-    display: none;
-    /* *TEMPORARY HIDDEN */
+  }
+
+  .ribbon-icon {    
+    height: 100%;
+    width: auto;
+    display: block;
+    margin: 0 auto;
   }
 
   .guarantee-section__text-box {
-    height: 100%;
+    height: 480px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -187,6 +191,10 @@
     font-weight: bold;
     font-size: 24px;
     line-height: 28px;
+  }
+
+  .guarantee-bottom-text {
+    color: black;
   }
 
   .guarantee-section__img-box {
