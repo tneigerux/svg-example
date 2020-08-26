@@ -1,6 +1,6 @@
 ---
-title: Sensor
-subtitle: sensor page
+title: atendit Sensor
+subtitle: A small, long lasting, bluetooth motion detector to trigger your custom reminders, alerts, and notifications
 layout: layouts/sensor.njk
 ctalink: https://www.amazon.com/dp/B089NB883H
 info: Product Information
