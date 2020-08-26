@@ -176,8 +176,7 @@
     
   }  
 
-  .guarantee-section__text-box {    
-    width: 75%;
+  .guarantee-section__text-box {   
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -218,10 +217,10 @@
   }
 
   .guarantee-section__img-box {
-    width: 100%;
+    min-width: 400px;
     height: clamp(250px, 50vw, 480px);
     @media (min-width: $wide){ 
-      width: 25%;
+      width: 30%;
     }
   }
 

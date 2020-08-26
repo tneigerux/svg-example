@@ -1,6 +1,6 @@
 ---
-title: Home
-subtitle: home page
+title: Sensor
+subtitle: sensor page
 layout: layouts/sensor.njk
 ctalink: https://www.amazon.com/dp/B089NB883H
 info: Product Information

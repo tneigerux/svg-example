@@ -1,5 +1,5 @@
 ---
-title: Home
-subtitle: home page
+title: Help
+subtitle: help page
 layout: layouts/help.njk
 ---
