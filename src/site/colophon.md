@@ -14,11 +14,15 @@ layout: layouts/base.njk
 * Puppy Photo by Andreas Wohlfahrt from Pexels
 * Car Interior Photo by Mike from Pexels
 * Rain Photo by Lum3n from Pexels
+* Lock Photo by Bich Tran from Pexels
+* Door Photo by Lina Kivaka from Pexels
 
 ### Considered
 
 * Kitchen Photo by Dmitry Zvolskiy from Pexels
-Photo by Jessica Lewis from Pexels
+* Kitchen Photo by Jessica Lewis from Pexels
+* Tumbler Photo by wendel moretti from Pexels
+* Wood Grain Photo by FWStudio from Pexels
 
 ## Iconography
 
