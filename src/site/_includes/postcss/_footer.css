@@ -69,7 +69,7 @@ footer {
     }
   }
   
-  .footer-sign-section > a {
+  .footer-sign-section > p , .footer-sign-section > p > a {
     color: black;
     padding-top: 0.5em;
     padding-left: 0.5em;

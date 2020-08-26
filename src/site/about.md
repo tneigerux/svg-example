@@ -1,6 +1,6 @@
 ---
-title: Home
-subtitle: home page
+title: About
+subtitle: about page
 layout: layouts/about.njk
 ---
 
