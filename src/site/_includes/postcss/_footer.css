@@ -69,7 +69,7 @@ footer {
     }
   }
   
-  .footer-sign-section > p {
+  .footer-sign-section > p , .footer-sign-section > p > a {
     color: black;
     padding-top: 0.5em;
     padding-left: 0.5em;
@@ -90,9 +90,7 @@ footer {
   .footer-footer > .social-icons {
     display: flex;
     justify-content: space-between;
-    max-width: 100%;
     padding: 20px 0;
-    width: 100%;
   
     @media (min-width: $wide) {
       padding: 0;
