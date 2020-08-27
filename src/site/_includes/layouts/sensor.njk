@@ -23,6 +23,8 @@
         </div>        
       </div> 
 
+      <div class="sensor-content-block">
+
       <div class="sensor-info-section">
         <div class="sensor-info-section__inner-box">
         <h2>{{info}}</h2>
@@ -31,6 +33,46 @@
         <h3>{{maninfo}}</h3>
         <h2>{{maninfodesc}}</h2>
           </div>
+      </div>
+
+      <div class="sensor-dimensions-section">
+        <div class="sensor-dimensions-section__col">
+          <table class="sensor-dimensions-section__table" cellspacing="0">
+            <tr>
+              <td class="cell-bg-gray">{{dimension_sign}}</td>
+              <td>{{inch_dimensions}}</td>
+            </tr>
+            <tr>
+              <td class="cell-bg-gray">{{weight_sign}}</td>
+              <td>{{ounces}}</td>
+            </tr>
+          </table>
+        </div>
+        <div class="sensor-dimensions-section__col">
+          <table class="sensor-dimensions-section__table" cellspacing="0">
+            <tr>
+              <td class="cell-bg-gray">{{dimension_sign}}</td>
+              <td>{{mm_dimensions}}</td>
+            </tr>
+            <tr>
+              <td class="cell-bg-gray">{{weight_sign}}</td>
+              <td>{{grams}}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      </div>
+
+      <div class="guarantee-section">
+        <div class="guarantee-section__img-box">
+          <svg class="ribbon-icon"><use xlink:href="/images/sprite-sheet.svg#ribbon"/></svg>
+        </div>
+        <div class="guarantee-section__text-box">
+          <h2>{{guaranteesign1}}<sup style="font-size: 16px">tm</sup> {{guaranteesign2}}</h2>
+          <h3>{{guaranteetext}}</h3>
+          <h3 class="guarantee-bottom-text">{{guaranteebottomtext}}</h3>
+        </div>
       </div>
 
       {% include "footer-extended.njk" %}
