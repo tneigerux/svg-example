@@ -21,37 +21,40 @@
     /* rotate -15deg to be added */
 }
 
-.app-feature-section__text {
+.app-feature-section__content {
     position: absolute;
     background: transparent;
-    max-height: 100%;
+    height: 100%;
+    width: 50%;
     overflow: hidden;
-    width: 30%;
-    left: 20%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
     padding-top: 20px;    
+    text-align: center;
+    margin-left: 10%;
     * {
         color: white;
     }
 }
 
-.app-feature-section__text > h3 {
-    font-family: Roboto;
+.app-feature-section__sign {
+    font-family: Questrial;
     font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 28px;
-    align-self: center;
-    margin-bottom: 26px;
-    @media (min-width: $wide) {
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 41px;
+    text-align: center;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 50%;
+}
+.app-feature-section__content > h2 {
+    
+    /* @media (min-width: $wide) {
         align-self: flex-start;
         margin-left: 20%;
-    };
+    }; */
 }
-.app-feature-section__text > p {
+.app-feature-section__content > p {
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -61,6 +64,23 @@
     @media (min-width: $wide) {
         margin-bottom: clamp(5px, 1vw, 20px);
     };
+}
+
+.app-feature-section__main-content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}   
+
+.app-feature-section__main-content__img {
+    min-width: 40%;
+    width: 40%;
+}
+
+.app-feature-section__main-content__text {
+    max-width: 60%;
+    text-align: left;
 }
 
 .app-feature-section__indent {
@@ -105,14 +125,14 @@
 
 .app-feature-section__img {
     display: block;
-    margin-top: -5%;
-    height: 460px;
+    height: 100%;
+}
 
-    @media (min-width: $wide) {
-        margin-right: 25px;
-    };
-    -ms-transform: rotate(15deg); /* IE 9 */
-    transform: rotate(15deg);
+.app-feature-section__img.hidden {
+    display: none;
+}
+.app-feature-section__sign.hidden {
+    display: none;
 }
 
 .app-feature-section__stripe {
@@ -151,8 +171,7 @@
     padding: 10px;
     width: 100%;
     height: 120px;
-    /* display: flex; UNCOMMENT */
-    display: none;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
