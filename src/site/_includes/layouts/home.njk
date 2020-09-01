@@ -1,4 +1,4 @@
-{% extends "template.njk" %}
+{% extends "layouts/parent.njk" %}
 
   {% block content %}
       <div class="image-section upper-section" style="background: url({{ himgpath }}{{ himgfilename }}); background-position: right; background-repeat: no-repeat; background-size: cover;">
@@ -20,7 +20,9 @@
         <img src="../../images/product-shot.png">
 
         <div class="product-section__text-box">
-          {{ content | safe }}
+          
+            {{ content | safe }}
+
         </div>        
       </div>
 
