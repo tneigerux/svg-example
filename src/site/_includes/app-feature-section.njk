@@ -1,53 +1,71 @@
 <div class="app-feature-section">
-    <div class="app-feature-section__main">
-        <div class="app-feature-section__stripe upper-left-stripe"></div>
-        <div class="app-feature-section__stripe upper-right-stripe"></div>
-        <div class="app-feature-section__content">
-                {% include "parts/feature-01.njk" %}
-                {% include "parts/feature-02.njk" %}
-                {% include "parts/feature-03.njk" %}
-                {% include "parts/feature-04.njk" %}
-                {% include "parts/feature-05.njk" %}
-                {% include "parts/feature-06.njk" %}
-        </div>
-        
-        <div class="app-feature-section__skewed skewed-tab-1"></div>
-        <div class="app-feature-section__skewed skewed-tab-2"></div>
-        <div class="app-feature-section__skewed skewed-tab-3"></div>
-        {# uncomment img tag with an image #}
-        <div class="app-feature-section__img-part">
-            <img class="app-feature-section__img feature-interractive feature-01 active" src="../images/app-features/feature-01-desk.png">
-            <img class="app-feature-section__img feature-interractive feature-02" src="../images/app-features/feature-02-desk.png">
-            <img class="app-feature-section__img feature-interractive feature-03" src="../images/app-features/feature-03-desk.png">
-            <img class="app-feature-section__img feature-interractive feature-04" src="../images/app-features/feature-04-desk.png">
-            <img class="app-feature-section__img feature-interractive feature-05" src="../images/app-features/feature-05-desk.jpg">
-            <img class="app-feature-section__img feature-interractive feature-06" src="../images/app-features/feature-06-desk.png">
-        </div>
-        
-        <div class="lower-left-stripe"></div>
-    </div>
 
-    <div class="app-feature-section__bottom">
-        <div class="bottom-container" onClick="changeInterractive('feature-01')">
-            <div class="bottom-border"></div><p>Simple Setup Process</p>
+    {# DESKTOP #}
+    <div class="app-feature-section__desktop">
+        <div class="app-feature-section__main">
+            <div class="app-feature-section__stripe upper-left-stripe"></div>
+            <div class="app-feature-section__stripe upper-right-stripe"></div>
+            <div class="app-feature-section__content">
+                    {% include "parts/feature-01.njk" %}
+                    {% include "parts/feature-02.njk" %}
+                    {% include "parts/feature-03.njk" %}
+                    {% include "parts/feature-04.njk" %}
+                    {% include "parts/feature-05.njk" %}
+                    {% include "parts/feature-06.njk" %}
+            </div>
+            
+            <div class="app-feature-section__skewed skewed-tab-1"></div>
+            <div class="app-feature-section__skewed skewed-tab-2"></div>
+            <div class="app-feature-section__skewed skewed-tab-3"></div>
+            {# uncomment img tag with an image #}
+            <div class="app-feature-section__img-part">
+                <img class="app-feature-section__img feature-interractive feature-01 active" src="../images/app-features/feature-01-desk.png">
+                <img class="app-feature-section__img feature-interractive feature-02" src="../images/app-features/feature-02-desk.png">
+                <img class="app-feature-section__img feature-interractive feature-03" src="../images/app-features/feature-03-desk.png">
+                <img class="app-feature-section__img feature-interractive feature-04" src="../images/app-features/feature-04-desk.png">
+                <img class="app-feature-section__img feature-interractive feature-05" src="../images/app-features/feature-05-desk.jpg">
+                <img class="app-feature-section__img feature-interractive feature-06" src="../images/app-features/feature-06-desk.png">
+            </div>
+            
+            <div class="lower-left-stripe"></div>
         </div>
-        <div class="bottom-container" onClick="changeInterractive('feature-02')">
-            <div class="bottom-border"></div><p>Reminders</p>
-        </div>
-        <div class="bottom-container" onClick="changeInterractive('feature-03')">
-            <div class="bottom-border"></div><p>Notifications</p>
-        </div>
-        <div class="bottom-container" onClick="changeInterractive('feature-04')">
-            <div class="bottom-border"></div><p>Alerts</p>
-        </div>
-        <div class="bottom-container" onClick="changeInterractive('feature-05')">
-            <div class="bottom-border"></div><p>Weather Based Reminders</p>
-        </div>
-        <div class="bottom-container" onClick="changeInterractive('feature-06')">
-            <div class="bottom-border"></div><p>Customizable Intelligence</p>
-        </div>
-        <div class="bottom-container">
-            <div class="bottom-border"></div>
+
+        <div class="app-feature-section__bottom">
+            <div class="bottom-container" onClick="changeInterractive('feature-01')">
+                <div class="bottom-border"></div><p>Simple Setup Process</p>
+            </div>
+            <div class="bottom-container" onClick="changeInterractive('feature-02')">
+                <div class="bottom-border"></div><p>Reminders</p>
+            </div>
+            <div class="bottom-container" onClick="changeInterractive('feature-03')">
+                <div class="bottom-border"></div><p>Notifications</p>
+            </div>
+            <div class="bottom-container" onClick="changeInterractive('feature-04')">
+                <div class="bottom-border"></div><p>Alerts</p>
+            </div>
+            <div class="bottom-container" onClick="changeInterractive('feature-05')">
+                <div class="bottom-border"></div><p>Weather Based Reminders</p>
+            </div>
+            <div class="bottom-container" onClick="changeInterractive('feature-06')">
+                <div class="bottom-border"></div><p>Customizable Intelligence</p>
+            </div>
+            <div class="bottom-container">
+                <div class="bottom-border"></div>
+            </div>
         </div>
     </div>
+    {# / DESKTOP #}
+
+    {# MOBILE #}
+    <div class="app-feature-section__mob">
+        <div class="app-feature-section__mob-block image-block">
+
+        </div>
+        <div class="app-feature-section__mob-block content-block">
+
+        </div>
+    </div>
+    {# / MOBILE #}
+
 </div>
+
