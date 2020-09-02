@@ -29,15 +29,6 @@ eventHandler('.header__burger', 'click', function(){
   //IE9 support?
 });
 
-eventHandler('.app-feature-section__bottom.bottom-container', 'click', function(){
-console.log('clickedftg');
-  // let elems = document.querySelectorAll('.feature-interractive');
-  // elems.forEach(element => element.classList.remove('active'))
-  
-  // console.log(e.target)
-
-});
-
 // Show-hide contact-form
 
 eventHandler('.expand-form', 'click', function(){
@@ -75,8 +66,17 @@ function showImg(evt, imgId){
   evt.currentTarget.className += " active-gif-tab";
 }
 
-function someFunc(a){
-console.log(a)
+function changeInterractive(className){
+  console.log('entered the method , classname ' + className)
+  // remove active to all
+  var elements = document.getElementsByClassName("feature-interractive");
+  Array.from(elements).forEach(function(element) {
+    element.classList.remove('active');
+  });
+
+  // set active to the clicked
+  var activeElements = document.getElementsByClassName(className);
+  Array.from(activeElements).forEach(function(element) {
+    element.classList.add('active');
+  });
 }
-
-
