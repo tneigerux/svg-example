@@ -128,12 +128,10 @@
     height: 100%;
 }
 
-.app-feature-section__img.hidden {
+.feature-interractive {
     display: none;
 }
-.app-feature-section__sign.hidden {
-    display: none;
-}
+
 
 .app-feature-section__stripe {
     position: absolute;
@@ -166,7 +164,7 @@
 }
 
 .app-feature-section__bottom {
-    position: relative;
+    position: absolute;
     background-color: #228FA7;
     padding: 10px;
     width: 100%;
@@ -182,7 +180,7 @@
     height: 100%;
     background-color: white;
     z-index: 0;    
-    position: relative;
+    /* position: relative; */
     p {
         margin: 30px auto auto 50px;
         font-family: Roboto;

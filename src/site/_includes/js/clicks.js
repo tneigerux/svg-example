@@ -29,6 +29,15 @@ eventHandler('.header__burger', 'click', function(){
   //IE9 support?
 });
 
+eventHandler('.app-feature-section__bottom.bottom-container', 'click', function(){
+console.log('clickedftg');
+  // let elems = document.querySelectorAll('.feature-interractive');
+  // elems.forEach(element => element.classList.remove('active'))
+  
+  // console.log(e.target)
+
+});
+
 // Show-hide contact-form
 
 eventHandler('.expand-form', 'click', function(){
@@ -65,3 +74,9 @@ function showImg(evt, imgId){
   document.getElementById(imgId).style.display = "block";
   evt.currentTarget.className += " active-gif-tab";
 }
+
+function someFunc(a){
+console.log(a)
+}
+
+
