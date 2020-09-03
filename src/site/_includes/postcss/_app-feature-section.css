@@ -248,15 +248,15 @@
 
 .app-feature-section__mob-block {
     width: 100%;
-    display: flex;
-    flex-direction: column;
+
 }
 
 .app-feature-section__mob-block.image-block {
-    background: url(../../images/app-features/feature-01-mob.png) no-repeat;  
-    background-size: cover;
-    background-position-x: center;
-    height: 370px;
+
+}
+
+.feature-img-mob {
+    width: 100%;
 }
 
 .app-feature-section__mob-block.content-block {
@@ -266,7 +266,6 @@
 .app-feature-section__mob-block > .content-block__info-part {
     /* display: flex;
     flex-direction: column; */
-    flex-grow: 1;
     padding: 28px;
 }
 
@@ -338,11 +337,11 @@
     display: block;
 }
 
-.feature-content-mob {
+.feature-content-mob, .feature-img-mob {
     display: none;
 }
 
-.feature-content-mob.active {
+.feature-content-mob.active, .feature-img-mob.active {
     display: block;
 }
 
