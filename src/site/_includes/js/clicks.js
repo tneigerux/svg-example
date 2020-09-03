@@ -65,3 +65,31 @@ function showImg(evt, imgId){
   document.getElementById(imgId).style.display = "block";
   evt.currentTarget.className += " active-gif-tab";
 }
+
+function changeInterractive(className){
+  // remove active to all
+  var elements = document.getElementsByClassName("feature-interractive");
+  Array.from(elements).forEach(function(element) {
+    element.classList.remove('active');
+  });
+
+  // set active to the clicked
+  var activeElements = document.getElementsByClassName(className);
+  Array.from(activeElements).forEach(function(element) {
+    element.classList.add('active');
+  });
+}
+
+function changeInterractiveMob(className){
+  // remove active to all
+  var elements = document.getElementsByClassName("feature-interractive-mob");
+  Array.from(elements).forEach(function(element) {
+    element.classList.remove('active');
+  });
+
+  // set active to the clicked
+  var activeElements = document.getElementsByClassName(className);
+  Array.from(activeElements).forEach(function(element) {
+    element.classList.add('active');
+  });
+}

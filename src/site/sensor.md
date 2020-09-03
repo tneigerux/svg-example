@@ -18,6 +18,7 @@ inch_dimensions: 1.27 x 0.88 x 0.21 in.
 ounces: 0.25 ounces
 mm_dimensions: 3.23 x 2.23 x 0.53 mm
 grams: 7 grams
+
 ---
 
 # The atendit Sensor
