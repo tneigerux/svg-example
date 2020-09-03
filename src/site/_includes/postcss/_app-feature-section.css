@@ -255,6 +255,7 @@
 .app-feature-section__mob-block.image-block {
     background: url(../../images/app-features/feature-01-mob.png) no-repeat;  
     background-size: cover;
+    background-position-x: center;
     height: 370px;
 }
 
@@ -266,16 +267,13 @@
     /* display: flex;
     flex-direction: column; */
     flex-grow: 1;
+    padding: 28px;
 }
 
 .info-part__header-row {
     display: flex;
     justify-content: space-between;
     align-items: center;    
-}
-
-.content-block__info-part {
-    padding: 28px;
 }
 
 .app-feature-section__mob * {
@@ -336,6 +334,15 @@
     border: 3px solid #fff;
 }  
 
-.navigation-dot-inner.active {
+.navigation-dot.active > .navigation-dot-inner {
     display: block;
 }
+
+.feature-content-mob {
+    display: none;
+}
+
+.feature-content-mob.active {
+    display: block;
+}
+
