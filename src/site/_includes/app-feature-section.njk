@@ -19,12 +19,9 @@
             <div class="app-feature-section__skewed skewed-tab-3"></div>
             {# uncomment img tag with an image #}
             <div class="app-feature-section__img-part">
-                <img class="app-feature-section__img feature-interractive feature-01 active" src="../images/app-features/feature-01-desk.png">
-                <img class="app-feature-section__img feature-interractive feature-02" src="../images/app-features/feature-02-desk.png">
-                <img class="app-feature-section__img feature-interractive feature-03" src="../images/app-features/feature-03-desk.png">
-                <img class="app-feature-section__img feature-interractive feature-04" src="../images/app-features/feature-04-desk.png">
-                <img class="app-feature-section__img feature-interractive feature-05" src="../images/app-features/feature-05-desk.jpg">
-                <img class="app-feature-section__img feature-interractive feature-06" src="../images/app-features/feature-06-desk.png">
+                {% for i in range(1, 7) -%}
+                   <img class="app-feature-section__img feature-interractive feature-0{{i}} {% if i == 1 %} active{% endif %}" src="../images/app-features/feature-0{{i}}-desk.png">
+                {%- endfor %}            
             </div>
             
             <div class="lower-left-stripe"></div>
@@ -60,12 +57,9 @@
     <div class="app-feature-section__mob">
         <div class="app-feature-section__mob-block image-block">
             {# only background image #}
-            <img class="feature-interractive-mob feature-img-mob feature-mob-01 active" src="../images/app-features/feature-01-mob.png">
-            <img class="feature-interractive-mob feature-img-mob feature-mob-02" src="../images/app-features/feature-02-mob.png">
-            <img class="feature-interractive-mob feature-img-mob feature-mob-03" src="../images/app-features/feature-03-mob.png">
-            <img class="feature-interractive-mob feature-img-mob feature-mob-04" src="../images/app-features/feature-04-mob.png">
-            <img class="feature-interractive-mob feature-img-mob feature-mob-05" src="../images/app-features/feature-05-mob.png">
-            <img class="feature-interractive-mob feature-img-mob feature-mob-06" src="../images/app-features/feature-06-mob.png">
+            {% for i in range(1, 7) -%}
+                <img class="feature-interractive-mob feature-img-mob feature-mob-0{{i}} {% if i == 1 %} active{% endif %}" src="../images/app-features/feature-0{{i}}-mob.png">
+            {%- endfor %}
         </div>
         <div class="app-feature-section__mob-block content-block">
             <div class="content-block__info-part">
@@ -79,24 +73,12 @@
             <div class="content-block__navigation-part">
                 <p>Swipe for more:</p>
                 <div class="navigation-dot-pane">
-                    <div class="navigation-dot feature-interractive-mob feature-mob-01 active" onClick="changeInterractiveMob('feature-mob-01')">
-                        <div class="navigation-dot-inner"></div>
-                    </div>
-                    <div class="navigation-dot feature-interractive-mob feature-mob-02" onClick="changeInterractiveMob('feature-mob-02')">
-                        <div class="navigation-dot-inner"></div>
-                    </div>
-                    <div class="navigation-dot feature-interractive-mob feature-mob-03" onClick="changeInterractiveMob('feature-mob-03')">
-                        <div class="navigation-dot-inner"></div>
-                    </div>
-                    <div class="navigation-dot feature-interractive-mob feature-mob-04" onClick="changeInterractiveMob('feature-mob-04')">
-                        <div class="navigation-dot-inner"></div>
-                    </div>
-                    <div class="navigation-dot feature-interractive-mob feature-mob-05" onClick="changeInterractiveMob('feature-mob-05')">
-                        <div class="navigation-dot-inner"></div>
-                    </div>
-                    <div class="navigation-dot feature-interractive-mob feature-mob-06" onClick="changeInterractiveMob('feature-mob-06')">
-                        <div class="navigation-dot-inner"></div>
-                    </div>
+                    {% for i in range(1, 7) -%}
+                        <div class="navigation-dot feature-interractive-mob feature-mob-0{{i}} {% if i == 1 %} active{% endif %}" onClick="changeInterractiveMob('feature-mob-0{{i}}')">
+                            <div class="navigation-dot-inner"></div>
+                        </div>
+                    {%- endfor %}
+                    
                 </div>
             </div>
         </div>
