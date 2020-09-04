@@ -81,7 +81,6 @@ function changeInterractive(className){
 }
 
 function changeInterractiveMob(className){
-  console.log(className)
   // remove active to all
   var elements = document.getElementsByClassName("feature-interractive-mob");
   Array.from(elements).forEach(function(element) {
@@ -104,7 +103,7 @@ function detectswipe(el,func) {
   swipe_det.eX = 0;
   swipe_det.eY = 0;
   var min_x = 20;  //min x swipe for horizontal swipe
-  var max_x = 4000;  //max x difference for vertical swipe
+  var max_x = 40;  //max x difference for vertical swipe
   var min_y = 40;  //min y swipe for vertical swipe
   var max_y = 50;  //max y difference for horizontal swipe
   var direc = "";
@@ -127,44 +126,56 @@ function detectswipe(el,func) {
       else direc = "l";
     }
     //vertical detection
-    if ((((swipe_det.eY - min_y > swipe_det.sY) || (swipe_det.eY + min_y < swipe_det.sY)) && ((swipe_det.eX < swipe_det.sX + max_x) && (swipe_det.sX > swipe_det.eX - max_x)))) {
-      if(swipe_det.eY > swipe_det.sY) direc = "d";
-      else direc = "u";
-    }
+    // Uncomment if needed
+    // commented to detect only horizontal swipe direction
+    // if ((((swipe_det.eY - min_y > swipe_det.sY) || (swipe_det.eY + min_y < swipe_det.sY)) && ((swipe_det.eX < swipe_det.sX + max_x) && (swipe_det.sX > swipe_det.eX - max_x)))) {
+    //   if(swipe_det.eY > swipe_det.sY) direc = "d";
+    //   else direc = "u";
+    // }
 
     if (direc != "") {
       if(typeof func == 'function') func(el,direc);
     }
     direc = "";
+    
   },false);  
 }
 
-function myfunction(el,direction) {
+
+function finishSwipe(el, direction) {
+  var maxV = 6
+  var minV = 1
+
   var elements = document.getElementsByClassName("feature-content-mob");
-  Array.from(elements).forEach(function(element) {
+
+    for (i = 0; i < elements.length; i++){
+      let element = elements[i]
     if(element.classList.contains('active')){
-      Array.from(element.classList).forEach(function(cls) {
+      for (i = 0; i < element.classList.length; i++){
+        cls = element.classList[i]
         if(cls.startsWith('feature-mob')){
           var elNum = parseInt(cls.slice(-1));
-          elNum += 1;
+          // if we swipe to the left, activate next slide
+          if(direction == 'l'){
+            if(elNum < maxV) {
+              elNum += 1;
+            }
+          }
+          // if we swipe to the right, activate previouse slide
+          if(direction == 'r'){
+            if(elNum > minV) {
+              elNum -= 1;
+            }
+          }          
           var newClass = cls.slice(0, -1) + elNum
-          // console.log(newClass)
-          changeInterractiveMob(newClass)
-          // sleep(1000);
+
+          changeInterractiveMob(newClass)         
         }
-      })
+      }
+      break;
     }
-  });
-
-  if(direction == 'l'){
-    
   }
-  if(direction == 'r'){
 
-  }
-  console.log(el, direction)
 }
 
-
-
-detectswipe('app-feature-section__mob',myfunction);
+detectswipe('app-feature-section__mob', finishSwipe);
