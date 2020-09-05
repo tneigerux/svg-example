@@ -29,6 +29,9 @@ footer {
     display: none;
     clear: both;
   }
+  .cancel-submit-btn:hover {
+    cursor: pointer;
+  }
   
   .footer-body {
     display: flex;
