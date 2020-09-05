@@ -22,21 +22,44 @@
   .qa-item {
     width: 30%;
     padding: 5px;
-    background-color: #F5F5F5;
-    border-top: 1px solid #48662A;
+    background-color: #F5F5F5;    
     border-bottom: 1px solid #48662A;
+  }
+
+  .qa-item:nth-child(-n+3) {
+    border-top: 1px solid #48662A;
   }
 
   .qa-item * {
     color: #48662A;
   }
 
-  .qa-item p:first-child {
+
+.arrow {
+  border: solid  #691B93;;
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  padding: 5px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+} 
+
+  .qa-item p:nth-child(2) {
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
     line-height: 28px;
-
+    margin-top: -30px;
     margin-left: 50px;
   }
 

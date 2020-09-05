@@ -45,6 +45,7 @@ document.addEventListener('keydown', (event) => {
   }
 });
 
+// show-hide answer on the help page
 var qaItems = document.getElementsByClassName("qa-item");
 Array.from(qaItems).forEach(function(item) {
   item.addEventListener('click', (item) => {
@@ -52,6 +53,12 @@ Array.from(qaItems).forEach(function(item) {
   });
 });
 
+// adds arrows to help pages 
+Array.from(qaItems).forEach(function(item) {
+  var node = document.createElement("LI"); 
+  node.classList.add('arrow', 'down')
+  item.prepend(node); 
+});
 
 // Switch gif image on the Welcome page - DEPRECATED
 
