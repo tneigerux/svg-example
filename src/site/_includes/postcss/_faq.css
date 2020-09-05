@@ -6,30 +6,57 @@
   
   .help-qa-section {
     /* background-color: white; */
-    padding: 30px;
+    width: 100%;
+    padding: 30px;    
   }
   
-  .help-qa-section p {
-    font-family: Questrial;
-    font-style: normal;
-    font-weight: normal;  
-  
-    color: #000000;
-  }
 
   .help-qa-section h2 {
     font-family: Questrial;
     font-style: normal;
     font-weight: normal;
     font-size: 40px;
+    color: black;
   }
-  
-  .qa-sign * {
-    color: #000000;
+
+  .qa-item {
+    width: 30%;
+    padding: 5px;
+    background-color: #F5F5F5;
+    border-top: 1px solid #48662A;
+    border-bottom: 1px solid #48662A;
+  }
+
+  .qa-item * {
+    color: #48662A;
+  }
+
+  .qa-item p:first-child {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 28px;
+
+    margin-left: 50px;
+  }
+
+  .qa-item p:last-child {
+    display: none;
+  }
+
+  .qa-item.active p:last-child {
+    display: block;
   }
 
   .help-image-section * {
     margin-bottom: 28px;
+  }
+
+  .help-content-section {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
   
   .help-image-section h2 {

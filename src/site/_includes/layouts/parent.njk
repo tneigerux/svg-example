@@ -39,6 +39,7 @@
     {% set js %}
       {% include "js/core.js" %}
       {% include "js/clicks.js" %}
+      {% include "js/customjs.js" %}
     {% endset %}
     <script>{{ js | jsmin | safe }}</script>
 
