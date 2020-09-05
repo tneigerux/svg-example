@@ -591,6 +591,10 @@ input {
     color: darkgrey;
     text-decoration: underline;
   }
+  .cancel-submit-btn:hover {
+    cursor: pointer;
+  }
+
 }
 
 .app-store-hero{
@@ -699,6 +703,10 @@ input {
     margin-top: $first-section-margin-top; 
 };     
   background-size: cover;
+}
+
+.submit-btn:hover {
+  cursor: pointer;
 }
 
 @import '_contact-form.css';

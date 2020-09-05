@@ -15,6 +15,10 @@
   width: 82px;
   fill: #691B93;
 }
+
+#expand-form:hover, .close-form-btn:hover, .contact-form-submit:hover{
+  cursor: pointer;
+}
   
 .contact-form {
   display: flex;

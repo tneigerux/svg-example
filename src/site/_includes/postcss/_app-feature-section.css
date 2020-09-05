@@ -220,6 +220,10 @@
     }
 }
 
+.bottom-container:hover {
+    cursor: pointer;
+}
+
 .bottom-border {
     position: absolute;
     height: 100%;
@@ -319,6 +323,9 @@
     width: 18px;
     background-color: #fff;
     border-radius: 50%;
+}
+.navigation-dot:hover {
+    cursor: pointer;
 }
 
 .navigation-dot-inner {

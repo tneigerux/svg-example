@@ -20,10 +20,13 @@
   }
 
   .qa-item {
-    width: 30%;
+    width: 100%;
     padding: 5px;
     background-color: #F5F5F5;    
     border-bottom: 1px solid #48662A;
+    @media (min-width: $wide) {
+      width: 30%;
+    };
   }
 
   .qa-item:nth-child(-n+3) {
