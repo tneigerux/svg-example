@@ -42,17 +42,19 @@
   padding: 5px;
   margin-top: 10px;
   margin-left: 10px;
-}
 
-.up {
-  transform: rotate(-135deg);
-  -webkit-transform: rotate(-135deg);
-}
-
-.down {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
-} 
+
+  transition: transform 0.3s;
+}
+
+.arrow-open {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+
+  transition: transform 0.3s;
+}
 
   .qa-item p:nth-child(2) {
     font-family: Roboto;
