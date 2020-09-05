@@ -45,6 +45,23 @@ document.addEventListener('keydown', (event) => {
   }
 });
 
+// show-hide answer on the help page
+var qaItems = document.getElementsByClassName("qa-item");
+Array.from(qaItems).forEach(function(item) {
+  item.addEventListener('click', (item) => {
+    item.currentTarget.classList.toggle('active')
+    let arrow = item.currentTarget.firstChild
+    arrow.classList.toggle('arrow-open')
+  });
+});
+
+// adds arrows to help pages 
+Array.from(qaItems).forEach(function(item) {
+  var node = document.createElement("LI"); 
+  node.classList.add('arrow')
+  item.prepend(node); 
+});
+
 // Switch gif image on the Welcome page - DEPRECATED
 
 function closeForm(){
@@ -94,9 +111,9 @@ function changeInterractiveMob(className){
   });
 }
 
+/* SWIPE */
 
-
-function detectswipe(el,func) {
+function detectSwipe(el,func) {
   swipe_det = new Object();
   swipe_det.sX = 0;
   swipe_det.sY = 0;
@@ -178,4 +195,6 @@ function finishSwipe(el, direction) {
 
 }
 
-detectswipe('app-feature-section__mob', finishSwipe);
+detectSwipe('app-feature-section__mob', finishSwipe);
+
+/* / SWIPE */

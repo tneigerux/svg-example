@@ -6,30 +6,82 @@
   
   .help-qa-section {
     /* background-color: white; */
-    padding: 30px;
+    width: 100%;
+    padding: 30px;    
   }
   
-  .help-qa-section p {
-    font-family: Questrial;
-    font-style: normal;
-    font-weight: normal;  
-  
-    color: #000000;
-  }
 
   .help-qa-section h2 {
     font-family: Questrial;
     font-style: normal;
     font-weight: normal;
     font-size: 40px;
+    color: black;
   }
-  
-  .qa-sign * {
-    color: #000000;
+
+  .qa-item {
+    width: 30%;
+    padding: 5px;
+    background-color: #F5F5F5;    
+    border-bottom: 1px solid #48662A;
+  }
+
+  .qa-item:nth-child(-n+3) {
+    border-top: 1px solid #48662A;
+  }
+
+  .qa-item * {
+    color: #48662A;
+  }
+
+
+.arrow {
+  border: solid  #691B93;;
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  padding: 5px;
+  margin-top: 10px;
+  margin-left: 10px;
+
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+
+  transition: transform 0.3s;
+}
+
+.arrow-open {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+
+  transition: transform 0.3s;
+}
+
+  .qa-item p:nth-child(2) {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 28px;
+    margin-top: -30px;
+    margin-left: 50px;
+  }
+
+  .qa-item p:last-child {
+    display: none;
+  }
+
+  .qa-item.active p:last-child {
+    display: block;
   }
 
   .help-image-section * {
     margin-bottom: 28px;
+  }
+
+  .help-content-section {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
   
   .help-image-section h2 {

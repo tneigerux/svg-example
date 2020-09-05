@@ -1,17 +1,22 @@
-{% include "parts/header.njk" %}      
+{% include "parts/header.njk" %}
 
-      <div class="help-image-section upper-section">
-        {{ content | safe }}
-        <img class="expand-form" id="expand-form" src="../../images/form-expand.svg">
-        {% include "contact-form.njk" %}          
-      </div>  
+<div class="help-image-section upper-section">
+  {{ content | safe }}
+  <img class="expand-form" id="expand-form" src="../../images/form-expand.svg">
+  {% include "contact-form.njk" %}
+</div>
 
-      <div class="help-qa-section">
-          {%- for item in collections.qa -%}
-              <div class="{{ item.data.class }}">
-                {{ item.templateContent | safe }}
-              </div>
-            {%- endfor -%}
-        </div>
+<div class="help-qa-section">
+  <div class="help-sign-section">
+    <h2>{{qasign}}</h2>
+  </div>
+  <div class="help-content-section">
+    {%- for item in collections.qa -%}
+      <div class="{{ item.data.class }}">
+        {{ item.templateContent | safe }}
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
 
-{% include "parts/footer.njk" %}
+{% include "parts/bottom.njk" %}
