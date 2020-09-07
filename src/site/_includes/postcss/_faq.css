@@ -27,6 +27,7 @@
     @media (min-width: $wide) {
       width: 30%;
     };
+    position: relative;
   }
 
   .qa-item:nth-child(-n+3) {
@@ -74,6 +75,12 @@
 
   .qa-item.active p:last-child {
     display: block;
+    position: absolute;
+    z-index: 50;
+  }
+
+  .qa-item .arrow:hover{
+    cursor: pointer;
   }
 
   .help-image-section * {

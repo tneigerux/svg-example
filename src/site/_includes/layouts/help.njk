@@ -12,7 +12,7 @@
   </div>
   <div class="help-content-section">
     {%- for item in collections.qa -%}
-      <div class="{{ item.data.class }}">
+      <div class="help-content-item {{ item.data.class }}">
         {{ item.templateContent | safe }}
       </div>
     {%- endfor -%}

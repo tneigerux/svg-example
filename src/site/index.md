@@ -3,9 +3,10 @@ title: atendit
 subtitle: A Bluetooth and iOS App powered event driven conditional reminder, notification, and alert system.
 himgpath: ../../images/hero-images/
 layout: layouts/home.njk
-head: Have your mask?
+head: Avoid forgetting your stuff
 subhead: We'll make sure you never leave home without it.
-himgfilename: hero-image-mask.jpg
+heroupperimg: hero-desk-cup.jpg
+heroupperimgmob: hero-mob-cup.jpg
 checkfilename: tweeter.svg
 ctalink: https://www.amazon.com/dp/B089NB883H
 comparisonsign: How is atendit different?

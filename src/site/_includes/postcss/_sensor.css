@@ -119,10 +119,6 @@
   .sensor-info-section__inner-box h2:nth-child(2){
     margin-bottom: 26px;
   }
-  
-  a {
-    border-bottom: none !important;
-  }
 
 
   .sensor-dimensions-section {
