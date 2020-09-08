@@ -16,23 +16,24 @@ comparison:
     sign: How is atendit different?
     text: atendit, unlike any other reminder apps, reminds you as you open the door to leave your home, apartment or office.  Not based on clock time or outside GPS location as other reminders are, atendit reminds you “just in time”.  atendit uses a Sensor, a Bluetooth Low Energy Beacon, that detects movement and briefly transmits that the door has moved triggering the atendit app to immediately issues a Notification containing your reminder information.
     textmob: Your iPhone comes with the Calendar app and the Reminder app, which allows you to sync with your computer calendar and set reminders for yourself. There are other apps available from the Apple app store which do those things but add the ability to set an alert when the phone’s GPS detects a certain location. The atendit sensor enables accuracy that no one else offers.
-    header: 
-        h1: APPS
-        h2: 'date/time triggered reminders:'
-        h31: 'Location Triggered reminders:'
-        h32: Street level accuracy (GPS)
-        h4: room level accuracy
-        h5: Exit / Entrance Level Accuracy
-        h6: Motion related Alerts
-    row1:
-        s1: ATENDIT    
-    row2:
-        s1: APPLE IOS CALENDAR
-    row3:
-        s1: APPLE IOS REMINDERS
-    row4:
-        s1: ANY.DO APP
-    mob:
+    tabledesk:
+        header: 
+            h1: APPS
+            h2: 'date/time triggered reminders:'
+            h31: 'Location Triggered reminders:'
+            h32: Street level accuracy (GPS)
+            h4: room level accuracy
+            h5: Exit / Entrance Level Accuracy
+            h6: Motion related Alerts
+        row1:
+            s1: ATENDIT    
+        row2:
+            s1: APPLE IOS CALENDAR
+        row3:
+            s1: APPLE IOS REMINDERS
+        row4:
+            s1: ANY.DO APP
+    tablemob:
         header:
             h1: APPS
             h2: highly accurate location alerts

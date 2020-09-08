@@ -1,7 +1,10 @@
 {% extends "layouts/parent.njk" %}
 
   {% block content %}
-      <div class="image-section upper-section" style=" background-position: right; background-repeat: no-repeat; background-size: cover;">
+      <div class="image-section upper-section">
+          <img class="image-section__img-mob" src="{{himgpath}}{{heroupperimgmob}}">
+          <img class="image-section__img-desk" src="{{himgpath}}{{heroupperimg}}">
+   
           <div class="upper-section__sign-box">
             <h1 class="upper-section-sign">{{ head }}</h1>
             <h2 class="upper-section-sign">{{ subhead }}</h2>                 
@@ -31,3 +34,4 @@
       
       {% include "app-feature-section.njk" %}
 {% endblock %}
+

@@ -699,10 +699,6 @@ input {
       font-size: 24px;
     }
   };
-  
-  @media (max-width: $narrow){
-    margin: 0 auto;
-  }
 }
 
 
