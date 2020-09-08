@@ -205,6 +205,9 @@ a:focus {
   /* flex: 0 0 60px; */
   position: relative;
   z-index: 3;
+  @media (max-width: $wide) {
+    margin-top: -30px;
+  }
 }
 .header__logo img {
   max-width: 100%;

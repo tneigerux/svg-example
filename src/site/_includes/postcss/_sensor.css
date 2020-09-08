@@ -4,6 +4,7 @@
     position: relative;
     overflow-x: hidden;
     @media (min-width: $wide) {
+        padding-top: 120px;
         min-height: 800px;     
     }; 
 }
@@ -81,7 +82,6 @@
     @media (min-width: $wide){
       height: 800px; 
     }
-    text-align: center;
   }
   
   .sensor-image-section__sign-box  h3:nth-of-type(2) {
@@ -141,7 +141,7 @@
     margin-bottom: 21px;
   }
   
-  .sensor-info-section__inner-box h2:first-child{
+  /* .sensor-info-section__inner-box h2:first-child{
     font-family: Questrial;
     font-style: normal;
     font-weight: normal;
@@ -154,7 +154,7 @@
     }
   
     margin-bottom: 28px;
-  }
+  } */
   
   .sensor-info-section__inner-box h2:nth-child(2){
     margin-bottom: 26px;
