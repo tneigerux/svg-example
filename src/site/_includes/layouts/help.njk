@@ -1,4 +1,6 @@
-{% include "parts/header.njk" %}
+{% extends "layouts/parent.njk" %}
+
+  {% block content %}
 
 <div class="help-image-section upper-section">
   {{ content | safe }}
@@ -19,4 +21,4 @@
   </div>
 </div>
 
-{% include "parts/bottom.njk" %}
+{% endblock %}

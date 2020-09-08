@@ -32,9 +32,16 @@
     position: relative;
   }
 
-  .qa-item:nth-child(-n+3) {
+  .qa-item:first-child {
     border-top: 1px solid #48662A;
   }
+
+  @media (min-width: $wide) {
+    .qa-item:nth-child(-n+3) {
+      border-top: 1px solid #48662A;
+    }
+  }
+  
 
   .qa-item * {
     color: #48662A;

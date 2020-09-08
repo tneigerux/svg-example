@@ -1,13 +1,13 @@
 .legacy-info-section{
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-  
-    padding: 93px 30px 40px;
+    padding: 30px 30px 100px; 
+    @media (min-width: $wide) {
+      padding: 93px 30px 40px;   
+    };
+    
     * {
       color: black;
+      word-wrap: break-word !important;
     }
     a {
       text-decoration: none;
