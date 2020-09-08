@@ -5,20 +5,61 @@
     overflow-x: hidden;
     @media (min-width: $wide) {
         min-height: 800px;     
-    };
+    }; 
+}
+
+.image-section__img-box {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.sensor-hero-text {
+  display: none;    
+  @media (min-width: $wide) {
+      display: block;       
+  };
+}
+
+.sensor-mob-text {
+  display: block;    
+  @media (min-width: $wide) {
+      display: none;       
+  };
+}
+
+.box-mob {
+  display: block;    
+  @media (min-width: $wide) {
+      display: none;       
+  }; 
+}
+
+.box-desk {
+  display: none;
+  @media (min-width: $wide) {
+      display: block;       
+  }; 
 }
   
   .sensor-image-section__sign-box h1{
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    min-width: 60%;
+    max-width: 80%;
+    text-align: right; 
+    
     color: #691B93;
     font-family: Questrial;
     font-style: normal;
     font-weight: normal;
     font-size: 40px;
     line-height: 66px;
-    text-align: right;
     margin-bottom: 260px;
     @media (min-width: $narrow){
-      text-align: left;  
       margin-bottom: 0;
       font-size: 64px;
     }
@@ -31,26 +72,30 @@
     font-size: clamp(20px, 2vw, 30px);
     line-height: 40px;
     display: none;
-    @media (min-width: $narrow){
-      display: block;   
-    }
   }
 
   
   .sensor-image-section__sign-box {
-    margin-top: $first-section-margin-top;
-    margin: 120px 20px 30px auto;
-    @media (min-width: $narrow){
-      max-width: 50%;   
-      margin: 217px 20px 30px auto;   
-    }
+    height: 600px;
+    position: relative;
     @media (min-width: $wide){
-      margin: 217px 41px 30px auto;
+      height: 800px; 
     }
+    text-align: center;
   }
   
   .sensor-image-section__sign-box  h3:nth-of-type(2) {
     margin-top: 50px;
+  }
+
+  .sensor-image-section__sign-box .amazon-link {
+    position: absolute;
+    bottom: 20px;
+    left:50%;
+    margin-left:-112px;
+    @media (min-width: $wide) {
+      margin-left:-150px;
+    }
   }
 
   .sensor-content-block {
@@ -208,7 +253,7 @@
   }
 
   .guarantee-section__img-box {
-    min-width: 400px;
+    /* min-width: 400px; */
     height: clamp(250px, 50vw, 480px);
     @media (min-width: $wide){ 
       width: 30%;

@@ -225,6 +225,7 @@ a:focus {
 .header__burger.active span {
   transform: scale(0);
 }
+
 .header__menu {
   flex-grow: 1;
   max-width: $container-width;
@@ -236,6 +237,7 @@ a:focus {
   justify-content: flex-start;
   align-items: center;
   @media (min-width: $wide) {
+    width: 100%;
     flex-direction: row;
     justify-content: space-around;
     position: relative;        
@@ -249,6 +251,10 @@ a:focus {
   font-size: 24px;
   text-decoration: none;
   border-bottom: none !important;  
+}
+
+.header__body a {
+  border-bottom: none;
 }
 
 @media (max-width: $wide) {
@@ -714,6 +720,10 @@ input {
 
 .submit-btn:hover {
   cursor: pointer;
+}
+
+.text-bold {
+  font-weight: bold;
 }
 
 @import '_contact-form.css';
