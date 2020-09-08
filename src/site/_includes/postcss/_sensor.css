@@ -1,16 +1,12 @@
 
 .sensor-image-section {
-    width: 100%;
-    background: url($imgpath$herosensorbgmob);
-    background-repeat: no-repeat;
-    background-size: cover;    
-    min-height: 400px;
-    @media (min-width: $wide){
-      background: url($imgpath$herosensorbgmob);
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-  }
+    width: 100%;   
+    position: relative;
+    overflow-x: hidden;
+    @media (min-width: $wide) {
+        min-height: 800px;     
+    };
+}
   
   .sensor-image-section__sign-box h1{
     color: #691B93;

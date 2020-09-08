@@ -75,8 +75,6 @@
 
   .qa-item.active p:last-child {
     display: block;
-    position: absolute;
-    z-index: 50;
   }
 
   .qa-item .arrow:hover{

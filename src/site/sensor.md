@@ -3,7 +3,9 @@ title: atendit Sensor
 heroheader: The atendit Sensor
 subtitle: A small, long lasting, bluetooth motion detector to trigger your custom reminders, alerts, and notifications
 layout: layouts/sensor.njk
-ctalink: https://www.amazon.com/dp/B089NB883H
+amazon:
+    link: https://www.amazon.com/dp/B089NB883H
+    text: BUY NOW on Amazon
 info: Product Information
 desc: Product Description
 proddesc: The atendit Sensor is a high-performance, customized Bluetooth V5.0 Low Energy Beacon with an accelerometer for advanced motion detection functionality. This small and rugged unit comes fully encapsulated with a resin based polymer for protection against dust and liquids and reliable use both indoors and outdoors in harsh environmental conditions.
