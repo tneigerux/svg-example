@@ -1,11 +1,13 @@
 .help-image-section {
     background: url(../../images/bg-help-desk.jpg);
     background-size: cover;
-    padding: 140px 80px 100px;
+    padding: 20px 20px 100px;
+    @media (min-width: $wide) {
+      padding: 140px 80px 100px;
+    }
   }
   
   .help-qa-section {
-    /* background-color: white; */
     width: 100%;
     padding: 30px;    
   }
