@@ -1,15 +1,15 @@
 {% extends "layouts/parent.njk" %}
 
   {% block content %}
-      <div class="image-section upper-section" style="background: url({{ himgpath }}{{ heroupperimg }}); background-position: right; background-repeat: no-repeat; background-size: cover;">
+      <div class="image-section upper-section" style=" background-position: right; background-repeat: no-repeat; background-size: cover;">
           <div class="upper-section__sign-box">
             <h1 class="upper-section-sign">{{ head }}</h1>
             <h2 class="upper-section-sign">{{ subhead }}</h2>                 
           </div>
 
 
-          <a class="amazon-link" href="{{ ctalink }}">
-                <p>BUY NOW<br>on Amazon</p>
+          <a class="amazon-link" href="{{ amazon.link }}">
+                <p>{{ amazon.text }}</p>
             </a>  
 
       </div> 

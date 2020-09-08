@@ -1,16 +1,14 @@
 
 .sensor-image-section {
-    background: url(../../images/bg-sensor-desk.jpg) no-repeat;
-    background-size: contain; 
-    margin-top: $first-section-margin-top;
-    background-color: #C2C1BD;    
-    background-position: top 0 left 40%;
-    @media (max-width: $narrow){
-      background-position: center;
-    }
+    width: 100%;
+    background: url($imgpath$herosensorbgmob);
+    background-repeat: no-repeat;
+    background-size: cover;    
+    min-height: 400px;
     @media (min-width: $wide){
-      background-size: cover; 
-      background-position: top 50% left 30%;
+      background: url($imgpath$herosensorbgmob);
+      background-repeat: no-repeat;
+      background-size: cover;
     }
   }
   
@@ -44,6 +42,7 @@
 
   
   .sensor-image-section__sign-box {
+    margin-top: $first-section-margin-top;
     margin: 120px 20px 30px auto;
     @media (min-width: $narrow){
       max-width: 50%;   

@@ -1,9 +1,9 @@
 .image-section {
     width: 100%;    
-    /* background: url("../../images/hero-images/hero-image-mask.jpg");
-    background-repeat: no-repeat;
-    background-size: contain; */
-    /* height: 0; */  
+    background: url($himgpath$heroupperimgmob);
+    @media (min-width: $wide) {
+        background: url($himgpath$heroupperimg);        
+    }; 
 }
 
 .image-section__amazon-box {

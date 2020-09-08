@@ -671,6 +671,7 @@ input {
   display: block;
   margin: 0 auto 34px;
   background-color: #6BCADF;
+  padding: 0 60px; 
   
   max-width: 100%;
   width: 225px;
