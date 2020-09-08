@@ -1,4 +1,6 @@
-{% include "parts/header.njk" %}
+{% extends "layouts/parent.njk" %}
+
+  {% block content %}
 
 <div class="help-image-section upper-section">
   {{ content | safe }}
@@ -12,11 +14,11 @@
   </div>
   <div class="help-content-section">
     {%- for item in collections.qa -%}
-      <div class="{{ item.data.class }}">
+      <div class="help-content-item {{ item.data.class }}">
         {{ item.templateContent | safe }}
       </div>
     {%- endfor -%}
   </div>
 </div>
 
-{% include "parts/bottom.njk" %}
+{% endblock %}

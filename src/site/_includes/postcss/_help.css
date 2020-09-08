@@ -1,11 +1,13 @@
 .help-image-section {
     background: url(../../images/bg-help-desk.jpg);
     background-size: cover;
-    padding: 140px 80px 100px;
+    padding: 20px 20px 100px;
+    @media (min-width: $wide) {
+      padding: 140px 80px 100px;
+    }
   }
   
   .help-qa-section {
-    /* background-color: white; */
     width: 100%;
     padding: 30px;    
   }
@@ -27,11 +29,19 @@
     @media (min-width: $wide) {
       width: 30%;
     };
+    position: relative;
   }
 
-  .qa-item:nth-child(-n+3) {
+  .qa-item:first-child {
     border-top: 1px solid #48662A;
   }
+
+  @media (min-width: $wide) {
+    .qa-item:nth-child(-n+3) {
+      border-top: 1px solid #48662A;
+    }
+  }
+  
 
   .qa-item * {
     color: #48662A;
@@ -74,6 +84,10 @@
 
   .qa-item.active p:last-child {
     display: block;
+  }
+
+  .qa-item .arrow:hover{
+    cursor: pointer;
   }
 
   .help-image-section * {

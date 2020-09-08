@@ -2,12 +2,16 @@
 
 {% block content %}
       <div class="sensor-image-section upper-section">
-        <div class="sensor-image-section__sign-box">
-            {{ content | safe }}
-              <a class="amazon-link" href="{{ ctalink }}">
-                <p>BUY NOW</p>
-                <p>on Amazon</p>
-            </a>
+          <div class="image-section__img-box box-mob" style="background: url({{ himgpath }}{{ heroupperimgmob }}); background-position: center; background-repeat: no-repeat; background-size: cover;"></div>
+          <div class="image-section__img-box box-desk" style="background: url({{ himgpath }}{{ heroupperimg }}); background-position: center; background-repeat: no-repeat; background-size: cover;"></div>
+
+        <div class="sensor-image-section__sign-box">   
+          <h1>{{ heroheader}}</h1>    
+          <h3 class="sensor-hero-text">{{ herotext1 }}</h3>     
+          <h3 class="sensor-hero-text">{{ herotext2 }}</h3>     
+              <a class="amazon-link" href="{{ amazon.link }}">
+                <p>{{ amazon.text }}</p>
+            </a>  
         </div>        
       </div> 
 
@@ -15,11 +19,9 @@
 
       <div class="sensor-info-section">
         <div class="sensor-info-section__inner-box">
-        <h2>{{info}}</h2>
-        <h3>{{desc}}</h3>
-        <h2>{{proddesc}}</h2>
-        <h3>{{maninfo}}</h3>
-        <h2>{{maninfodesc}}</h2>
+          <h2 class="sensor-mob-text">{{ herotext1 }}</h2>     
+          <h2 class="sensor-mob-text">{{ herotext2 }}</h2> 
+          {{ content | safe }}
           </div>
       </div>
 
@@ -57,7 +59,7 @@
           <svg class="ribbon-icon"><use xlink:href="/images/sprite-sheet.svg#ribbon"/></svg>
         </div>
         <div class="guarantee-section__text-box">
-          <h2>{{guaranteesign1}}<sup style="font-size: 16px">tm</sup> {{guaranteesign2}}</h2>
+          <h2>{{guaranteesign1}}<sup style="font-size: 16px">{{guaranteetm}}</sup> {{guaranteesign2}}</h2>
           <h3>{{guaranteetext}}</h3>
           <h3 class="guarantee-bottom-text">{{guaranteebottomtext}}</h3>
         </div>

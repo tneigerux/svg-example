@@ -5,9 +5,11 @@
   }
   
   .about-image-section__box {
-    max-width: 833px;  
-    margin-top: 200px;
-    margin-left: 40px;
+    max-width: 833px;
+    padding: 20px 40px 60px;
+    @media (min-width: $wide) {
+      margin-top: 120px;   
+  };
   }
   
   .about-image-section__box * {
@@ -40,6 +42,7 @@
     font-weight: normal;
     font-size: 18px;
     line-height: 21px;
+    margin-bottom: 20px;
   }
 /*   
   .about-image-section__box p:first-of-type {

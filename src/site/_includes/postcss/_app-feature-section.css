@@ -251,8 +251,7 @@
 }
 
 .app-feature-section__mob-block {
-    width: 100%;
-
+    width: 100%;    
 }
 
 .app-feature-section__mob-block.image-block {
@@ -268,7 +267,7 @@
 }
 
 .app-feature-section__mob-block > .content-block__info-part {
-
+    min-height: 380px;
     padding: 28px;
 }
 

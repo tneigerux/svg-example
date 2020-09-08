@@ -48,6 +48,10 @@ footer {
   
       }
   }
+
+  .footer-body a {
+    border-bottom: none;
+  }
   
   
   .footer-footer {
@@ -79,7 +83,7 @@ footer {
     font-size: 18px;
     text-align: center;
     line-height: 1.8em;
-  
+    border-bottom: none;
     @media (min-width: $wide) {
       font-size: 24px !important;
       color: $page-color;
