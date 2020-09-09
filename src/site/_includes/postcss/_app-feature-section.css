@@ -274,7 +274,11 @@
 .info-part__header-row {
     display: flex;
     justify-content: space-between;
-    align-items: center;    
+    align-items: center; 
+}
+
+.app-feature-section__icon {
+    margin-right: 0;
 }
 
 .app-feature-section__mob * {
