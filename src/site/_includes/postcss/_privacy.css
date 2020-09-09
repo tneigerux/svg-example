@@ -28,11 +28,11 @@
       width: 100%;
     }
   
-    .privacy-paragraph-list__item {
+    .privacy-paragraph-list > p {
       color: black;
       width: 100%;
     }
-    .privacy-paragraph-list__item span {
+    .privacy-paragraph-list > p > span {
       float: right;
     }
   
