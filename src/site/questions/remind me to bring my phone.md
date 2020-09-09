@@ -1,6 +1,8 @@
 ---
 class: qa-item
-tags: qa
+tags: 
+    - qa
+    - qaapp
 category: sensor
 ---
 
