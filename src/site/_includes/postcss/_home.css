@@ -72,6 +72,7 @@
   
   .upper-section__sign-box > h2{  
     font-size: 36px;
+    line-height: 38px;
     @media (min-width: $wide) {
       margin-top: 50px;
     };

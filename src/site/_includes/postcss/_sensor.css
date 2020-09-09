@@ -43,15 +43,31 @@
   @media (min-width: $wide) {
       display: block;       
   }; 
-}
+}  
   
+  .sensor-image-section__sign-box {
+    height: 600px;
+    position: relative;
+    @media (min-width: $wide){
+      height: 100%;
+      width: 100%;
+      padding-top: 100px;
+      padding-left: 45%;
+      padding-right: 20px;
+      text-align: left;
+    }
+  }
+
   .sensor-image-section__sign-box h1{
-    position: absolute;
-    top: 50px;
-    right: 20px;
-    min-width: 60%;
-    max-width: 80%;
-    text-align: right; 
+    @media (max-width: $wide){
+      position: absolute;
+      top: 50px;
+      right: 20px;
+      min-width: 60%;
+      max-width: 80%;
+      text-align: right; 
+    };
+    
     
     color: #691B93;
     font-family: Questrial;
@@ -59,28 +75,18 @@
     font-weight: normal;
     font-size: 40px;
     line-height: 66px;
-    margin-bottom: 260px;
     @media (min-width: $narrow){
-      margin-bottom: 0;
       font-size: 64px;
     }
-  }
-  
-  .sensor-image-section__sign-box h3{
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: clamp(20px, 2vw, 30px);
-    line-height: 40px;
-    display: none;
-  }
+   }
 
-  
-  .sensor-image-section__sign-box {
-    height: 600px;
-    position: relative;
-    @media (min-width: $wide){
-      height: 800px; 
+  .sensor-image-section__sign-box .amazon-link {    
+    margin-left: 0 !important;
+    @media (max-width: $wide) {
+      position: absolute;
+      bottom: 20px;
+      left:50%;
+      margin-left:-112px;
     }
   }
   
@@ -88,15 +94,7 @@
     margin-top: 50px;
   }
 
-  .sensor-image-section__sign-box .amazon-link {
-    position: absolute;
-    bottom: 20px;
-    left:50%;
-    margin-left:-112px;
-    @media (min-width: $wide) {
-      margin-left:-150px;
-    }
-  }
+  
 
   .sensor-content-block {
     padding: 40px;
@@ -267,4 +265,4 @@
       width: 100%; 
       height: 100%;
 
-  }
+  }  
