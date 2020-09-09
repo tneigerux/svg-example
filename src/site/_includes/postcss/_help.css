@@ -99,6 +99,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding: 28px;
+    @media (min-width: $wide) {
+      padding: 40px;
+    }
   }
   
   .help-image-section h2 {
