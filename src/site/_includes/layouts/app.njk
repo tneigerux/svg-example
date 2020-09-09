@@ -21,6 +21,10 @@
       </div> 
     {% include "app-feature-section.njk" %}
 
+<div class="help-qa-section">
+  <div class="help-sign-section">
+    <h2>{{qasign}}</h2>
+  </div>
     <div class="help-content-section">
     {%- for item in collections.qaapp -%}
       <div class="help-content-item {{ item.data.class }}">
@@ -28,5 +32,6 @@
       </div>
     {%- endfor -%}
   </div>
+  </div
     
 {% endblock %}
