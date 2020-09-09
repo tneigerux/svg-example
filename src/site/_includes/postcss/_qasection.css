@@ -28,7 +28,7 @@
     background-color: #F5F5F5;    
     border-bottom: 1px solid #48662A;
     @media (min-width: $wide) {
-      width: 30%;
+      width: 32.5%;
     };
     position: relative;
   }
