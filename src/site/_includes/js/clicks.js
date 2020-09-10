@@ -83,6 +83,21 @@ function showImg(evt, imgId){
   evt.currentTarget.className += " active-gif-tab";
 }
 
+// // show-hide answer on the help page
+// var navbarLinks = document.getElementsByClassName("header__link");
+// Array.from(navbarLinks).forEach(function(item) {  
+//   item.addEventListener('click', changeActiveNavbarLink());
+// });
+
+// function changeActiveNavbarLink(){
+//   // remove active to all tabs
+//   var tabs = document.getElementsByClassName("header__link");
+//   Array.from(tabs).forEach(function(tab) {
+//     tab.classList.remove('active');
+//   });
+//   event.currentTarget.classList.add('active')
+// }
+
 function changeInterractive(className){
   // remove active to all tabs
   var tabs = document.getElementsByClassName("bottom-container");
@@ -90,7 +105,7 @@ function changeInterractive(className){
     tab.classList.remove('active');
   });
   event.currentTarget.classList.add('active')
-  
+
   // remove active to all
   var elements = document.getElementsByClassName("feature-interractive");
   Array.from(elements).forEach(function(element) {
