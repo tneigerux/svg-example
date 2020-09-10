@@ -83,8 +83,7 @@
 }   
 
 .app-feature-section__main-content__img {
-    min-width: 40%;
-    width: 40%;
+
 }
 
 .app-feature-section__main-content__text {
@@ -275,6 +274,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center; 
+    width: 100%;
 }
 
 .app-feature-section__icon {
@@ -287,6 +287,7 @@
 
 .info-part__main-box {
     padding-top: 10px;
+    max-width: 80%;
 }
 .info-part__main-box p {
     margin-bottom: 20px;
