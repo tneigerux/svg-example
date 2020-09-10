@@ -84,6 +84,13 @@ function showImg(evt, imgId){
 }
 
 function changeInterractive(className){
+  // remove active to all tabs
+  var tabs = document.getElementsByClassName("bottom-container");
+  Array.from(tabs).forEach(function(tab) {
+    tab.classList.remove('active');
+  });
+  event.currentTarget.classList.add('active')
+  
   // remove active to all
   var elements = document.getElementsByClassName("feature-interractive");
   Array.from(elements).forEach(function(element) {
@@ -97,7 +104,7 @@ function changeInterractive(className){
   });
 }
 
-function changeInterractiveMob(className){
+function changeInterractiveMob(className){  
   // remove active to all
   var elements = document.getElementsByClassName("feature-interractive-mob");
   Array.from(elements).forEach(function(element) {
