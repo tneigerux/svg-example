@@ -74,8 +74,7 @@ body {
   flex: 1;
   justify-content: flex-start;
   @media (min-width: $wide) {
-    max-width: 100%;
-
+    max-width: 1364px; /* this limitation makes the app feature section on the home and app pages look best */
   };
 }
 
