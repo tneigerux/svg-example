@@ -320,7 +320,7 @@ a:focus {
     width: 100%;
     height: 100%;
     transition: all 0.3s ease 0s;
-    background-color: #18b5a4;
+    background-color: #fff;
     padding: 70px 0 0 0;
   }
 
@@ -736,13 +736,15 @@ input {
 }
 
 .active-nav-link-arrow.active {
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  margin-bottom: -6px;
+  @media (min-width: $wide) {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-bottom: -6px;
+  }
 }
 
 
