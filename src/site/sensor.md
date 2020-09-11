@@ -1,8 +1,8 @@
 ---
 title: atendit Sensor
 heroheader: The atendit Sensor
-herotext1: A key component of the atendit system, the atendit Sensor is a Bluetooth Low Energy (BLE) beacon that is custom programmed to briefly transmit information that identifies its location to your mobile phone. The atendit Sensor is activated when the door it is mounted on is moved.
-herotext2: The atractive blue atendit Sensor is lightweight and comes with a removable mounting tab for easy and secure placement on your door
+herotext1: A key component of the atendit system, the atendit sensor is a Bluetooth Low Energy (BLE) beacon that is custom programmed to briefly transmit information that identifies its location to your mobile phone. The atendit Sensor is activated when the door it is mounted on is moved.
+herotext2: The attractive blue atendit sensor is lightweight and comes with a removable mounting tab for easy and secure placement on your door
 subtitle: A small, long lasting, bluetooth motion detector to trigger your custom reminders, alerts, and notifications
 layout: layouts/sensor.njk
 amazon:
@@ -18,7 +18,7 @@ heroupperimgmob: bg-sensor-mob.jpg
 guaranteesign1: The atendit 
 guaranteetm: tm
 guaranteesign2: sensor is guaranteed to perform for a full two years of normal use. 
-guaranteetext: If for any reason it isnâ€™t working just return the sensor to Did U Remember to LLC for an immediate replacement.
+guaranteetext: If for any reason it isn’t working just return the sensor to Did U Remember to LLC for an immediate replacement.
 guaranteebottomtext: For replacement directions please email support@atendit.com
 dimension_sign: Product Dimensions
 weight_sign: Item Weight
