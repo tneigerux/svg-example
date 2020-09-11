@@ -83,14 +83,27 @@
     align-items: flex-start;
   }
 
+  .help-content-section.help-content-desk {
+    display: none;
+    @media (min-width: $wide) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    };
+  }
+
+  .help-content-section.help-content-mob {
+    display: block;
+    @media (min-width: $wide) {
+      display: none;
+    };
+  }
+
   .qa-item {
     width: 100%;
     padding: 5px 20px 5px 5px;
     background-color: #F5F5F5;    
-    border-bottom: 1px solid #48662A;
-    @media (min-width: $wide) {
-
-    };
+    border-bottom: 1px solid #48662A;    
     position: relative;
   }
 
