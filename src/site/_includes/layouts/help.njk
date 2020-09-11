@@ -1,11 +1,10 @@
 {% extends "layouts/parent.njk" %}
 
   {% block content %}
-
+{% include "contact-form.njk" %}
 <div class="help-image-section upper-section">
   {{ content | safe }}
-  <img class="expand-form" id="expand-form" src="../../images/form-expand.svg">
-  {% include "contact-form.njk" %}
+  
 </div>
 
 {% include "parts/qa-section.njk" %}
