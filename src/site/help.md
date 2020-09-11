@@ -3,6 +3,7 @@ title: atendit Support & Help
 subtitle: Self help and support resources when using your atendit system. Contact informaition for further help
 layout: layouts/help.njk
 qasign: Frequently Asked Questions (FAQ)
+qaitems: qa
 ---
 
 ## Help & Support
