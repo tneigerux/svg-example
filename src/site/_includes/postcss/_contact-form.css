@@ -13,7 +13,18 @@
 #expand-form {
   height: 249px;
   width: 82px;
-  fill: #691B93;
+  background-color: #691B93;
+  padding: 12px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  display: flex;
+}
+
+.contact-tab-sign {
+  height: 100%; 
+  margin: 0; 
+  padding: 0;
+  position: relative;
 }
 
 #expand-form:hover, .close-form-btn:hover, .contact-form-submit:hover{
