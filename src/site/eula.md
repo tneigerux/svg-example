@@ -1,7 +1,7 @@
 ---
 title: eula title
 subtitle: eula subtitle
-layout: layouts/legacy.njk
+layout: layouts/eula.njk
 ---
 
 Did U Remember To LLC License Agreement for the atendit™ Mobile Application

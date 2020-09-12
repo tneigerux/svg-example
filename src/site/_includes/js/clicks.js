@@ -45,6 +45,23 @@ document.addEventListener('keydown', (event) => {
   }
 });
 
+// show-hide answer on the help page
+var qaItems = document.getElementsByClassName("qa-item");
+Array.from(qaItems).forEach(function(item) {
+  item.addEventListener('click', (item) => {
+    item.currentTarget.classList.toggle('active')
+    let arrow = item.currentTarget.firstChild
+    arrow.classList.toggle('arrow-open')
+  });
+});
+
+// adds arrows to help pages 
+Array.from(qaItems).forEach(function(item) {
+  var node = document.createElement("LI"); 
+  node.classList.add('arrow')
+  item.prepend(node); 
+});
+
 // Switch gif image on the Welcome page - DEPRECATED
 
 function closeForm(){
@@ -65,3 +82,141 @@ function showImg(evt, imgId){
   document.getElementById(imgId).style.display = "block";
   evt.currentTarget.className += " active-gif-tab";
 }
+
+// // show-hide answer on the help page
+// var navbarLinks = document.getElementsByClassName("header__link");
+// Array.from(navbarLinks).forEach(function(item) {  
+//   item.addEventListener('click', changeActiveNavbarLink());
+// });
+
+// function changeActiveNavbarLink(){
+//   // remove active to all tabs
+//   var tabs = document.getElementsByClassName("header__link");
+//   Array.from(tabs).forEach(function(tab) {
+//     tab.classList.remove('active');
+//   });
+//   event.currentTarget.classList.add('active')
+// }
+
+function changeInterractive(className){
+  // remove active to all tabs
+  var tabs = document.getElementsByClassName("bottom-container");
+  Array.from(tabs).forEach(function(tab) {
+    tab.classList.remove('active');
+  });
+  event.currentTarget.classList.add('active')
+
+  // remove active to all
+  var elements = document.getElementsByClassName("feature-interractive");
+  Array.from(elements).forEach(function(element) {
+    element.classList.remove('active');
+  });
+
+  // set active to the clicked
+  var activeElements = document.getElementsByClassName(className);
+  Array.from(activeElements).forEach(function(element) {
+    element.classList.add('active');
+  });
+}
+
+function changeInterractiveMob(className){  
+  // remove active to all
+  var elements = document.getElementsByClassName("feature-interractive-mob");
+  Array.from(elements).forEach(function(element) {
+    element.classList.remove('active');
+  });
+
+  // set active to the clicked
+  var activeElements = document.getElementsByClassName(className);
+  Array.from(activeElements).forEach(function(element) {
+    element.classList.add('active');
+  });
+}
+
+/* SWIPE */
+
+function detectSwipe(el,func) {
+  swipe_det = new Object();
+  swipe_det.sX = 0;
+  swipe_det.sY = 0;
+  swipe_det.eX = 0;
+  swipe_det.eY = 0;
+  var min_x = 20;  //min x swipe for horizontal swipe
+  var max_x = 40;  //max x difference for vertical swipe
+  var min_y = 40;  //min y swipe for vertical swipe
+  var max_y = 50;  //max y difference for horizontal swipe
+  var direc = "";
+  ele = document.getElementById(el);
+  ele.addEventListener('touchstart',function(e){
+    var t = e.touches[0];
+    swipe_det.sX = t.screenX; 
+    swipe_det.sY = t.screenY;
+  },false);
+  ele.addEventListener('touchmove',function(e){
+    // e.preventDefault();
+    var t = e.touches[0];
+    swipe_det.eX = t.screenX; 
+    swipe_det.eY = t.screenY;    
+  },false);
+  ele.addEventListener('touchend',function(e){
+    //horizontal detection
+    if ((((swipe_det.eX - min_x > swipe_det.sX) || (swipe_det.eX + min_x < swipe_det.sX)) && ((swipe_det.eY < swipe_det.sY + max_y) && (swipe_det.sY > swipe_det.eY - max_y)))) {
+      if(swipe_det.eX > swipe_det.sX) direc = "r";
+      else direc = "l";
+    }
+    //vertical detection
+    // Uncomment if needed
+    // commented to detect only horizontal swipe direction
+    // if ((((swipe_det.eY - min_y > swipe_det.sY) || (swipe_det.eY + min_y < swipe_det.sY)) && ((swipe_det.eX < swipe_det.sX + max_x) && (swipe_det.sX > swipe_det.eX - max_x)))) {
+    //   if(swipe_det.eY > swipe_det.sY) direc = "d";
+    //   else direc = "u";
+    // }
+
+    if (direc != "") {
+      if(typeof func == 'function') func(el,direc);
+    }
+    direc = "";
+    
+  },false);  
+}
+
+
+function finishSwipe(el, direction) {
+  var maxV = 6
+  var minV = 1
+
+  var elements = document.getElementsByClassName("feature-content-mob");
+
+    for (i = 0; i < elements.length; i++){
+      let element = elements[i]
+    if(element.classList.contains('active')){
+      for (i = 0; i < element.classList.length; i++){
+        cls = element.classList[i]
+        if(cls.startsWith('feature-mob')){
+          var elNum = parseInt(cls.slice(-1));
+          // if we swipe to the left, activate next slide
+          if(direction == 'l'){
+            if(elNum < maxV) {
+              elNum += 1;
+            }
+          }
+          // if we swipe to the right, activate previouse slide
+          if(direction == 'r'){
+            if(elNum > minV) {
+              elNum -= 1;
+            }
+          }          
+          var newClass = cls.slice(0, -1) + elNum
+
+          changeInterractiveMob(newClass)         
+        }
+      }
+      break;
+    }
+  }
+
+}
+
+detectSwipe('app-feature-section__mob', finishSwipe);
+
+/* / SWIPE */

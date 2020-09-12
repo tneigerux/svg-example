@@ -23,3 +23,12 @@ $screen-var: ((100vw - 320px) / (1280 - 320));
 $container-width: 1280px;
 
 $first-section-margin-top: -96px;
+
+$himgpath: ../../images/hero-images/;
+$imgpath: ../../images/;
+
+$heroupperimg: hero-desk-cup.jpg;
+$heroupperimgmob: hero-mob-cup.jpg;
+
+$herosensorbg: bg-sensor-desk.jpg;
+$herosensorbgmob: bg-sensor-mob.jpg;

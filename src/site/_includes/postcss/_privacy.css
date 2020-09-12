@@ -1,0 +1,39 @@
+.privacy-info-section{
+  h1 {
+    font-size: 40px;
+  }
+    width: 100%;
+    padding: 30px 30px 100px; 
+    @media (min-width: $wide) {
+      padding: 93px 30px 40px;   
+      h1 {
+        font-size: 46px;
+      }
+    };
+    
+    * {
+      color: black;
+      word-wrap: break-word !important;
+    }
+    a {
+      text-decoration: none;
+      border-bottom: none;
+      color: black !important;
+    }
+  
+    .privacy-paragraph-list {
+      background-color: #c0c0c0;
+      padding: 30px; 
+      margin: 20px 0;
+      width: 100%;
+    }
+  
+    .privacy-paragraph-list > p {
+      color: black;
+      width: 100%;
+    }
+    .privacy-paragraph-list > p > span {
+      float: right;
+    }
+  
+  }

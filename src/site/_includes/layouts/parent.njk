@@ -18,11 +18,11 @@
     <title>{{ title }} - {{ subtitle }}</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container home-container">
       {% include "navbar.njk" %}
-      <div class="legacy-info-section">
-          {{ content | safe }} 
-      </div>      
+
+        {% block content %}{% endblock %}
+
       {% include "footer-extended.njk" %}
     </div>
 
@@ -39,6 +39,7 @@
     {% set js %}
       {% include "js/core.js" %}
       {% include "js/clicks.js" %}
+      {% include "js/customjs.js" %}
     {% endset %}
     <script>{{ js | jsmin | safe }}</script>
 

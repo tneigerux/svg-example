@@ -1,16 +1,38 @@
 .image-section {
-    width: 100%;    
-    /* background: url("../../images/hero-images/hero-image-mask.jpg");
-    background-repeat: no-repeat;
-    background-size: contain; */
-    /* height: 0; */    
+    width: 100%;   
+    position: relative;
+    overflow-x: hidden;
+    @media (min-width: $wide) {
+        min-height: 800px;     
+    }; 
+}
+
+.image-section__img-box {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.box-mob {
+    display: block;    
+    @media (min-width: $wide) {
+        display: none;       
+    }; 
+}
+.box-desk {
+    display: none;
+    @media (min-width: $wide) {
+        display: block;       
+    }; 
 }
 
 .image-section__amazon-box {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 30px 0;
+    padding: 10px 0;
 }
 
 .image-section__stripe{
@@ -21,40 +43,38 @@
 
 .upper-section__sign-box {
     width: 100%;
-    padding: 100px;
+    padding: 10px;
     @media (min-width: $wide) {
         margin-top: 96px;
-        
+        padding: 10%;
     }; 
 }
-
-.upper-section-sign {
-    margin-left: 20px;
-}
-
 
 .upper-section-sign {
     color: white;
     font-family: Questrial;
     font-style: normal;
     font-weight: normal;
+    width: 70%;
     @media (min-width: $wide) {
         max-width: 40%;
       };
   }
   
   .upper-section__sign-box > h1{  
-    font-size: 36px;
-    @media (min-width: $wide) {
-      font-size: 64px;
-    };  
+    font-family: Questrial;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 66px;
+    font-size: 64px;
+
   }
   
   .upper-section__sign-box > h2{  
-    font-size: 24px;
+    font-size: 36px;
+    line-height: 38px;
     @media (min-width: $wide) {
       margin-top: 50px;
-      font-size: 36px;
     };
   }
 
@@ -83,16 +103,6 @@
         align-self: flex-start;
     }
   }
-
-  .amazon-link-box {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 30px;
-  }
-  
- 
   
   .product-section__text-box h2 {  
     color: #243315;
