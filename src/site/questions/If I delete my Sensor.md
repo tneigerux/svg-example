@@ -2,7 +2,6 @@
 class: qa-item
 tags: 
     - qa
-    - qasensor
 category: sensor
 ---
 
