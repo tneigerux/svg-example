@@ -1,8 +1,11 @@
 .app-image-section {    
-    background-color: white;
+    background: url(../../images/bg-app-mob.jpg) no-repeat;
+    background-size: 100%;
+    background-position: bottom;
     margin-top: $first-section-margin-top;
-    
+    padding-bottom: 100%;    
     @media (min-width: $wide) {
+        padding-bottom: 0;
         background: url(../../images/bg-app-desk.jpg) no-repeat;
         background-size: contain;
         background-position: right;    
