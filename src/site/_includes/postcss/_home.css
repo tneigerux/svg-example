@@ -35,6 +35,22 @@
     padding: 10px 0;
 }
 
+.home-amazon-link {
+    text-transform: uppercase;
+    padding: 0 !important;
+    position: relative;
+
+    p {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        padding: 0 !important;
+    }
+}
+
 .image-section__stripe{
     position: absolute; 
     bottom: 0;
@@ -42,40 +58,34 @@
 }
 
 .upper-section__sign-box {
-    width: 100%;
-    padding: 10px;
+    width: 387px;
+    height: 470px;
+    background: #691B93;
+    border-radius: 10px 50px 10px 10px;
+    position: absolute;
+    left: 40px;
+    top: 79px;
+    padding: 43px 5px 0 20px;
     @media (min-width: $wide) {
         margin-top: 96px;
-        padding: 10%;
     }; 
 }
 
 .upper-section-sign {
     color: white;
-    font-family: Questrial;
-    font-style: normal;
-    font-weight: normal;
-    width: 70%;
-    @media (min-width: $wide) {
-        max-width: 40%;
-      };
-  }
+ }
   
   .upper-section__sign-box > h1{  
     font-family: Questrial;
     font-style: normal;
     font-weight: normal;
-    line-height: 66px;
-    font-size: 64px;
-
+    line-height: 41px;
+    font-size: 40px;
   }
   
   .upper-section__sign-box > h2{  
-    font-size: 36px;
-    line-height: 38px;
-    @media (min-width: $wide) {
-      margin-top: 50px;
-    };
+    font-size: 24px;
+    line-height: 36px;
   }
 
 
