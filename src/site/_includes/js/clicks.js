@@ -147,6 +147,10 @@ function detectSwipe(el,func) {
   var max_y = 50;  //max y difference for horizontal swipe
   var direc = "";
   ele = document.getElementById(el);
+
+  // if element not found
+  if(null == ele) return
+
   ele.addEventListener('touchstart',function(e){
     var t = e.touches[0];
     swipe_det.sX = t.screenX; 
