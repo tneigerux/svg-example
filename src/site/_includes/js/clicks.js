@@ -12,14 +12,6 @@ eventHandler('.cancel-submit-btn', 'click', function(){
   hiddenForm[0].style.display = "none";
 });
 
-// Close the address collector with no entry via ESC key
-
-eventHandler('document', 'keydown', function(){
-  let hiddenForm = document.getElementsByClassName('email-modal')
-  if (event.which == 27) 
-    hiddenForm[0].style.display = "none";
-});
-
 // Activate hamburger menu
 
 eventHandler('.header__burger', 'click', function(){
