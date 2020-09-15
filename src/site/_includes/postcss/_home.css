@@ -56,6 +56,7 @@
 }
 
 .options-box-row {
+    padding-top: 20px;
     /* display: flex;
     justify-content: flex-start;
     align-items: center; */
@@ -65,6 +66,7 @@
     color: #165A69;
     display: inline-block;
     margin-right: 10px;
+    margin-bottom: 20px;
     width: 183px;
     padding: 10px;
     text-align: center;
@@ -73,7 +75,22 @@
     font-weight: bold;
     font-size: 24px;
     line-height: 28px;
+    position: relative;
 }
+
+.options-box-tab.active:after {
+  border-right: solid 8px transparent;
+  border-left: solid 8px transparent;
+  border-top: solid 8px #165A69;
+  transform: translateX(-50%);
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 50%;
+  height: 0;
+  width: 0;
+}
+
 
 .options-box-tab:hover {
     cursor: pointer;
@@ -85,6 +102,10 @@
 }
 
 .options-box-col-section {
+    display: none;    
+}
+
+.options-box-col-section.active {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -92,6 +113,7 @@
 
 .options-box-col {
     width: 214px;
+    margin-right: 10px;
 }
 .upper-section__option-box {
     width: 100%;

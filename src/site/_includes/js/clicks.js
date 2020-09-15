@@ -38,6 +38,26 @@ document.addEventListener('keydown', (event) => {
 });
 
 // show-hide answer on the help page
+var homeOptionsTabs = document.getElementsByClassName("options-box-tab");
+var homeOptions = document.getElementsByClassName("options-box-col-section");
+
+Array.from(homeOptionsTabs).forEach((item, index) => {
+  item.addEventListener('click', () => {
+    Array.from(homeOptionsTabs).forEach((item) => {
+      item.classList.remove('active')
+    });
+    Array.from(homeOptions).forEach((item) => {
+      item.classList.remove('active')
+    });
+  console.log('index is ' + index);
+
+    homeOptionsTabs[index].classList.add('active'); /* active for tab */
+    homeOptions[index].classList.add('active'); /* active for option section */
+  } );
+});
+
+
+// show-hide answer on the help page
 var qaItems = document.getElementsByClassName("qa-item");
 Array.from(qaItems).forEach(function(item) {
   item.addEventListener('click', (item) => {
