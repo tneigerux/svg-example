@@ -97,10 +97,13 @@
     width: 100%;
     height: 72px;
     margin-bottom: 10px;
+    position: relative;
 }
 
 .upper-section__option {
-   
+   position: absolute;
+   top: 0;
+   left:0;
 }
 
 .upper-section__option > polyline {
@@ -109,7 +112,18 @@
     stroke-width:2;
 }
 
-
+.upper-section__option-box h3 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: #165A69;
+    position: absolute;
+    text-align: right;
+    right: 5px;
+    top: 8px;
+}
 
 
 .image-section__stripe{
