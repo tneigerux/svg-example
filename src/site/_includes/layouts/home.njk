@@ -22,21 +22,27 @@
               <h3 class="options-box-tab">Security Alerts</h3>
             </div>
             <div class="options-box-col-section">
+
+              {% for i in range(0, 3) -%}
               <div class="options-box-col">
-                
+
                 {% for item in options.reminders %}
-                  <div class="upper-section__option-box">
-                    <svg class="upper-section__option">
-                      <polyline points="0,20 30,0 214,0 214,72 30,72 0,52 0,20"/>
-                      <circle cx="15" cy="36" r="10" fill="#165A69" />                    
-                    </svg>
-                    <h3>{{item}}</h3>
-                  </div> 
+                  {% if (loop.index > 3 * i) and (loop.index <= 3 * (i+1)) %}
+                  
+                    <div class="upper-section__option-box">
+                      <svg class="upper-section__option">
+                        <polyline points="0,20 30,0 214,0 214,72 30,72 0,52 0,20"/>
+                        <circle cx="15" cy="36" r="10" fill="#165A69" />                    
+                      </svg>
+                      <h3>{{item}}</h3>
+                    </div> 
+                    
+                  {% endif %}   
                 {% endfor %}
 
               </div>
-              <div class="options-box-col"></div>
-              <div class="options-box-col"></div>
+            {% endfor %}
+
             </div>  
           </div>
 
