@@ -54,6 +54,14 @@ options:
         - '...bring books - class tonight'
         - '...get gas / petrol right away!'
         - '...don’t forget umbrella'
+    doorbell:
+        - 'someone tried to open front door!'
+        - 'someone opened kitchen window'
+        - 'medicine cabinet opened'
+    security: 
+        - '...customer entering shop!'
+        - '...visitor entering office!'
+        - '...patient in waiting room'
 
 ---
 
