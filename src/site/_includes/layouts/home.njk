@@ -24,13 +24,15 @@
             <div class="options-box-col-section">
               <div class="options-box-col">
                 
-                <div class="upper-section__option-box">
-                  <svg class="upper-section__option">
-                    <polyline points="0,20 30,0 214,0 214,72 30,72 0,52 0,20"/>
-                    <circle cx="15" cy="36" r="10" fill="#165A69" />                    
-                  </svg>
-                  <h3>...bring morning coffee</h3>
-                 </div> 
+                {% for item in options.reminders %}
+                  <div class="upper-section__option-box">
+                    <svg class="upper-section__option">
+                      <polyline points="0,20 30,0 214,0 214,72 30,72 0,52 0,20"/>
+                      <circle cx="15" cy="36" r="10" fill="#165A69" />                    
+                    </svg>
+                    <h3>{{item}}</h3>
+                  </div> 
+                {% endfor %}
 
               </div>
               <div class="options-box-col"></div>

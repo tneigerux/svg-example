@@ -47,7 +47,13 @@ comparison:
             s1: REMINDERS    
         row4:
             s1: ANY.DO    
-
+options:
+    reminders:
+        - '...bring morning coffee'
+        - '...adjust A/C before leaving'
+        - '...bring books - class tonight'
+        - '...get gas / petrol right away!'
+        - '...don’t forget umbrella'
 
 ---
 
