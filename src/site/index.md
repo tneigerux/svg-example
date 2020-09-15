@@ -62,6 +62,9 @@ options:
         - '...customer entering shop!'
         - '...visitor entering office!'
         - '...patient in waiting room'
+tab1: Reminders
+tab2: Silent Doorbell
+tab3: Security Alerts
 
 ---
 

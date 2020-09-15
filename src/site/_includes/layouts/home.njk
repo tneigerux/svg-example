@@ -17,9 +17,9 @@
 
           <div class="upper-section__options-box">
             <div class="options-box-row">
-              <h3 class="options-box-tab active">Reminders</h3>
-              <h3 class="options-box-tab">Silent Doorbell</h3>
-              <h3 class="options-box-tab">Security Alerts</h3>
+              <h3 class="options-box-tab active">{{ tab1 }}</h3>
+              <h3 class="options-box-tab">{{ tab2 }}</h3>
+              <h3 class="options-box-tab">{{ tab3 }}</h3>
             </div>
 
             <div class="options-box-col-section active">
@@ -94,6 +94,12 @@
             {% endfor %}
             </div>  
 
+          </div>
+
+          <div class="upper-section__options-box-mob">
+              <div class="options-item-mob"><h3>{{ tab1 }}</h3></div>
+              <div class="options-item-mob"><h3>{{ tab2 }}</h3></div>
+              <div class="options-item-mob"><h3>{{ tab3 }}</h3></div>
           </div>
 
           </div>

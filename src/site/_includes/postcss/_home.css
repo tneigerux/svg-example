@@ -53,6 +53,36 @@
 
 .upper-section__options-box {
     padding-left: 20px;
+    display: none;
+    @media (min-width: $wide) {        
+        display: block;
+    } 
+}
+
+.upper-section__options-box-mob {
+    display: block;
+    @media (min-width: $wide) {        
+        display: none;
+    } 
+}
+
+.options-item-mob {
+    width: 388px;
+    height: 42px;
+    margin: 0 auto 10px;
+    background: #165A69;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.options-item-mob h3 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: white;
 }
 
 .options-box-row {
@@ -155,21 +185,21 @@
     width: 100%;
 }
 
-.upper-section-content {
-    position: absolute;
-    left: 40px;
-    top: 79px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+.upper-section-content {     
+    padding-top: 40px;
     @media (min-width: $wide) {
-        margin-top: 96px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-top: 176px;
+        padding-left: 40px;
     }; 
 }
 
 .upper-section__sign-box {
-    width: 387px;
-    height: 470px;
+    margin: 0 auto 50px;
+    width: 422px;
+    height: 574px;
     background: $accent-color;
     border-radius: 10px 50px 10px 10px;    
     padding: 43px 5px 0 20px;    
