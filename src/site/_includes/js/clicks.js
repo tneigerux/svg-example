@@ -37,7 +37,7 @@ document.addEventListener('keydown', (event) => {
   }
 });
 
-// home page tabs and options
+// desktop - home page tabs and options
 var homeOptionsTabs = document.getElementsByClassName("options-box-tab");
 var homeOptions = document.getElementsByClassName("options-box-col-section");
 
@@ -53,6 +53,37 @@ Array.from(homeOptionsTabs).forEach((item, index) => {
     homeOptionsTabs[index].classList.add('active'); /* active for tab */
     homeOptions[index].classList.add('active'); /* active for option section */
   } );
+});
+
+// mobile - show-hide home page options
+var optionsArrows = document.getElementsByClassName("options-arrow");
+var optionsBlocks = document.getElementsByClassName("options-block");
+var optionsItems = document.getElementsByClassName("options-box-mob__option-tab");
+Array.from(optionsItems).forEach(function(item) {
+  item.addEventListener('click', (item) => {
+    let tab = item.currentTarget;
+    let arrow = tab.querySelector('.options-arrow');
+
+    let parent = tab.parentElement;
+    let block = parent.querySelector('.options-block');
+      // if active clicked - close it
+    if(block.classList.contains('active')){
+      arrow.classList.remove('arrow-open');
+      block.classList.remove('active');
+
+      // else - regular case
+    } else {
+      Array.from(optionsBlocks).forEach((item) => {
+        item.classList.remove('active')
+      });
+      Array.from(optionsArrows).forEach((item) => {
+        item.classList.remove('arrow-open')
+      });  
+      
+      arrow.classList.add('arrow-open');
+      block.classList.add('active');
+    }    
+  });
 });
 
 
