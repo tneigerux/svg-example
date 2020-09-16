@@ -31,13 +31,6 @@
     }; 
 }
 
-.image-section__amazon-box {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
-}
-
 .home-amazon-link {
     text-transform: uppercase;
     padding: 0 !important;
@@ -57,12 +50,13 @@
 .upper-section__options-box {
     padding-left: 20px;
     display: none;
-    @media (min-width: $wide) {        
+    @media (min-width: $wide) {  
+        position: relative;      
         display: block;
     } 
 }
 .options-box-mob__option {
-    width: 388px;
+    max-width: 388px;
     margin: auto;
     max-height: 52px;
     overflow: hidden;
@@ -74,6 +68,8 @@
 }
 .upper-section__options-box-mob {
     display: block;
+    padding-left: 10px;
+    padding-right: 10px;
     @media (min-width: $wide) {        
         display: none;
     } 
@@ -102,6 +98,8 @@
     margin-bottom: 10px;
     padding-right: 10px;
     color: #165A69;
+    white-space: nowrap;
+    overflow: hidden;
 
     display: flex;
     justify-content: flex-end;
@@ -174,18 +172,22 @@
 }
 
 .options-box-tab.active {
+    transition-duration: 500ms;
     color: white;
     background: #165A69;
 }
 
 .options-box-col-section {
-    display: none;    
-}
-
-.options-box-col-section.active {
+    position: absolute;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    opacity: 0; 
+}
+
+.options-box-col-section.active {
+    opacity: 1; 
+    transition-duration: 500ms;
 }
 
 .options-box-col {
@@ -230,10 +232,11 @@
     position: absolute; 
     bottom: 0;
     width: 100%;
+    padding: 0 10px;
 }
 
 .upper-section-content {     
-    padding-top: 40px;
+    padding-top: 40px;    
     @media (min-width: $wide) {
         display: flex;
         justify-content: flex-start;
