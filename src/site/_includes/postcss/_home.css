@@ -62,7 +62,7 @@
     } 
 }
 .options-box-mob__option {
-    width: 388px;
+    max-width: 388px;
     margin: auto;
     max-height: 52px;
     overflow: hidden;
@@ -74,6 +74,8 @@
 }
 .upper-section__options-box-mob {
     display: block;
+    padding-left: 10px;
+    padding-right: 10px;
     @media (min-width: $wide) {        
         display: none;
     } 
@@ -102,6 +104,8 @@
     margin-bottom: 10px;
     padding-right: 10px;
     color: #165A69;
+    white-space: nowrap;
+    overflow: hidden;
 
     display: flex;
     justify-content: flex-end;
@@ -144,7 +148,7 @@
     display: inline-block;
     margin-right: 10px;
     margin-bottom: 20px;
-    width: 183px;
+    max-width: 183px;
     padding: 10px;
     text-align: center;
     font-family: Roboto;
@@ -230,10 +234,11 @@
     position: absolute; 
     bottom: 0;
     width: 100%;
+    padding: 0 10px;
 }
 
 .upper-section-content {     
-    padding-top: 40px;
+    padding-top: 40px;    
     @media (min-width: $wide) {
         display: flex;
         justify-content: flex-start;
