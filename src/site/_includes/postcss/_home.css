@@ -1,6 +1,6 @@
 .image-section {
     @media (max-width: $wide) {
-        height: 1285px;    
+        min-height: 1285px;    
     }; 
     width: 100%;   
     position: relative;
@@ -90,6 +90,7 @@
 .options-block.active {
     display: block;
     width: 100%;
+    transition: display 0.3s, opacity 0.5s linear;
 }
 
 .option-item {
@@ -98,7 +99,8 @@
     height: 42px;
     text-align: right;
     margin-bottom: 10px;
-    color: black;
+    padding-right: 10px;
+    color: #165A69;
 
     display: flex;
     justify-content: flex-end;
@@ -219,7 +221,7 @@
     text-align: right;
     right: 3px;
     top: 8px;
-    max-width: 85%;
+    max-width: 90%;
 }
 
 
@@ -241,14 +243,18 @@
 }
 
 .upper-section__sign-box {
-    margin: 0 auto 50px;
-    width: 422px;
-    height: 574px;
+    
+    max-width: 422px;
+    min-height: 574px;
     background: $accent-color;
     border-radius: 10px 50px 10px 10px;    
     border: 14px solid #8749A9;
     padding: 43px 5px 0 20px;    
     position: relative;
+    @media (max-width: $wide) {   
+        margin: 0 auto 50px;
+    }
+    
 }
 .upper-section__sign-box:after {
     content: " ";

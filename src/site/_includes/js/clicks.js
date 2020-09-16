@@ -56,8 +56,6 @@ Array.from(homeOptionsTabs).forEach((item, index) => {
 });
 
 // mobile - show-hide home page options
-var optionsArrows = document.getElementsByClassName("options-arrow");
-var optionsBlocks = document.getElementsByClassName("options-block");
 var optionsItems = document.getElementsByClassName("options-box-mob__option-tab");
 Array.from(optionsItems).forEach(function(item) {
   item.addEventListener('click', (item) => {
@@ -73,12 +71,8 @@ Array.from(optionsItems).forEach(function(item) {
 
       // else - regular case
     } else {
-      Array.from(optionsBlocks).forEach((item) => {
-        item.classList.remove('active')
-      });
-      Array.from(optionsArrows).forEach((item) => {
-        item.classList.remove('arrow-open')
-      });  
+      removeClass('options-arrow', 'arrow-open');
+      removeClass('options-block', 'active');
       
       arrow.classList.add('arrow-open');
       block.classList.add('active');
