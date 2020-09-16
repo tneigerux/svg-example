@@ -164,6 +164,7 @@
   left: 50%;
   height: 0;
   width: 0;
+  transition-duration: 500ms;
 }
 
 
