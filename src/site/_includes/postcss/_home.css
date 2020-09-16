@@ -31,13 +31,6 @@
     }; 
 }
 
-.image-section__amazon-box {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
-}
-
 .home-amazon-link {
     text-transform: uppercase;
     padding: 0 !important;
@@ -57,7 +50,8 @@
 .upper-section__options-box {
     padding-left: 20px;
     display: none;
-    @media (min-width: $wide) {        
+    @media (min-width: $wide) {  
+        position: relative;      
         display: block;
     } 
 }
@@ -148,7 +142,7 @@
     display: inline-block;
     margin-right: 10px;
     margin-bottom: 20px;
-    max-width: 183px;
+    width: 183px;
     padding: 10px;
     text-align: center;
     font-family: Roboto;
@@ -178,18 +172,22 @@
 }
 
 .options-box-tab.active {
+    transition-duration: 500ms;
     color: white;
     background: #165A69;
 }
 
 .options-box-col-section {
-    display: none;    
-}
-
-.options-box-col-section.active {
+    position: absolute;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    opacity: 0; 
+}
+
+.options-box-col-section.active {
+    opacity: 1; 
+    transition-duration: 500ms;
 }
 
 .options-box-col {
