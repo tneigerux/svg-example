@@ -1,9 +1,10 @@
 .help-image-section {
-    background: url(../../images/bg-help-desk.jpg);
+    background: url(../../images/bg-help-mob.jpg);
     background-size: cover;
     padding: 20px 20px 100px;
     @media (min-width: $wide) {
       padding: 140px 80px 100px;
+      background: url(../../images/bg-help-desk.jpg);
     }
   }  
    

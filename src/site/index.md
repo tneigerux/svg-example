@@ -2,8 +2,8 @@
 title: atendit
 subtitle: A Bluetooth and iOS App powered event driven conditional reminder, notification, and alert system.
 layout: layouts/home.njk
-head: Avoid forgetting your stuff
-subhead: We'll make sure you never leave home without it.
+head: A motion sensor that wirelessly communicates with your iPhone
+subhead: Limitless uses... you decide
 
 himgpath: ../../images/hero-images/
 heroupperimg: hero-desk-cup.jpg
@@ -11,7 +11,7 @@ heroupperimgmob: hero-mob-cup.jpg
 checkfilename: tweeter.svg
 amazon:
     link: https://www.amazon.com/dp/B089NB883H
-    text: BUY NOW on Amazon
+    text: See pricing
 comparison: 
     sign: How is atendit different?
     text: atendit, unlike any other reminder apps, reminds you as you open the door to leave your home, apartment or office.  Not based on clock time or outside GPS location as other reminders are, atendit reminds you “just in time”.  atendit uses a Sensor, a Bluetooth Low Energy Beacon, that detects movement and briefly transmits that the door has moved triggering the atendit app to immediately issues a Notification containing your reminder information.
@@ -47,7 +47,24 @@ comparison:
             s1: REMINDERS    
         row4:
             s1: ANY.DO    
-
+options:
+    reminders:
+        - '...bring morning coffee'
+        - '...adjust A/C before leaving'
+        - '...bring books - class tonight'
+        - '...get gas / petrol right away!'
+        - '...don’t forget umbrella'
+    doorbell:
+        - 'someone tried to open front door!'
+        - 'someone opened kitchen window'
+        - 'medicine cabinet opened'
+    security: 
+        - '...customer entering shop!'
+        - '...visitor entering office!'
+        - '...patient in waiting room'
+tab1: Reminders
+tab2: Silent Doorbell
+tab3: Security Alerts
 
 ---
 

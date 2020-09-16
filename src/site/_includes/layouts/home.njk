@@ -5,14 +5,140 @@
           <div class="image-section__img-box box-mob" style="background: url({{ himgpath }}{{ heroupperimgmob }}); background-position: right; background-repeat: no-repeat; background-size: cover;"></div>
           <div class="image-section__img-box box-desk" style="background: url({{ himgpath }}{{ heroupperimg }}); background-position: right; background-repeat: no-repeat; background-size: cover;"></div>
    
+        <div class="upper-section-content">
           <div class="upper-section__sign-box">
             <h1 class="upper-section-sign">{{ head }}</h1>
-            <h2 class="upper-section-sign">{{ subhead }}</h2>                 
+            <h2 class="upper-section-sign">{{ subhead }}</h2> 
+
+            <a class="amazon-link home-amazon-link" href="{{ amazon.link }}">
+              <p>{{ amazon.text }}</p>
+            </a>
           </div>
 
-          <a class="amazon-link" href="{{ amazon.link }}">
-                <p>{{ amazon.text }}</p>
-            </a>  
+          <div class="upper-section__options-box">
+            <div class="options-box-row">
+              <h3 class="options-box-tab active">{{ tab1 }}</h3>
+              <h3 class="options-box-tab">{{ tab2 }}</h3>
+              <h3 class="options-box-tab">{{ tab3 }}</h3>
+            </div>
+
+            <div class="options-box-col-section active">
+              {# three columns at all #}
+              {% for i in range(0, 3) -%}
+              <div class="options-box-col">
+                {# looping through all elements of a tab #}
+                {% for item in options.reminders %}
+                {# greater than the outer index multiplied by elements in a column and not greater than the outer element plus 1 multiplied by the same #}
+                  {% if (loop.index > 3 * i) and (loop.index <= 3 * (i+1)) %}
+                  
+                    <div class="upper-section__option-box">
+                      <svg class="upper-section__option">
+                        <polyline points="0,20 30,0 214,0 214,72 30,72 0,52 0,20"/>
+                        <circle cx="15" cy="36" r="10" fill="#165A69" />                    
+                      </svg>
+                      <h3>{{item}}</h3>
+                    </div> 
+
+                  {% endif %}   
+                {% endfor %}
+
+              </div>
+            {% endfor %}
+            </div>  
+
+            <div class="options-box-col-section">
+              {# three columns at all #}
+              {% for i in range(0, 3) -%}
+              <div class="options-box-col">
+                {# looping through all elements of a tab #}
+                {% for item in options.doorbell %}
+                {# greater than the outer index multiplied by elements in a column and not greater than the outer element plus 1 multiplied by the same #}
+                  {% if (loop.index > 3 * i) and (loop.index <= 3 * (i+1)) %}
+                  
+                    <div class="upper-section__option-box">
+                      <svg class="upper-section__option">
+                        <polyline points="0,20 30,0 214,0 214,72 30,72 0,52 0,20"/>
+                        <circle cx="15" cy="36" r="10" fill="#165A69" />                    
+                      </svg>
+                      <h3>{{item}}</h3>
+                    </div> 
+
+                  {% endif %}   
+                {% endfor %}
+
+              </div>
+            {% endfor %}
+            </div>  
+
+            <div class="options-box-col-section">
+              {# three columns at all #}
+              {% for i in range(0, 3) -%}
+              <div class="options-box-col">
+                {# looping through all elements of a tab #}
+                {% for item in options.security %}
+                {# greater than the outer index multiplied by elements in a column and not greater than the outer element plus 1 multiplied by the same #}
+                  {% if (loop.index > 3 * i) and (loop.index <= 3 * (i+1)) %}
+                  
+                    <div class="upper-section__option-box">
+                      <svg class="upper-section__option">
+                        <polyline points="0,20 30,0 214,0 214,72 30,72 0,52 0,20"/>
+                        <circle cx="15" cy="36" r="10" fill="#165A69" />                    
+                      </svg>
+                      <h3>{{item}}</h3>
+                    </div> 
+
+                  {% endif %}   
+                {% endfor %}
+
+              </div>
+            {% endfor %}
+            </div>  
+
+          </div>
+
+          <div class="upper-section__options-box-mob">
+              <div class="options-box-mob__option">
+                <div class="options-box-mob__option-tab">
+                  <div class="options-arrow"></div>
+                  <h3>{{ tab1 }}</h3>
+                </div>
+                
+                <div class="options-block">
+                  {% for item in options.reminders %}
+                      <h3 class="option-item">{{item}}</h3>
+                  {% endfor %}
+                </div>
+              </div>
+              <div class="options-box-mob__option">
+                <div class="options-box-mob__option-tab">
+                  <div class="options-arrow"></div>
+                  <h3>{{ tab2 }}</h3>
+                </div>
+                
+                <div class="options-block">
+                  {% for item in options.doorbell %}
+                      <h3 class="option-item">{{item}}</h3>
+                  {% endfor %}
+                </div>
+              </div>
+              <div class="options-box-mob__option">
+                <div class="options-box-mob__option-tab">
+                  <div class="options-arrow"></div>
+                  <h3>{{ tab3 }}</h3>
+                </div>
+                
+                <div class="options-block">
+                  {% for item in options.security %}
+                      <h3 class="option-item">{{item}}</h3>
+                  {% endfor %}
+                </div>
+              </div>
+              
+          </div>
+
+          </div>
+
+           
 
       </div> 
 
