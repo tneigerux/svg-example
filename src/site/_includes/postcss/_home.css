@@ -1,4 +1,7 @@
 .image-section {
+    @media (max-width: $wide) {
+        height: 1285px;    
+    }; 
     width: 100%;   
     position: relative;
     overflow-x: hidden;
@@ -67,7 +70,6 @@
     @media (min-width: $wide) {        
         display: none;
     } 
-    padding-bottom: 450px;
 }
 
 .options-box-mob__option-tab {
@@ -244,7 +246,19 @@
     height: 574px;
     background: $accent-color;
     border-radius: 10px 50px 10px 10px;    
+    border: 14px solid #8749A9;
     padding: 43px 5px 0 20px;    
+    position: relative;
+}
+.upper-section__sign-box:after {
+    content: " ";
+    position: absolute; 
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    border: 10px solid #A576BE;
+    border-radius: 10px 50px 10px 10px;   
 }
 
 .upper-section-sign {
