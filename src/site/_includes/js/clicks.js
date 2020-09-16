@@ -63,19 +63,18 @@ Array.from(optionsItems).forEach(function(item) {
     let arrow = tab.querySelector('.options-arrow');
 
     let parent = tab.parentElement;
-    let block = parent.querySelector('.options-block');
       // if active clicked - close it
-    if(block.classList.contains('active')){
+    if(parent.classList.contains('active')){
       arrow.classList.remove('arrow-open');
-      block.classList.remove('active');
+      parent.classList.remove('active');
 
       // else - regular case
     } else {
       removeClass('options-arrow', 'arrow-open');
-      removeClass('options-block', 'active');
+      removeClass('options-box-mob__option', 'active');
       
       arrow.classList.add('arrow-open');
-      block.classList.add('active');
+      parent.classList.add('active');
     }    
   });
 });

@@ -64,6 +64,13 @@
 .options-box-mob__option {
     width: 388px;
     margin: auto;
+    max-height: 52px;
+    overflow: hidden;
+    transition-duration: 300ms;
+}
+.options-box-mob__option.active {
+    max-height: 700px;
+    transition-duration: 300ms;
 }
 .upper-section__options-box-mob {
     display: block;
@@ -84,13 +91,7 @@
 }
 
 .options-block {
-    display: none;
-}
-
-.options-block.active {
-    display: block;
     width: 100%;
-    transition: display 0.3s, opacity 0.5s linear;
 }
 
 .option-item {
