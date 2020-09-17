@@ -66,10 +66,9 @@
       min-width: 60%;
       max-width: 80%;
       text-align: right; 
-    };
+    }  
     
-    
-    color: #691B93;
+    color: $accent-color;
     font-family: Questrial;
     font-style: normal;
     font-weight: normal;
@@ -81,12 +80,13 @@
    }
 
   .sensor-image-section__sign-box .amazon-link {    
-    margin-left: 0 !important;
+    margin-left: 0;
     @media (max-width: $wide) {
       position: absolute;
       bottom: 20px;
-      left:50%;
-      margin-left:-112px;
+      left: 0;
+      right: 0;
+      margin: auto;
     }
   }
   
