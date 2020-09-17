@@ -6,7 +6,7 @@ head: A motion sensor that wirelessly communicates with your iPhone
 subhead: Limitless uses... you decide
 
 himgpath: ../../images/hero-images/
-heroupperimg: hero-desk-cup.jpg
+heroupperimg: hero-desk-simple.jpg
 heroupperimgmob: hero-mob-cup.jpg
 checkfilename: tweeter.svg
 amazon:
