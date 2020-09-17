@@ -91,8 +91,7 @@
 }
 
 .option-item {
-    /* background-color: #EAF7FA; */
-    background-color: rgba(234,247,250, .6);
+    background-color: rgba(234,247,250, .75); /*different way for background #EAF7FA with opacity of 0.6*/
     width: 100%;
     height: 42px;
     text-align: right;
@@ -101,7 +100,13 @@
     color: #165A69;
     white-space: nowrap;
     overflow: hidden;
-
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -247,7 +252,7 @@
 }
 
 .upper-section__sign-box {
-    
+    word-wrap: break-word;
     max-width: 422px;
     min-height: 574px;
     background: $accent-color;
