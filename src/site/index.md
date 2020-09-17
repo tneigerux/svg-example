@@ -7,7 +7,7 @@ subhead: Limitless uses... you decide
 
 himgpath: ../../images/hero-images/
 heroupperimg: hero-desk-simple.jpg
-heroupperimgmob: hero-mob-cup.jpg
+heroupperimgmob: hero-mob-simple.jpg
 checkfilename: tweeter.svg
 amazon:
     link: https://www.amazon.com/dp/B089NB883H
