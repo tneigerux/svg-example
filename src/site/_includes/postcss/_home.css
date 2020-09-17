@@ -91,8 +91,8 @@
 }
 
 .option-item {
-    background-color: #EAF7FA;
-    opacity: 0.6;
+    /* background-color: #EAF7FA; */
+    background-color: rgba(234,247,250, .6);
     width: 100%;
     height: 42px;
     text-align: right;
