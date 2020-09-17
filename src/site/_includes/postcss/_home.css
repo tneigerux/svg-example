@@ -164,7 +164,6 @@
   left: 50%;
   height: 0;
   width: 0;
-  transition-duration: 500ms;
 }
 
 
@@ -173,7 +172,6 @@
 }
 
 .options-box-tab.active {
-    transition-duration: 500ms;
     color: white;
     background: #165A69;
 }
