@@ -1,13 +1,13 @@
 .image-section {
     @media (max-width: $wide) {
-        min-height: 1285px;    
+        min-height: 1285px;           
     }; 
     width: 100%;   
     position: relative;
     overflow-x: hidden;
     @media (min-width: $wide) {
         min-height: 800px;     
-    }; 
+    };     
 }
 
 .image-section__img-box {
@@ -91,7 +91,8 @@
 }
 
 .option-item {
-    background-color: #E1ECEE;
+    background-color: #EAF7FA;
+    opacity: 0.6;
     width: 100%;
     height: 42px;
     text-align: right;

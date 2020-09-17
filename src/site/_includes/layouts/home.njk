@@ -2,7 +2,7 @@
 
   {% block content %}
       <div class="image-section upper-section">
-          <div class="image-section__img-box box-mob" style="background: url({{ himgpath }}{{ heroupperimgmob }}); background-position: right; background-repeat: no-repeat; background-size: cover;"></div>
+          <div class="image-section__img-box box-mob" style="background: #8F7D6B url({{ himgpath }}{{ heroupperimgmob }}); background-position: bottom; background-repeat: no-repeat; background-size: contain;"></div>
           <div class="image-section__img-box box-desk" style="background: url({{ himgpath }}{{ heroupperimg }}); background-position: right; background-repeat: no-repeat; background-size: cover;"></div>
    
         <div class="upper-section-content">
@@ -29,7 +29,7 @@
                 {# looping through all elements of a tab #}
                 {% for item in options.reminders %}
 
-                    {% include "parts/home-option-box-pane-desk.njk" %}
+                    {% include "parts/home-option-box-desk.njk" %}
 
                 {% endfor %}
 
@@ -44,7 +44,7 @@
                 {# looping through all elements of a tab #}
                 {% for item in options.doorbell %}
                 
-                    {% include "parts/home-option-box-pane-desk.njk" %}
+                    {% include "parts/home-option-box-desk.njk" %}
 
                 {% endfor %}
 
@@ -59,7 +59,7 @@
                 {# looping through all elements of a tab #}
                 {% for item in options.security %}
                 
-                    {% include "parts/home-option-box-pane-desk.njk" %}
+                    {% include "parts/home-option-box-desk.njk" %}
 
                 {% endfor %}
 
