@@ -81,7 +81,7 @@
   
     margin-bottom: 36px;
   
-    color: #691B93;
+    color: $accent-color;
   }
   
   .app-image-section h3 {

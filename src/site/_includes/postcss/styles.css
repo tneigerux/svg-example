@@ -213,7 +213,7 @@ a:focus {
   display: block; /*if rounded*/
 }
 .hamburger-logo {
-  fill: #691B93 !important;
+  fill: $accent-color !important;
 }
 .header__burger {
   display: none;
