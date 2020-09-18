@@ -12,14 +12,6 @@ eventHandler('.cancel-submit-btn', 'click', function(){
   hiddenForm[0].style.display = "none";
 });
 
-// Close the address collector with no entry via ESC key
-
-eventHandler('document', 'keydown', function(){
-  let hiddenForm = document.getElementsByClassName('email-modal')
-  if (event.which == 27) 
-    hiddenForm[0].style.display = "none";
-});
-
 // Activate hamburger menu
 
 eventHandler('.header__burger', 'click', function(){
@@ -44,6 +36,49 @@ document.addEventListener('keydown', (event) => {
     closeForm();
   }
 });
+
+// desktop - home page tabs and options
+var homeOptionsTabs = document.getElementsByClassName("options-box-tab");
+var homeOptions = document.getElementsByClassName("options-box-col-section");
+
+Array.from(homeOptionsTabs).forEach((item, index) => {
+  item.addEventListener('click', () => {
+    Array.from(homeOptionsTabs).forEach((item) => {
+      item.classList.remove('active')
+    });
+    Array.from(homeOptions).forEach((item) => {
+      item.classList.remove('active')
+    });
+
+    homeOptionsTabs[index].classList.add('active'); /* active for tab */
+    homeOptions[index].classList.add('active'); /* active for option section */
+  } );
+});
+
+// mobile - show-hide home page options
+var optionsItems = document.getElementsByClassName("options-box-mob__option-tab");
+Array.from(optionsItems).forEach(function(item) {
+  item.addEventListener('click', (item) => {
+    let tab = item.currentTarget;
+    let arrow = tab.querySelector('.options-arrow');
+
+    let parent = tab.parentElement;
+      // if active clicked - close it
+    if(parent.classList.contains('active')){
+      arrow.classList.remove('arrow-open');
+      parent.classList.remove('active');
+
+      // else - regular case
+    } else {
+      removeClass('options-arrow', 'arrow-open');
+      removeClass('options-box-mob__option', 'active');
+      
+      arrow.classList.add('arrow-open');
+      parent.classList.add('active');
+    }    
+  });
+});
+
 
 // show-hide answer on the help page
 var qaItems = document.getElementsByClassName("qa-item");
@@ -147,6 +182,10 @@ function detectSwipe(el,func) {
   var max_y = 50;  //max y difference for horizontal swipe
   var direc = "";
   ele = document.getElementById(el);
+
+  // if element not found
+  if(null == ele) return
+
   ele.addEventListener('touchstart',function(e){
     var t = e.touches[0];
     swipe_det.sX = t.screenX; 

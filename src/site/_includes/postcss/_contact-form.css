@@ -13,7 +13,7 @@
 #expand-form {
   height: 249px;
   width: 82px;
-  background-color: #691B93;
+  background-color: $accent-color;
   padding: 12px;
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
@@ -37,7 +37,7 @@
 
   background-color: white;
   padding: 11px 29px 0 23px;
-  border: 6px solid #691B93;
+  border: 6px solid $accent-color;
   box-sizing: border-box;
   border-radius: 20px 0px 0px 20px;
   border-right: none;

@@ -3,6 +3,7 @@ class: qa-item
 tags: 
     - qa
     - qasensor
+    - qaapp
 category: sensor
 ---
 

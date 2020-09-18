@@ -1,7 +1,11 @@
 
 .about-image-section {
-    background: url(../../images/bg-about-desk.jpg) no-repeat;  
+    background: url(../../images/bg-about-mob.jpg) no-repeat;  
     background-size: cover;
+    @media (min-width: $wide) {
+      background: url(../../images/bg-about-desk.jpg) no-repeat; 
+      background-size: cover; 
+    }
   }
   
   .about-image-section__box {

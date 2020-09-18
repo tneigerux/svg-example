@@ -18,7 +18,7 @@ heroupperimgmob: bg-sensor-mob.jpg
 guaranteesign1: The atendit 
 guaranteetm: tm
 guaranteesign2: sensor is guaranteed to perform for a full two years of normal use. 
-guaranteetext: If for any reason it isn’t working just return the sensor to Did U Remember to LLC for an immediate replacement.
+guaranteetext: If for any reason it isn't working just return the sensor to Did U Remember to LLC for an immediate replacement.
 guaranteebottomtext: For replacement directions please email support@atendit.com
 dimension_sign: Product Dimensions
 weight_sign: Item Weight

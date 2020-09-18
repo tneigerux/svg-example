@@ -11,3 +11,10 @@ function eventHandler(selector, eventType, callback) {
     callback();
   }, false);
 }
+
+function removeClass(targetClass, className) {
+  let items = document.getElementsByClassName(targetClass);
+  Array.from(items).forEach((item) => {
+    item.classList.remove(className)
+  });
+}
