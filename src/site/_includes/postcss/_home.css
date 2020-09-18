@@ -137,7 +137,10 @@
   }
 
 .options-box-row {
-    padding-top: 20px;
+    padding-top: 20px;    
+    @media (max-width: 1100px) {        
+        margin-left: -10px;
+    }
     /* display: flex;
     justify-content: flex-start;
     align-items: center; */
@@ -146,9 +149,12 @@
 .options-box-tab {
     color: #165A69;
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 2px;
+    @media (min-width: 1100px) {        
+        margin-right: 10px;
+    }
     margin-bottom: 20px;
-    width: 183px;
+    width: 180px;
     padding: 10px;
     text-align: center;
     font-family: Roboto;
@@ -247,7 +253,7 @@
         justify-content: flex-start;
         align-items: flex-start;
         padding-top: 176px;
-        padding-left: 40px;
+        padding-left: 20px;
     }; 
 }
 
