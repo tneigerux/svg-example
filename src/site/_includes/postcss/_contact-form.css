@@ -2,7 +2,13 @@
     position: absolute;
     top: 114px;
     right: 0;
+    fill: white;
   }
+
+  #contact-form-use {
+    --fill-color: #691B93;
+  }
+ 
 
 .form-header {
   display: flex;
