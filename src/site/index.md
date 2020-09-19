@@ -11,7 +11,7 @@ heroupperimgmob: hero-mob-simple.jpg
 checkfilename: tweeter.svg
 amazon:
     link: https://www.amazon.com/dp/B089NB883H
-    text: See pricing
+    text: SEE OUR LOW PRICING!
 comparison: 
     sign: How is atendit different?
     text: atendit, unlike any other reminder apps, reminds you as you open the door to leave your home, apartment or office.  Not based on clock time or outside GPS location as other reminders are, atendit reminds you “just in time”.  atendit uses a Sensor, a Bluetooth Low Energy Beacon, that detects movement and briefly transmits that the door has moved triggering the atendit app to immediately issues a Notification containing your reminder information.
@@ -55,13 +55,13 @@ options:
         - '...get gas / petrol right away!'
         - '...don’t forget umbrella'
     doorbell:
-        - 'someone tried to open front door!'
-        - 'someone opened kitchen window'
-        - 'medicine cabinet opened'
-    security: 
         - '...customer entering shop!'
         - '...visitor entering office!'
         - '...patient in waiting room'
+    security:         
+        - 'someone tried to open front door!'
+        - 'someone opened kitchen window'
+        - 'medicine cabinet opened'    
 tab1: Reminders
 tab2: Silent Doorbell
 tab3: Security Alerts

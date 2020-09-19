@@ -31,13 +31,23 @@
     }; 
 }
 
+.aoa-link {
+    display: block;
+    margin: -30px auto 0;
+    border-bottom: none !important;
+}
+
+.aoa-link:hover {
+    text-decoration: none !important;
+  }
+
 .home-amazon-link {
     text-transform: uppercase;
     padding: 0 !important;
     position: relative;
 
     p {
-        margin: 0;
+        /* margin: 0; */
         position: absolute;
         top: 50%;
         left: 50%;
@@ -45,6 +55,9 @@
         transform: translate(-50%, -50%);
         padding: 0 !important;
     }
+    @media (min-width: $wide) {
+        margin-bottom: 34px !important; 
+      };
 }
 
 .upper-section__options-box {
@@ -137,7 +150,10 @@
   }
 
 .options-box-row {
-    padding-top: 20px;
+    padding-top: 20px;    
+    @media (max-width: 1100px) {        
+        margin-left: -10px;
+    }
     /* display: flex;
     justify-content: flex-start;
     align-items: center; */
@@ -146,9 +162,12 @@
 .options-box-tab {
     color: #165A69;
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 2px;
+    @media (min-width: 1100px) {        
+        margin-right: 10px;
+    }
     margin-bottom: 20px;
-    width: 183px;
+    width: 180px;
     padding: 10px;
     text-align: center;
     font-family: Roboto;
@@ -247,7 +266,7 @@
         justify-content: flex-start;
         align-items: flex-start;
         padding-top: 176px;
-        padding-left: 40px;
+        padding-left: 20px;
     }; 
 }
 
@@ -257,7 +276,7 @@
     min-height: 574px;
     background: $accent-color;
     border-radius: 10px 50px 10px 10px;    
-    border: 14px solid #8749A9;
+    border: 12px solid #8749A9;
     padding: 43px 5px 0 20px;    
     position: relative;
     @media (max-width: $wide) {   
@@ -265,21 +284,29 @@
     }
     
 }
-.upper-section__sign-box:after {
+
+.upper-section__sign-box-x {
     content: " ";
     position: absolute; 
     top: -20px;
     left: -20px;
     right: -20px;
     bottom: -20px;
-    border: 10px solid #A576BE;
-    border-radius: 10px 50px 10px 10px;   
+    border: 16px solid #A576BE;
+    border-radius: 10px 50px 10px 10px;  
+    z-index: -1; 
 }
 
 .upper-section-sign {
     color: white;
  }
-  
+
+ .aoa-icon {
+     display: block;
+    margin: 0 auto;
+    fill: #fff;
+ }
+
   .upper-section__sign-box > h1{  
     font-family: Questrial;
     font-style: normal;
