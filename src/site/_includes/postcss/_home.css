@@ -34,7 +34,12 @@
 .aoa-link {
     display: block;
     margin: -30px auto 0;
+    border-bottom: none !important;
 }
+
+.aoa-link:hover {
+    text-decoration: none !important;
+  }
 
 .home-amazon-link {
     text-transform: uppercase;
