@@ -33,7 +33,7 @@
 
 .aoa-link {
     display: block;
-    margin: 0 auto;
+    margin: -30px auto 0;
 }
 
 .home-amazon-link {
@@ -299,6 +299,7 @@
  .aoa-icon {
      display: block;
     margin: 0 auto;
+    fill: #fff;
  }
 
   .upper-section__sign-box > h1{  
