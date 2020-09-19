@@ -7,11 +7,15 @@
    
         <div class="upper-section-content">
           <div class="upper-section__sign-box">
+            <div class="upper-section__sign-box-x"></div>
             <h1 class="upper-section-sign">{{ head }}</h1>
             <h2 class="upper-section-sign">{{ subhead }}</h2> 
 
-            <a class="amazon-link home-amazon-link" href="{{ amazon.link }}">
+            <a href="{{ amazon.link }}" class="amazon-link home-amazon-link">
               <p>{{ amazon.text }}</p>
+            </a>
+            <a href="{{ amazon.link }}" class="aoa-link">
+              <svg width="240" class="aoa-icon"><use xlink:href="/images/sprite-sheet.svg#aoa"/></svg>
             </a>
           </div>
 
