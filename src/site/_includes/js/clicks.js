@@ -154,17 +154,17 @@ function changeInterractive(className){
   });
 }
 
-function changeInterractiveMob(className){  
+function changeInterractiveMob(className, dir){  
   // remove active to all
   var elements = document.getElementsByClassName("feature-interractive-mob");
   Array.from(elements).forEach(function(element) {
-    element.classList.remove('active');
+    element.classList.remove('active', 'x-animate-left', 'x-animate-right');
   });
-
+  dirClass = dir == 'r' ? 'x-animate-left' : 'x-animate-right';
   // set active to the clicked
   var activeElements = document.getElementsByClassName(className);
   Array.from(activeElements).forEach(function(element) {
-    element.classList.add('active');
+    element.classList.add('active', dirClass);
   });
 }
 
@@ -247,7 +247,7 @@ function finishSwipe(el, direction) {
           }          
           var newClass = cls.slice(0, -1) + elNum
 
-          changeInterractiveMob(newClass)         
+          changeInterractiveMob(newClass, direction)         
         }
       }
       break;
