@@ -154,17 +154,66 @@ function changeInterractive(className){
   });
 }
 
+function moveAway(elem, dir) {
+  if(dir == 'l'){
+    var maxV = -500;
+    var delta = -1;
+  } else {
+    var delta = 1;
+    var maxV = 500;
+  }
+  elem.style.position = 'absolute';
+  var pos = 0;
+  var id = setInterval(frame(dir), 10);
+  function frame() {    
+      if (pos == maxV) {
+        clearInterval(id);
+        elem.classList.remove('active');
+        elem.style.marginLeft = 0;
+        elem.style.position = 'relative';
+      } else {
+        pos += delta; 
+        elem.style.marginLeft = pos + 'px'; 
+      }
+  
+  }
+}
+
+function moveIn(elem, dir) {
+  elem.style.position = 'absolute';
+  if(dir == 'l'){
+    var pos = 500;
+  } else {
+    var pos = -500;
+  }  
+  var id = setInterval(frame(), 10);
+  function frame() {
+      if (pos == 0) {
+        clearInterval(id);
+        elem.classList.remove('active');
+        elem.style.marginLeft = 0;
+        elem.style.position = 'relative';
+      } else {
+        pos += delta; 
+        elem.style.marginLeft = pos + 'px'; 
+      } 
+  }
+}
+
 function changeInterractiveMob(className, dir){  
   // remove active to all
   var elements = document.getElementsByClassName("feature-interractive-mob");
   Array.from(elements).forEach(function(element) {
-    element.classList.remove('active', 'x-animate-left', 'x-animate-right');
+    if(element.classList.contains('active')){      
+      element.classList.remove('active');
+      // moveAway(element, dir);      
+    }    
   });
-  dirClass = dir == 'r' ? 'x-animate-left' : 'x-animate-right';
   // set active to the clicked
   var activeElements = document.getElementsByClassName(className);
-  Array.from(activeElements).forEach(function(element) {
-    element.classList.add('active', dirClass);
+  Array.from(activeElements).forEach(function(element) {    
+    element.classList.add('active')
+    // moveIn(element, dir);    
   });
 }
 
