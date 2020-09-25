@@ -154,17 +154,20 @@ function changeInterractive(className){
   });
 }
 
+// pixels per one move action
+var moveDelta = 10;
+
 function moveAway(elem, dir) {
   if(dir == 'l'){
     var maxV = -500;
-    var delta = -1;
+    var delta = -1 * moveDelta;
   } else {
-    var delta = 1;
+    var delta = moveDelta;
     var maxV = 500;
   }
   elem.style.position = 'absolute';
   var pos = 0;
-  var id = setInterval(frame(dir), 10);
+  var id = setInterval(frame, 1);
   function frame() {    
       if (pos == maxV) {
         clearInterval(id);
@@ -173,6 +176,7 @@ function moveAway(elem, dir) {
         elem.style.position = 'relative';
       } else {
         pos += delta; 
+        console.log('cur pos: ' + pos);
         elem.style.marginLeft = pos + 'px'; 
       }
   
@@ -183,15 +187,15 @@ function moveIn(elem, dir) {
   elem.style.position = 'absolute';
   if(dir == 'l'){
     var pos = 500;
+    var delta = -1 * moveDelta;
   } else {
     var pos = -500;
+    var delta = moveDelta;
   }  
-  var id = setInterval(frame(), 10);
+  var id = setInterval(frame, 1);
   function frame() {
       if (pos == 0) {
         clearInterval(id);
-        elem.classList.remove('active');
-        elem.style.marginLeft = 0;
         elem.style.position = 'relative';
       } else {
         pos += delta; 
@@ -204,16 +208,16 @@ function changeInterractiveMob(className, dir){
   // remove active to all
   var elements = document.getElementsByClassName("feature-interractive-mob");
   Array.from(elements).forEach(function(element) {
-    if(element.classList.contains('active')){      
-      element.classList.remove('active');
-      // moveAway(element, dir);      
+    if(element.classList.contains('active')){  
+          //остановить, если элемент крайний 
+      moveAway(element, dir);      
     }    
   });
   // set active to the clicked
   var activeElements = document.getElementsByClassName(className);
   Array.from(activeElements).forEach(function(element) {    
-    element.classList.add('active')
-    // moveIn(element, dir);    
+    element.classList.add('active');
+    moveIn(element, dir);    
   });
 }
 
