@@ -85,7 +85,7 @@
 
 .app-feature-section__main-content {
     height: 100%;
-    width: 55%;
+    width: 58%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -97,14 +97,15 @@
     border-right: 50px solid #1A6B7D;    
 }  
 
-.app-feature-section__main-content:after {
-    width: 63px;
+.app-feature-section__main-content .right-stripe {
+    position: absolute;
+    right: 0;
+    width: 50px;
     height: 100%;
-    background: #228FA7;
-    content: '';
+    background: #228FA7;    
 }
 
-.app-feature-section__main-content > h2, .app-feature-section__main-content__text > p, .app-feature-section__icon {
+.app-feature-section__main-content > h2, .app-feature-section__main-content__text, .app-feature-section__icon {
     -ms-transform: skewX(15deg); 
     transform: skewX(15deg); 
 }
@@ -116,6 +117,7 @@
 .app-feature-section__main-content__text {
     max-width: 60%;
     text-align: left;
+    padding-right: 100px;
 }
 
 .app-feature-section__main-content__text p {
@@ -135,11 +137,12 @@
     top: 0;
     right: 0;
     height: 100%;
+    text-align: left;
 }
 
 .app-feature-section__img {
     display: block;
-    min-height: 100%;   
+    height: 100%;   
 }
 
 .feature-interractive {
