@@ -133,43 +133,86 @@ function showImg(evt, imgId){
 //   event.currentTarget.classList.add('active')
 // }
 
+var moveDeltaDesk = 1;
+var frameIntervalMsDesk = 1;
+function runSlideDesk(dir, oldActive) {
+  // container to move
+  var deskContainer = document.getElementById("app-feature-section__content");
+  if(dir == 'l'){
+    var pos = 0;
+    var endPos = -100;
+    var delta = -1 * moveDeltaDesk;
+  } else {
+    var pos = -100;
+    var endPos = 0;
+    var delta = moveDeltaDesk;    
+  }
+  
+  var id = setInterval(frame, frameIntervalMsDesk);
+  function frame() {    
+      if (pos == endPos) {
+        clearInterval(id);
+        deskContainer.style.marginLeft = 0;
+        //remove active from old
+        Array.from(oldActive).forEach(function(element) {
+            element.classList.remove('active');  
+        });
+      } else {
+        pos += delta; 
+        deskContainer.style.marginLeft = pos + '%'; 
+      }
+  
+  }
+}
+
+function getChildIndex(child){
+  var parent = child.parentNode;
+  // The equivalent of parent.children.indexOf(child)
+  let index = Array.prototype.indexOf.call(parent.children, child);
+
+  return index;
+}
+
 function changeInterractive(className){
   // remove active to all tabs
-  var tabs = document.getElementsByClassName("bottom-container");
+  var tabs = document.querySelectorAll(".bottom-container.active");
+  let oldActiveIndex = getChildIndex(tabs[0]);
+
   Array.from(tabs).forEach(function(tab) {
     tab.classList.remove('active');
   });
   event.currentTarget.classList.add('active')
+  let newIndex = getChildIndex(event.currentTarget);
 
   // remove active to all
-  var elements = document.getElementsByClassName("feature-interractive");
-  Array.from(elements).forEach(function(element) {
-    element.classList.remove('active');
-  });
+  var oldActive = document.querySelectorAll('.feature-interractive.active');  
 
   // set active to the clicked
   var activeElements = document.getElementsByClassName(className);
   Array.from(activeElements).forEach(function(element) {
     element.classList.add('active');
   });
+
+  let dir = newIndex > oldActiveIndex ? 'l' : 'r';
+
+  runSlideDesk(dir, oldActive);
 }
 
-// var moveDelta = 10;
-var moveDelta = 1;
+// var moveDeltaMob = 10;
+var moveDeltaMob = 1;
 var frameIntervalMs = 1;
-function runSlide(dir, oldActive) {
+function runSlideMob(dir, oldActive) {
   // container to move
   var appFeatureContainer = document.getElementById("app-feature-sliding-part");
   if(dir == 'l'){
     var pos = 0;
     var endPos = -100;
-    var delta = -1 * moveDelta;
+    var delta = -1 * moveDeltaMob;
   } else {
     var pos = -100;
     var endPos = 0;
-    var delta = moveDelta;    
+    var delta = moveDeltaMob;    
   }
-
   
   var id = setInterval(frame, frameIntervalMs);
   function frame() {    
@@ -189,8 +232,27 @@ function runSlide(dir, oldActive) {
 }
 
 function changeInterractiveMob(className, dir){  
+
+  var tabs = document.querySelectorAll(".navigation-dot.active");
+  let oldActiveIndex = getChildIndex(tabs[0]);
+
+  Array.from(tabs).forEach(function(tab) {
+    tab.classList.remove('active');
+  });
+  
+  
   // previously active elements
   var oldActive = document.querySelectorAll('.feature-interractive-mob.active');  
+
+  // if it was not a swipe action but a tab click 
+  if(dir == false) {
+    event.currentTarget.classList.add('active')
+    let newIndex = getChildIndex(event.currentTarget);
+
+    var realDir = newIndex > oldActiveIndex ? 'l' : 'r';
+  } else {
+    var realDir = dir
+  }
 
   // set active to the clicked
   var activeElements = document.getElementsByClassName(className);
@@ -198,12 +260,7 @@ function changeInterractiveMob(className, dir){
     element.classList.add('active');
   });
 
-  console.log('old: ')
-  console.log(oldActive)
-  console.log('new: ')
-  console.log(activeElements)
-
-  runSlide(dir, oldActive);
+  runSlideMob(realDir, oldActive);
 }
 
 /* SWIPE */
@@ -298,6 +355,6 @@ function finishSwipe(el, direction) {
 
 }
 
-detectSwipe('app-feature-section__mob', finishSwipe);
+detectSwipe('app-feature-sliding-part-box', finishSwipe);
 
 /* / SWIPE */
