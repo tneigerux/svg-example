@@ -232,8 +232,27 @@ function runSlideMob(dir, oldActive) {
 }
 
 function changeInterractiveMob(className, dir){  
+
+  var tabs = document.querySelectorAll(".navigation-dot.active");
+  let oldActiveIndex = getChildIndex(tabs[0]);
+
+  Array.from(tabs).forEach(function(tab) {
+    tab.classList.remove('active');
+  });
+  
+  
   // previously active elements
   var oldActive = document.querySelectorAll('.feature-interractive-mob.active');  
+
+  // if it was not a swipe action but a tab click 
+  if(dir == false) {
+    event.currentTarget.classList.add('active')
+    let newIndex = getChildIndex(event.currentTarget);
+
+    var realDir = newIndex > oldActiveIndex ? 'l' : 'r';
+  } else {
+    var realDir = dir
+  }
 
   // set active to the clicked
   var activeElements = document.getElementsByClassName(className);
@@ -241,7 +260,7 @@ function changeInterractiveMob(className, dir){
     element.classList.add('active');
   });
 
-  runSlideMob(dir, oldActive);
+  runSlideMob(realDir, oldActive);
 }
 
 /* SWIPE */
@@ -336,6 +355,6 @@ function finishSwipe(el, direction) {
 
 }
 
-detectSwipe('app-feature-section__mob', finishSwipe);
+detectSwipe('app-feature-sliding-part-box', finishSwipe);
 
 /* / SWIPE */

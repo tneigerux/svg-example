@@ -53,7 +53,7 @@
                 <p>Swipe for more:</p>
                 <div class="navigation-dot-pane">
                     {% for i in range(1, 7) -%}
-                        <div class="navigation-dot feature-interractive-mob feature-mob-0{{i}} {% if i == 1 %} active{% endif %}" onClick="changeInterractiveMob('feature-mob-0{{i}}')">
+                        <div class="navigation-dot feature-interractive-mob feature-mob-0{{i}} {% if i == 1 %} active{% endif %}" onClick="changeInterractiveMob('feature-mob-0{{i}}', false)">
                             <div class="navigation-dot-inner"></div>
                         </div>
                     {%- endfor %}

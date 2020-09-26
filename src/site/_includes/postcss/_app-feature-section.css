@@ -277,7 +277,7 @@
 
 .content-block__info-part {
     width: 100%;
-    min-height: 380px;
+    min-height: 460px;
     padding: 28px;
     background: #30ACC8;
 }
@@ -291,6 +291,7 @@
 
 .app-feature-section__icon {
     margin-right: 0;
+    
 }
 
 .app-feature-section__mob * {
