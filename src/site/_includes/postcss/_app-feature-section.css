@@ -105,7 +105,7 @@
     background: #228FA7;    
 }
 
-.app-feature-section__main-content > h2, .app-feature-section__main-content__text, .app-feature-section__icon {
+.app-feature-section__main-content > h2, .app-feature-section__main-content__text, .app-feature-section__main-content__img > .app-feature-section__icon {
     -ms-transform: skewX(15deg); 
     transform: skewX(15deg); 
 }
