@@ -154,18 +154,56 @@ function changeInterractive(className){
   });
 }
 
-function changeInterractiveMob(className){  
-  // remove active to all
-  var elements = document.getElementsByClassName("feature-interractive-mob");
-  Array.from(elements).forEach(function(element) {
-    element.classList.remove('active');
-  });
+// var moveDelta = 10;
+var moveDelta = 1;
+var frameIntervalMs = 1;
+function runSlide(dir, oldActive) {
+  // container to move
+  var appFeatureContainer = document.getElementById("app-feature-sliding-part");
+  if(dir == 'l'){
+    var pos = 0;
+    var endPos = -100;
+    var delta = -1 * moveDelta;
+  } else {
+    var pos = -100;
+    var endPos = 0;
+    var delta = moveDelta;    
+  }
+
+  
+  var id = setInterval(frame, frameIntervalMs);
+  function frame() {    
+      if (pos == endPos) {
+        clearInterval(id);
+        appFeatureContainer.style.marginLeft = 0;
+        //remove active from old
+        Array.from(oldActive).forEach(function(element) {
+            element.classList.remove('active');  
+        });
+      } else {
+        pos += delta; 
+        appFeatureContainer.style.marginLeft = pos + '%'; 
+      }
+  
+  }
+}
+
+function changeInterractiveMob(className, dir){  
+  // previously active elements
+  var oldActive = document.querySelectorAll('.feature-interractive-mob.active');  
 
   // set active to the clicked
   var activeElements = document.getElementsByClassName(className);
-  Array.from(activeElements).forEach(function(element) {
+  Array.from(activeElements).forEach(function(element) {    
     element.classList.add('active');
   });
+
+  console.log('old: ')
+  console.log(oldActive)
+  console.log('new: ')
+  console.log(activeElements)
+
+  runSlide(dir, oldActive);
 }
 
 /* SWIPE */
@@ -237,17 +275,21 @@ function finishSwipe(el, direction) {
           if(direction == 'l'){
             if(elNum < maxV) {
               elNum += 1;
+            } else {
+              return
             }
           }
           // if we swipe to the right, activate previouse slide
           if(direction == 'r'){
             if(elNum > minV) {
               elNum -= 1;
+            } else {
+              return
             }
           }          
           var newClass = cls.slice(0, -1) + elNum
 
-          changeInterractiveMob(newClass)         
+          changeInterractiveMob(newClass, direction)         
         }
       }
       break;

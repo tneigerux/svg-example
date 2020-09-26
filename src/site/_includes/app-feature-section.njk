@@ -54,22 +54,17 @@
 
     {# MOBILE #}
     <div id="app-feature-section__mob" class="app-feature-section__mob">
-        <div class="app-feature-section__mob-block image-block">
-            {# only background image #}
-            {% for i in range(1, 7) -%}
-                <img class="feature-interractive-mob feature-img-mob feature-mob-0{{i}} {% if i == 1 %} active{% endif %}" src="../images/app-features/feature-0{{i}}-mob.png">
-            {%- endfor %}
-        </div>
-        <div class="app-feature-section__mob-block content-block">
-            <div class="content-block__info-part">
-                {% include "parts/feature-mob-01.njk" %}
-                {% include "parts/feature-mob-02.njk" %}
-                {% include "parts/feature-mob-03.njk" %}
-                {% include "parts/feature-mob-04.njk" %}
-                {% include "parts/feature-mob-05.njk" %}
-                {% include "parts/feature-mob-06.njk" %}
+        <div id="app-feature-sliding-part-box">            
+            <div id="app-feature-sliding-part" class="content-block">
+                    {% include "parts/feature-mob-01.njk" %}
+                    {% include "parts/feature-mob-02.njk" %}
+                    {% include "parts/feature-mob-03.njk" %}
+                    {% include "parts/feature-mob-04.njk" %}
+                    {% include "parts/feature-mob-05.njk" %}
+                    {% include "parts/feature-mob-06.njk" %}        
             </div>
-            <div class="content-block__navigation-part">
+        </div>
+        <div class="content-block__navigation-part">
                 <p>Swipe for more:</p>
                 <div class="navigation-dot-pane">
                     {% for i in range(1, 7) -%}
@@ -80,7 +75,6 @@
                     
                 </div>
             </div>
-        </div>
     </div>
     {# / MOBILE #}
 
