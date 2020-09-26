@@ -31,12 +31,10 @@
     position: absolute;
     background: transparent;
     height: 100%;
-    width: 55%;
+    width: 100%;
     overflow: hidden;
     padding-top: 20px;    
     text-align: center;
-    padding-left: 7%;
-    padding-right: 50px;
     * {
         color: white;
     }
@@ -46,15 +44,12 @@
     font-family: Questrial;
     font-style: normal;
     font-weight: normal;
+    width: 100%;
     font-size: 40px;
     line-height: 41px;
     text-align: center;
-    margin: 0 auto;
     position: absolute;
-    top: 0;
-    /* centered */
-    left: 10%;
-    right: 0;
+    top: 10px;
 }
 .app-feature-section__content > h2 {
     
@@ -75,12 +70,37 @@
     };
 }
 
-.app-feature-section__main-content {
-    height: 100%;
+.feature-interractive-upper-part {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}   
+}
+
+.app-feature-section__main-content {
+    height: 100%;
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #30ACC8;
+    position: relative;
+    margin-left: 70px;
+    -ms-transform: skewX(-15deg); 
+    transform: skewX(-15deg);    
+    border-right: 50px solid #1A6B7D;    
+}  
+
+.app-feature-section__main-content:after {
+    width: 63px;
+    height: 100%;
+    background: #228FA7;
+    content: '';
+}
+
+.app-feature-section__main-content > h2, .app-feature-section__main-content__text > p, .app-feature-section__icon {
+    -ms-transform: skewX(15deg); 
+    transform: skewX(15deg); 
+}
 
 .app-feature-section__main-content__img {
 
@@ -103,46 +123,11 @@
     margin-left: 30px;
 }
 
-.app-feature-section__skewed {
-    position: absolute;
-    left: 100px;
-    width: 50%;
-    height: 100%;
-    z-index: -1;
-    -ms-transform: skewX(-15deg); /* IE 9 */
-    transform: skewX(-15deg);
-}
-
-.skewed-tab-1 {
-    left: 70px;
-    z-index: -1;
-    background-color: #30ACC8;
-}
-.skewed-tab-2 {
-    left: 120px;
-    z-index: -2;
-    background-color: #228FA7;
-}
-.skewed-tab-3 {
-    left: 170px;
-    z-index: -3;
-    background-color: #1A6B7D;
-}
-
 .app-feature-section__img-part {
-    position: relative;
-    float: right;
-    width: 50%;
-    /* max-width: 490px; */
-    height: 100%;
-    z-index: -5;
-}
-.app-feature-section__img-box {
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     height: 100%;
-    width: 100%;
 }
 
 .app-feature-section__img {
@@ -187,12 +172,9 @@
     position: absolute;
     bottom: 0;
     height: 14px;
-    width: 55%;
+    width: 100%;
     z-index: 0;
     background-color: #228FA7;
-    @media (min-width: $wide) {
-        width: 52%;
-      };
 }
 
 .app-feature-section__bottom {

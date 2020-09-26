@@ -2,9 +2,7 @@
 
     {# DESKTOP #}
     <div class="app-feature-section__desktop">
-        <div class="app-feature-section__main">
-            <div class="app-feature-section__stripe upper-left-stripe"></div>
-            <div class="app-feature-section__stripe upper-right-stripe"></div>
+        <div class="app-feature-section__main">            
             <div class="app-feature-section__content">
                     {% include "parts/feature-01.njk" %}
                     {% include "parts/feature-02.njk" %}
@@ -13,19 +11,6 @@
                     {% include "parts/feature-05.njk" %}
                     {% include "parts/feature-06.njk" %}
             </div>
-            
-            <div class="app-feature-section__skewed skewed-tab-1"></div>
-            <div class="app-feature-section__skewed skewed-tab-2"></div>
-            <div class="app-feature-section__skewed skewed-tab-3"></div>
-            <div class="app-feature-section__img-part">
-                <div class="app-feature-section__img-box">
-                {% for i in range(1, 7) -%}
-                   <img class="app-feature-section__img feature-interractive feature-0{{i}} {% if i == 1 %} active{% endif %}" src="../images/app-features/feature-0{{i}}-desk.{{'png' if i == 5 else 'jpg'}}">
-                {%- endfor %}  
-                </div>          
-            </div> 
-            
-            <div class="lower-left-stripe"></div>
         </div>
 
         <div class="app-feature-section__bottom">
