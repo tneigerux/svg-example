@@ -261,25 +261,29 @@
     }
 }
 
-.app-feature-section__mob-block {
-    width: 100%;    
+#app-feature-sliding-part-box {
+    width: 100%;
+    overflow: hidden;
 }
 
-.app-feature-section__mob-block.image-block {
+#app-feature-sliding-part {
+    display: flex;    
+    width: 100%;
+}
 
+#app-feature-sliding-part > .feature-content-mob.active {
+    width: 100%;
 }
 
 .feature-img-mob {
     width: 100%;
 }
 
-.app-feature-section__mob-block.content-block {
-    background: #30ACC8;
-}
-
-.app-feature-section__mob-block > .content-block__info-part {
+.content-block__info-part {
+    width: 100%;
     min-height: 380px;
     padding: 28px;
+    background: #30ACC8;
 }
 
 .info-part__header-row {
@@ -324,10 +328,6 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
 }
 
 .navigation-dot-pane {
@@ -363,10 +363,80 @@
     display: block;
 }
 
+.feature-content-mob {
+    width: 100%;
+}
+
 .feature-content-mob, .feature-img-mob {
     display: none;
 }
 
 .feature-content-mob.active, .feature-img-mob.active {
     display: block;
+}
+.x-animate-left {
+    position : relative;
+    animation: animateleft 0.4s
+}
+
+@keyframes animateleft {
+    from {
+        left   : -300px;
+        opacity: 0
+    }
+
+    to {
+        left   : 0;
+        opacity: 1
+    }
+}
+
+.x-animate-right {
+    position : relative;
+    animation: animateright 0.4s
+}
+
+@keyframes animateright {
+    from {
+        right  : -300px;
+        opacity: 0
+    }
+
+    to {
+        right  : 0;
+        opacity: 1
+    }
+}
+
+
+.vanish-animate-left {
+    position : relative;
+    animation: animateleft 0.4s
+}
+@keyframes animateleft {
+    from {
+        left   : 0;
+        opacity: 1
+    }
+
+    to {
+        left   : -300px;
+        opacity: 0
+    }    
+}
+
+.vanish-animate-right {
+    position : relative;
+    animation: animateright 0.4s
+}
+@keyframes animateright {
+    from {
+        right  : 0;
+        opacity: 1
+    }
+
+    to {
+        right  : -300px;
+        opacity: 0
+    }
 }

@@ -154,71 +154,56 @@ function changeInterractive(className){
   });
 }
 
-// pixels per one move action
-var moveDelta = 10;
-
-function moveAway(elem, dir) {
+// var moveDelta = 10;
+var moveDelta = 1;
+var frameIntervalMs = 1;
+function runSlide(dir, oldActive) {
+  // container to move
+  var appFeatureContainer = document.getElementById("app-feature-sliding-part");
   if(dir == 'l'){
-    var maxV = -500;
+    var pos = 0;
+    var endPos = -100;
     var delta = -1 * moveDelta;
   } else {
-    var delta = moveDelta;
-    var maxV = 500;
+    var pos = -100;
+    var endPos = 0;
+    var delta = moveDelta;    
   }
-  elem.style.position = 'absolute';
-  var pos = 0;
-  var id = setInterval(frame, 1);
+
+  
+  var id = setInterval(frame, frameIntervalMs);
   function frame() {    
-      if (pos == maxV) {
+      if (pos == endPos) {
         clearInterval(id);
-        elem.classList.remove('active');
-        elem.style.marginLeft = 0;
-        elem.style.position = 'relative';
+        appFeatureContainer.style.marginLeft = 0;
+        //remove active from old
+        Array.from(oldActive).forEach(function(element) {
+            element.classList.remove('active');  
+        });
       } else {
         pos += delta; 
-        console.log('cur pos: ' + pos);
-        elem.style.marginLeft = pos + 'px'; 
+        appFeatureContainer.style.marginLeft = pos + '%'; 
       }
   
   }
 }
 
-function moveIn(elem, dir) {
-  elem.style.position = 'absolute';
-  if(dir == 'l'){
-    var pos = 500;
-    var delta = -1 * moveDelta;
-  } else {
-    var pos = -500;
-    var delta = moveDelta;
-  }  
-  var id = setInterval(frame, 1);
-  function frame() {
-      if (pos == 0) {
-        clearInterval(id);
-        elem.style.position = 'relative';
-      } else {
-        pos += delta; 
-        elem.style.marginLeft = pos + 'px'; 
-      } 
-  }
-}
-
 function changeInterractiveMob(className, dir){  
-  // remove active to all
-  var elements = document.getElementsByClassName("feature-interractive-mob");
-  Array.from(elements).forEach(function(element) {
-    if(element.classList.contains('active')){  
-          //остановить, если элемент крайний 
-      moveAway(element, dir);      
-    }    
-  });
+  // previously active elements
+  var oldActive = document.querySelectorAll('.feature-interractive-mob.active');  
+
   // set active to the clicked
   var activeElements = document.getElementsByClassName(className);
   Array.from(activeElements).forEach(function(element) {    
     element.classList.add('active');
-    moveIn(element, dir);    
   });
+
+  console.log('old: ')
+  console.log(oldActive)
+  console.log('new: ')
+  console.log(activeElements)
+
+  runSlide(dir, oldActive);
 }
 
 /* SWIPE */
@@ -290,12 +275,16 @@ function finishSwipe(el, direction) {
           if(direction == 'l'){
             if(elNum < maxV) {
               elNum += 1;
+            } else {
+              return
             }
           }
           // if we swipe to the right, activate previouse slide
           if(direction == 'r'){
             if(elNum > minV) {
               elNum -= 1;
+            } else {
+              return
             }
           }          
           var newClass = cls.slice(0, -1) + elNum
