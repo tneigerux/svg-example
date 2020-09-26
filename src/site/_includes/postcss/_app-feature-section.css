@@ -264,15 +264,19 @@
 #app-feature-sliding-part-box {
     width: 100%;
     overflow: hidden;
+    background: #30ACC8;
 }
 
 #app-feature-sliding-part {
     display: flex;    
     width: 100%;
+    background: #30ACC8;
 }
 
 #app-feature-sliding-part > .feature-content-mob.active {
+    min-width: 100%;
     width: 100%;
+    max-width: 100%;
 }
 
 .feature-img-mob {
