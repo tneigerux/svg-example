@@ -184,6 +184,8 @@ function changeInterractive(className){
   event.currentTarget.classList.add('active')
   let newIndex = getChildIndex(event.currentTarget);
 
+  // if clicked the same item - exit the method
+  if(newIndex == oldActiveIndex) return;
   // remove active to all
   var oldActive = document.querySelectorAll('.feature-interractive.active');  
 
@@ -192,6 +194,8 @@ function changeInterractive(className){
   Array.from(activeElements).forEach(function(element) {
     element.classList.add('active');
   });
+
+  
 
   let dir = newIndex > oldActiveIndex ? 'l' : 'r';
 
@@ -249,6 +253,9 @@ function changeInterractiveMob(className, dir){
     event.currentTarget.classList.add('active')
     let newIndex = getChildIndex(event.currentTarget);
 
+    // if clicked the same item - exit the method
+    if(newIndex == oldActiveIndex) return;
+    
     var realDir = newIndex > oldActiveIndex ? 'l' : 'r';
   } else {
     var realDir = dir
