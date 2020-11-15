@@ -80,16 +80,7 @@ Array.from(optionsItems).forEach(function(item) {
 });
 
 var submitContactForm = () => {
-
   let url = 'https://api.backendless.com/6D0CC6DE-4FD2-C484-FFC4-F47290F29700/0116A92C-8F97-4098-8F0D-1DAD483D040C/data/MarketingCRM';
-  // axios.post(url, {
-  //   registrationSource : 'atendit.com',
-  //   objectId : document.querySelector('#firstname'),
-  //   ownerId : document.querySelector('#email'),
-  //   message : document.querySelector('#message')
-  // })
-  // .then(response => console.log(response))
-  // .catch(e => console.log(e))
 
   let ojb =  {
       registrationSource : 'atendit.com',
@@ -106,7 +97,6 @@ var submitContactForm = () => {
           console.log(xhr.responseText)
 
         }
-
 
     xhr.send(JSON.stringify(ojb));
   
