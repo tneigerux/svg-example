@@ -29,3 +29,7 @@ layout: layouts/base.njk
 Many are original icons, exceptions below.
 
 * guarantee by Adrien Coquet from the Noun Project
+
+## Social
+
+<span>Photo by <a href="https://unsplash.com/@arcreates?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Anthony Roberts</a> on <a href="https://unsplash.com/s/photos/fireworks?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
