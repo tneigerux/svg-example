@@ -4,6 +4,7 @@ subtitle: A Bluetooth and iOS App powered event driven conditional reminder, not
 layout: layouts/lp.njk
 head: A motion sensor that wirelessly communicates with your iPhone
 subhead: Limitless uses... you decide
+imgpath: ../../../images/
 
 himgpath: ../../../../images/hero-images/
 heroupperimg: hero-desk-simple.jpg
