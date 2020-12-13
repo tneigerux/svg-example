@@ -82,11 +82,17 @@ Array.from(optionsItems).forEach(function(item) {
 var submitContactForm = () => {
   let url = 'https://api.backendless.com/6D0CC6DE-4FD2-C484-FFC4-F47290F29700/0116A92C-8F97-4098-8F0D-1DAD483D040C/data/MarketingCRM';
 
+  const theWholeName = document.getElementById('name').value
+
+  const firstName = theWholeName.substr(0,theWholeName.indexOf(' '))
+  const lastName = theWholeName.substr(theWholeName.indexOf(' ')+1)
+
   let ojb =  {
-      registrationSource : 'atendit.com',
-      objectId : document.getElementById('firstname').value,
-      ownerId : document.getElementById('email').value,
-      message : document.getElementById('message').value
+      registrationSource : 'atendit contact us',
+      firstName : firstName,
+      lastName: lastName,
+      emailAddress : document.getElementById('email').value,
+      messageContents : document.getElementById('message').value
     }
 
     var xhr = new XMLHttpRequest();
