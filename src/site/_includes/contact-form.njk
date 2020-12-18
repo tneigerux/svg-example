@@ -1,7 +1,7 @@
 <div class="expand-form" id="expand-form">
   <svg classc="contact-tab-sign"><use id="contact-form-use" xlink:href="/images/sprite-sheet.svg#speech-bubble"/></svg>
 </div>
-<form class="contact-form expand-form form-invisible" name="contact-form" id="contact-form" data-netlify="true" method="POST">
+<form class="contact-form expand-form form-invisible" name="contactxx" onsubmit="submitContactForm();return false" id="contactxx" method="POST">
     <div class="form-header">
         <h3 class="contact-form-sign">Contact Us</h3>
         <svg class="cart-icon close-form-btn" width="44" height="44">
@@ -9,14 +9,14 @@
       </svg>
     </div>
 
-    <p>First Name</p>
-    <input type="text" class="form-input" name="firstname">
+    <p>Your Name</p>
+    <input type="text" class="form-input" name="name" id="name">
 
-    <label>Your email address or phone #</label>
-    <input type="text" class="form-input" name="email">
+    <p>Your email address or phone #</p>
+    <input type="text" class="form-input" name="email" required id="email">
 
     <p>Your message to us:</p>
-    <textarea id="subject" class="form-text-area" name="subject" style="height:200px"></textarea>
+    <textarea id="message" class="form-text-area" name="message" style="height:200px"></textarea>
 
     <input type="submit" class="contact-form-submit" value="Deliver Message">
 

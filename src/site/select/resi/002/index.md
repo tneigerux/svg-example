@@ -1,12 +1,12 @@
 ---
 title: atendit
 subtitle: A Bluetooth and iOS App powered event driven conditional reminder, notification, and alert system.
-layout: layouts/home.njk
+layout: layouts/lp.njk
 head: A motion sensor that wirelessly communicates with your iPhone
 subhead: Limitless uses... you decide
-imgpath: ../images/
+imgpath: ../../../images/
 
-himgpath: ../../images/hero-images/
+himgpath: ../../../../images/hero-images/
 heroupperimg: hero-desk-simple.jpg
 heroupperimgmob: hero-mob-simple.jpg
 checkfilename: tweeter.svg

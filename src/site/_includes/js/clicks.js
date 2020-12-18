@@ -79,6 +79,35 @@ Array.from(optionsItems).forEach(function(item) {
   });
 });
 
+var submitContactForm = () => {
+  let url = 'https://api.backendless.com/6D0CC6DE-4FD2-C484-FFC4-F47290F29700/0116A92C-8F97-4098-8F0D-1DAD483D040C/data/MarketingCRM';
+
+  const theWholeName = document.getElementById('name').value
+
+  const firstName = theWholeName.substr(0,theWholeName.indexOf(' '))
+  const lastName = theWholeName.substr(theWholeName.indexOf(' ')+1)
+
+  let ojb =  {
+      registrationSource : 'atendit contact us',
+      firstName : firstName,
+      lastName: lastName,
+      emailAddress : document.getElementById('email').value,
+      messageContents : document.getElementById('message').value
+    }
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.onreadystatechange = function () {
+          console.log(xhr.status)
+          console.log(xhr.responseText)
+
+        }
+
+    xhr.send(JSON.stringify(ojb));
+  
+}
+
 
 // show-hide answer on the help page
 var qaItems = document.getElementsByClassName("qa-item");
@@ -133,39 +162,141 @@ function showImg(evt, imgId){
 //   event.currentTarget.classList.add('active')
 // }
 
+var moveDeltaDesk = 1;
+var frameIntervalMsDesk = 1;
+function runSlideDesk(dir, oldActive) {
+  // container to move
+  var deskContainer = document.getElementById("app-feature-section__content");
+  if(dir == 'l'){
+    var pos = 0;
+    var endPos = -100;
+    var delta = -1 * moveDeltaDesk;
+  } else {
+    var pos = -100;
+    var endPos = 0;
+    var delta = moveDeltaDesk;    
+  }
+  
+  var id = setInterval(frame, frameIntervalMsDesk);
+  function frame() {    
+      if (pos == endPos) {
+        clearInterval(id);
+        deskContainer.style.marginLeft = 0;
+        //remove active from old
+        Array.from(oldActive).forEach(function(element) {
+            element.classList.remove('active');  
+        });
+      } else {
+        pos += delta; 
+        deskContainer.style.marginLeft = pos + '%'; 
+      }
+  
+  }
+}
+
+function getChildIndex(child){
+  var parent = child.parentNode;
+  // The equivalent of parent.children.indexOf(child)
+  let index = Array.prototype.indexOf.call(parent.children, child);
+
+  return index;
+}
+
 function changeInterractive(className){
   // remove active to all tabs
-  var tabs = document.getElementsByClassName("bottom-container");
+  var tabs = document.querySelectorAll(".bottom-container.active");
+  let oldActiveIndex = getChildIndex(tabs[0]);
+
   Array.from(tabs).forEach(function(tab) {
     tab.classList.remove('active');
   });
   event.currentTarget.classList.add('active')
+  let newIndex = getChildIndex(event.currentTarget);
 
+  // if clicked the same item - exit the method
+  if(newIndex == oldActiveIndex) return;
   // remove active to all
-  var elements = document.getElementsByClassName("feature-interractive");
-  Array.from(elements).forEach(function(element) {
-    element.classList.remove('active');
-  });
+  var oldActive = document.querySelectorAll('.feature-interractive.active');  
 
   // set active to the clicked
   var activeElements = document.getElementsByClassName(className);
   Array.from(activeElements).forEach(function(element) {
     element.classList.add('active');
   });
+
+  
+
+  let dir = newIndex > oldActiveIndex ? 'l' : 'r';
+
+  runSlideDesk(dir, oldActive);
 }
 
-function changeInterractiveMob(className){  
-  // remove active to all
-  var elements = document.getElementsByClassName("feature-interractive-mob");
-  Array.from(elements).forEach(function(element) {
-    element.classList.remove('active');
+// var moveDeltaMob = 10;
+var moveDeltaMob = 1;
+var frameIntervalMs = 1;
+function runSlideMob(dir, oldActive) {
+  // container to move
+  var appFeatureContainer = document.getElementById("app-feature-sliding-part");
+  if(dir == 'l'){
+    var pos = 0;
+    var endPos = -100;
+    var delta = -1 * moveDeltaMob;
+  } else {
+    var pos = -100;
+    var endPos = 0;
+    var delta = moveDeltaMob;    
+  }
+  
+  var id = setInterval(frame, frameIntervalMs);
+  function frame() {    
+      if (pos == endPos) {
+        clearInterval(id);
+        appFeatureContainer.style.marginLeft = 0;
+        //remove active from old
+        Array.from(oldActive).forEach(function(element) {
+            element.classList.remove('active');  
+        });
+      } else {
+        pos += delta; 
+        appFeatureContainer.style.marginLeft = pos + '%'; 
+      }
+  
+  }
+}
+
+function changeInterractiveMob(className, dir){  
+
+  var tabs = document.querySelectorAll(".navigation-dot.active");
+  let oldActiveIndex = getChildIndex(tabs[0]);
+
+  Array.from(tabs).forEach(function(tab) {
+    tab.classList.remove('active');
   });
+  
+  
+  // previously active elements
+  var oldActive = document.querySelectorAll('.feature-interractive-mob.active');  
+
+  // if it was not a swipe action but a tab click 
+  if(dir == false) {
+    event.currentTarget.classList.add('active')
+    let newIndex = getChildIndex(event.currentTarget);
+
+    // if clicked the same item - exit the method
+    if(newIndex == oldActiveIndex) return;
+    
+    var realDir = newIndex > oldActiveIndex ? 'l' : 'r';
+  } else {
+    var realDir = dir
+  }
 
   // set active to the clicked
   var activeElements = document.getElementsByClassName(className);
-  Array.from(activeElements).forEach(function(element) {
+  Array.from(activeElements).forEach(function(element) {    
     element.classList.add('active');
   });
+
+  runSlideMob(realDir, oldActive);
 }
 
 /* SWIPE */
@@ -237,17 +368,21 @@ function finishSwipe(el, direction) {
           if(direction == 'l'){
             if(elNum < maxV) {
               elNum += 1;
+            } else {
+              return
             }
           }
           // if we swipe to the right, activate previouse slide
           if(direction == 'r'){
             if(elNum > minV) {
               elNum -= 1;
+            } else {
+              return
             }
           }          
           var newClass = cls.slice(0, -1) + elNum
 
-          changeInterractiveMob(newClass)         
+          changeInterractiveMob(newClass, direction)         
         }
       }
       break;
@@ -256,6 +391,6 @@ function finishSwipe(el, direction) {
 
 }
 
-detectSwipe('app-feature-section__mob', finishSwipe);
+detectSwipe('app-feature-sliding-part-box', finishSwipe);
 
 /* / SWIPE */
