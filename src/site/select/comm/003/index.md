@@ -6,7 +6,7 @@ head: A motion sensor that wirelessly communicates with your iPhone
 subhead: Limitless uses... you decide
 imgpath: ../../../images/
 
-landingherotext: Be atendit® to your customers! atendit® can be used as a silent doorbell to let you know as soon as someone walks in the door!
+landingherotext: Pay atendit® to those in your care! atendit® allows nursing and assisted living facilities to make sure their patients are safe and not wandering at night.
 
 himgpath: ../../../../images/hero-images/
 heroupperimg: hero-desk-simple.jpg

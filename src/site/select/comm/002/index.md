@@ -6,6 +6,8 @@ head: A motion sensor that wirelessly communicates with your iPhone
 subhead: Limitless uses... you decide
 imgpath: ../../../images/
 
+landingherotext: Pay atendit® to your security! atendit® can be used as a security alert system at a fraction of competitor’s prices!
+
 himgpath: ../../../../images/hero-images/
 heroupperimg: hero-desk-simple.jpg
 heroupperimgmob: hero-mob-simple.jpg

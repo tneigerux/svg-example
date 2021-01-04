@@ -6,6 +6,8 @@ head: A motion sensor that wirelessly communicates with your iPhone
 subhead: Limitless uses... you decide
 imgpath: ../../../images/
 
+landingherotext: Let your mind pay atendit® to the important things! atendit® can send you weekly reminders to put out the garbage or trash!
+
 himgpath: ../../../../images/hero-images/
 heroupperimg: hero-desk-simple.jpg
 heroupperimgmob: hero-mob-simple.jpg
