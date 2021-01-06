@@ -31,4 +31,4 @@ h3text1: Once your Sensor is linked to the atendit app, you can set up a wide va
 h3text2: You are in control and can change the RNAs anytime.  All the app screens have in app Help screens to easily check on any feature or function you might like to use.
 qasign: App Questions & Answers 
 ---
-## Be atendit<sup>®</sup> to your customers! atendit<sup>®</sup> can be used as a silent doorbell to let you know as soon as someone walks in the door!
+## Be atendit<sup>®</sup> to your customers! <br><br>atendit<sup>®</sup> can be used as a silent doorbell to let you know as soon as someone walks in the door!
