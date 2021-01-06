@@ -708,6 +708,7 @@ input {
 
 
 .upper-section {  
+  position: relative;
   @media (min-width: $wide) {
     margin-top: $first-section-margin-top; 
 };     

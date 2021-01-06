@@ -5,15 +5,35 @@
         font-size: 40px;
         line-height: 42px;
         margin-top: 0;
+        sup { vertical-align: top; position: relative; top: -0.5em; }
     }
 
     @media (min-width: $wide) {
         h2{
             font-size: 64px;
             line-height: 66px;
+            
         }
         
     }
+}
+
+.landing-header__logo {
+    position: absolute;
+    top: 20;
+    left: 20;
+    margin-top: -100px;
+}
+
+@media (max-width: $wide) {
+    .landing-header__logo {
+
+    }    
+}
+
+.landing-upper-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 @media (min-width: $wide) {

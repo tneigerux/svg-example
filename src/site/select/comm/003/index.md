@@ -6,8 +6,6 @@ head: A motion sensor that wirelessly communicates with your iPhone
 subhead: Limitless uses... you decide
 imgpath: ../../../images/
 
-landingherotext: Pay atendit® to those in your care! atendit® allows nursing and assisted living facilities to make sure their patients are safe and not wandering at night.
-
 himgpath: ../../../../images/hero-images/
 heroupperimg: hero-desk-simple.jpg
 heroupperimgmob: hero-mob-simple.jpg
@@ -32,3 +30,5 @@ appheader: The atendit iOS Mobile App
 h3text1: Once your Sensor is linked to the atendit app, you can set up a wide variety of reminders, notices, & alerts (RNAs) based on your personal needs.  The key is that whenever you move the door with the Sensor on it, the app will check to see if you have any RNAs set up for the current date/day/time.
 h3text2: You are in control and can change the RNAs anytime.  All the app screens have in app Help screens to easily check on any feature or function you might like to use.
 qasign: App Questions & Answers 
+---
+## Pay atendit<sup>®</sup> to those in your care! atendit<sup>®</sup> allows nursing and assisted living facilities to make sure their patients are safe and not wandering at night.
