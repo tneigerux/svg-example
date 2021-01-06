@@ -6,7 +6,8 @@ head: A motion sensor that wirelessly communicates with your iPhone
 subhead: Limitless uses... you decide
 imgpath: ../../../images/
 
-landingherotext: Don’t forget to pay atendit<sup>®</sup>  <sup>2</sup> to your kids! atendit® can send you reminders to bring your child a snack after school or drop them off at football practice!
+landingherotext: Don’t forget to pay atendit® to your kids! atendit® can send you reminders to bring your child a
+snack after school or drop them off at football practice!
 
 himgpath: ../../../../images/hero-images/
 heroupperimg: hero-desk-simple.jpg
@@ -16,6 +17,19 @@ amazon:
     link: https://www.amazon.com/dp/B089NB883H
     text: BUY NOW on Amazon
 
----
+sensorhimgpath: ../../../../images/
+sensorimg: bg-sensor-desk.jpg
+sensorimgmob: bg-sensor-mob.jpg
 
-## All smartphones have reminders, but atendit is different. Other reminder systems are limited to the calendar, clock, or GPS. The atendit system leverages our atendit sensor, which uses motion detection & bluetooth to remind, notify & alert you based on custom rules you tailor using the atendit app.
+sensorheader: The atendit Sensor
+sensortext1: A key component of the atendit system, the atendit sensor is a Bluetooth Low Energy (BLE) beacon that is custom programmed to briefly transmit information that identifies its location to your mobile phone. The atendit Sensor is activated when the door it is mounted on is moved.
+sensortext2: The attractive blue atendit sensor is lightweight and comes with a removable mounting tab for easy and secure placement on your door
+sensoramazon:
+    link: https://www.amazon.com/dp/B089NB883H
+    text: BUY NOW on Amazon
+
+
+appheader: The atendit iOS Mobile App
+h3text1: Once your Sensor is linked to the atendit app, you can set up a wide variety of reminders, notices, & alerts (RNAs) based on your personal needs.  The key is that whenever you move the door with the Sensor on it, the app will check to see if you have any RNAs set up for the current date/day/time.
+h3text2: You are in control and can change the RNAs anytime.  All the app screens have in app Help screens to easily check on any feature or function you might like to use.
+qasign: App Questions & Answers 

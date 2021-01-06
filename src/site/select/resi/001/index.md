@@ -12,14 +12,14 @@ himgpath: ../../../../images/hero-images/
 heroupperimg: hero-desk-simple.jpg
 heroupperimgmob: hero-mob-simple.jpg
 
-sensorhimgpath: ../../../../images/
-sensorimg: bg-sensor-desk.jpg
-sensorimgmob: bg-sensor-mob.jpg
-
 checkfilename: tweeter.svg
 amazon:
     link: https://www.amazon.com/dp/B089NB883H
     text: SEE OUR LOW PRICING!
+
+sensorhimgpath: ../../../../images/
+sensorimg: bg-sensor-desk.jpg
+sensorimgmob: bg-sensor-mob.jpg
 
 
 sensorheader: The atendit Sensor
