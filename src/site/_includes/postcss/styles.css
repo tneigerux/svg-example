@@ -168,6 +168,7 @@ a:focus {
 }
 
 .header {
+  display: none;
   background: $page-color;  
   position: sticky;
   width: 100%;
@@ -707,6 +708,7 @@ input {
 
 
 .upper-section {  
+  position: relative;
   @media (min-width: $wide) {
     margin-top: $first-section-margin-top; 
 };     
@@ -753,3 +755,4 @@ input {
 @import '_about.css';
 @import '_footer.css';
 @import '_qasection.css';
+@import '_landings.css';

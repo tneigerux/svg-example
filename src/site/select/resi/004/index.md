@@ -29,6 +29,7 @@ sensoramazon:
 appheader: The atendit iOS Mobile App
 h3text1: Once your Sensor is linked to the atendit app, you can set up a wide variety of reminders, notices, & alerts (RNAs) based on your personal needs.  The key is that whenever you move the door with the Sensor on it, the app will check to see if you have any RNAs set up for the current date/day/time.
 h3text2: You are in control and can change the RNAs anytime.  All the app screens have in app Help screens to easily check on any feature or function you might like to use.
-qasign: App Questions & Answers 
+qasign: App Questions & Answers    
 ---
-## Be atendit<sup>®</sup> to your customers! atendit<sup>®</sup> can be used as a silent doorbell to let you know as soon as someone walks in the door!
+## Pay atendit<sup>®</sup> to your family! With atendit<sup>®</sup>, you’ll get an alert every time someone enters your
+house!
