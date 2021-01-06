@@ -14,7 +14,7 @@ heroupperimgmob: hero-mob-simple.jpg
 checkfilename: tweeter.svg
 amazon:
     link: https://www.amazon.com/dp/B089NB883H
-    text: SEE OUR LOW PRICING!
+    text: BUY NOW on Amazon
 
 ---
 

@@ -1,89 +1,73 @@
 {% extends "layouts/parent.njk" %}
 
-  {% block content %}
-      <div class="image-section upper-section">
-          <div class="image-section__img-box box-mob" style="background: #8F7D6B url({{ himgpath }}{{ heroupperimgmob }}); background-position: bottom; background-repeat: no-repeat; background-size: contain;"></div>
-          <div class="image-section__img-box box-desk" style="background: url({{ himgpath }}{{ heroupperimg }}); background-position: bottom; background-repeat: no-repeat; background-size: cover;"></div>
-   
-        <div class="upper-section-content">
-          <div class="upper-section__sign-box">
-            <div class="upper-section__sign-box-x"></div>
-            <h1 class="upper-section-sign">{{ head }}</h1>
-            <h2 class="upper-section-sign">{{ subhead }}</h2> 
+{% block content %}
+  <div class="image-section upper-section">
+    <div class="image-section__img-box box-mob" style="background: #8F7D6B url({{ himgpath }}{{ heroupperimgmob }}); background-position: bottom; background-repeat: no-repeat; background-size: contain;"></div>
+    <div class="image-section__img-box box-desk" style="background: url({{ himgpath }}{{ heroupperimg }}); background-position: bottom; background-repeat: no-repeat; background-size: cover;"></div>
+{# 1 section #}
+    <div class="upper-section-content">
+      <div class="upper-section__sign-box">
+        <div class="upper-section__sign-box-x"></div>
+        <h1 class="upper-section-sign">{{ head }}</h1>
+        <h2 class="upper-section-sign">{{ subhead }}</h2>
 
-            <a href="{{ amazon.link }}" class="amazon-link home-amazon-link">
-              <p>{{ amazon.text }}</p>
+        <a href="{{ amazon.link }}" class="amazon-link home-amazon-link">
+          <p>{{ amazon.text }}</p>
+        </a>
+        <a href="{{ amazon.link }}" class="aoa-link">
+          <svg width="240" class="aoa-icon"><use xlink:href="/images/sprite-sheet.svg#aoa"/></svg>
+        </a>
+      </div>
+
+      <div class="upper-section__right-box">
+        <h2>{{landingherotext}}</h2>
+      </div>
+
+      <div class="upper-section__options-box-mob"></div>
+
+    </div>
+
+  </div>
+{# / 1 section #}
+
+  <div class="youtube-embed-section"> 
+
+  </div>
+
+{# sensor section #}
+  <div class="sensor-image-section">
+      <div class="image-section__img-box box-mob" style="background: url({{ sensorhimgpath }}{{ sensorimgmob }}); background-position: center; background-repeat: no-repeat; background-size: cover;"></div>
+      <div class="image-section__img-box box-desk" style="background: url({{ sensorhimgpath }}{{ sensorimg }}); background-position: center; background-repeat: no-repeat; background-size: cover;"></div>
+
+    <div class="sensor-image-section__sign-box">  
+      <h1>{{ sensorheader}}</h1>    
+      <h3 class="sensor-hero-text">{{ sensortext1 }}</h3>     
+      <h3 class="sensor-hero-text">{{ sensortext2 }}</h3>     
+          <a class="amazon-link" href="{{ amazon.link }}">
+            <p>{{ sensoramazon.text }}</p>
+        </a>  
+    </div>        
+  </div> 
+{# / sensor section #}
+
+<div class="app-image-section">
+        <div class="app-image-section__box">
+          <div class="app-image-section__header-sign">
+              <h1>{{ appheader }}</h1>
+              <div>
+              <svg class="app-image-section__img"><use xlink:href="/images/sprite-sheet.svg#app-icon"/></svg>
+              </div>
+          </div>
+          <div class="app-image-section__text">
+            <h3>{{ h3text1 }}</h3>
+            <h3>{{ h3text2 }}</h3>
+            <a href="https://apps.apple.com/us/app/atendit/id1525005462">
+              <img class="app-store-img" src="/images/app-store-ios.png">
             </a>
-            <a href="{{ amazon.link }}" class="aoa-link">
-              <svg width="240" class="aoa-icon"><use xlink:href="/images/sprite-sheet.svg#aoa"/></svg>
-            </a>
-          </div>
-
-          <div class="upper-section__right-box">
-              <h2>{{landingherotext}}</h2>
-          </div>
-
-          <div class="upper-section__options-box-mob">
-              <div class="options-box-mob__option">
-                <div class="options-box-mob__option-tab">
-                  <div class="options-arrow"></div>
-                  <h3>{{ tab1 }}</h3>
-                </div>
-                
-                <div class="options-block">
-                  {% for item in options.reminders %}
-                      <h3 class="option-item">{{item}}</h3>
-                  {% endfor %}
-                </div>
-              </div>
-              <div class="options-box-mob__option">
-                <div class="options-box-mob__option-tab">
-                  <div class="options-arrow"></div>
-                  <h3>{{ tab2 }}</h3>
-                </div>
-                
-                <div class="options-block">
-                  {% for item in options.doorbell %}
-                      <h3 class="option-item">{{item}}</h3>
-                  {% endfor %}
-                </div>
-              </div>
-              <div class="options-box-mob__option">
-                <div class="options-box-mob__option-tab">
-                  <div class="options-arrow"></div>
-                  <h3>{{ tab3 }}</h3>
-                </div>
-                
-                <div class="options-block">
-                  {% for item in options.security %}
-                      <h3 class="option-item">{{item}}</h3>
-                  {% endfor %}
-                </div>
-              </div>
-              
-          </div>
-
-          </div>
-
-           
-
+          </div>   
+        </div>
       </div> 
 
-      <div class="product-section">
+  
 
-        <img src="{{imgpath + 'product-shot.png'}}">
-
-        <div class="product-section__text-box">
-          
-            {{ content | safe }}
-
-        </div>        
-      </div>
-
-      <div class="comparison-table-section">
-          {% include "comparison-table.njk" %}
-      </div>
-      
-      {% include "app-feature-section.njk" %}
 {% endblock %}
-
