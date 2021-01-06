@@ -168,6 +168,7 @@ a:focus {
 }
 
 .header {
+  display: none;
   background: $page-color;  
   position: sticky;
   width: 100%;

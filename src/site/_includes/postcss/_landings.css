@@ -1,0 +1,7 @@
+.upper-section__right-box {
+    padding: 20px 60px;
+    max-width: 100%;
+    h2{
+        font-size: 64px !important;
+    }
+}

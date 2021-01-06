@@ -394,3 +394,9 @@ function finishSwipe(el, direction) {
 detectSwipe('app-feature-sliding-part-box', finishSwipe);
 
 /* / SWIPE */
+
+window.onload = function() {
+  if (!window.location.href.includes('/select/')) {
+    document.querySelector('#header').style.display = 'block';
+  }
+};

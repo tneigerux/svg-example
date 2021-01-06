@@ -19,58 +19,8 @@
             </a>
           </div>
 
-          <div class="upper-section__options-box">
-            <div class="options-box-row">
-              <h3 class="options-box-tab active">{{ tab1 }}</h3>
-              <h3 class="options-box-tab">{{ tab2 }}</h3>
-              <h3 class="options-box-tab">{{ tab3 }}</h3>
-            </div>
-
-            <div class="options-box-col-section active">
-              {# three columns at all #}
-              {% for i in range(0, 3) -%}
-              <div class="options-box-col">
-                {# looping through all elements of a tab #}
-                {% for item in options.reminders %}
-
-                    {% include "parts/home-option-box-desk.njk" %}
-
-                {% endfor %}
-
-              </div>
-            {% endfor %}
-            </div>  
-
-            <div class="options-box-col-section">
-              {# three columns at all #}
-              {% for i in range(0, 3) -%}
-              <div class="options-box-col">
-                {# looping through all elements of a tab #}
-                {% for item in options.doorbell %}
-                
-                    {% include "parts/home-option-box-desk.njk" %}
-
-                {% endfor %}
-
-              </div>
-            {% endfor %}
-            </div>  
-
-            <div class="options-box-col-section">
-              {# three columns at all #}
-              {% for i in range(0, 3) -%}
-              <div class="options-box-col">
-                {# looping through all elements of a tab #}
-                {% for item in options.security %}
-                
-                    {% include "parts/home-option-box-desk.njk" %}
-
-                {% endfor %}
-
-              </div>
-            {% endfor %}
-            </div>  
-
+          <div class="upper-section__right-box">
+              <h2>{{landingherotext}}</h2>
           </div>
 
           <div class="upper-section__options-box-mob">
