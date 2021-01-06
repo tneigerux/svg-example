@@ -1,15 +1,34 @@
 .upper-section__right-box {
     padding: 20px 60px;
     max-width: 100%;
-    h2 {
-        
+    h2 {        
+        font-size: 40px;
+        line-height: 42px;
         margin-top: 0;
     }
 
     @media (min-width: $wide) {
         h2{
             font-size: 64px;
+            line-height: 66px;
         }
         
     }
 }
+
+@media (min-width: $wide) {
+    .youtube-embed-section {
+        padding: 90px;
+        
+    }
+    iframe {
+            width: 100%;
+        }
+
+    .landing-sensor-section {
+        padding-top: 0 !important;
+        padding-bottom: 20px;
+    }
+        
+}
+

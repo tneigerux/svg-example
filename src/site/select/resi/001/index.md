@@ -27,7 +27,7 @@ sensortext1: A key component of the atendit system, the atendit sensor is a Blue
 sensortext2: The attractive blue atendit sensor is lightweight and comes with a removable mounting tab for easy and secure placement on your door
 sensoramazon:
     link: https://www.amazon.com/dp/B089NB883H
-    text: SEE OUR LOW PRICING!
+    text: BUY NOW on Amazon
 
 
 appheader: The atendit iOS Mobile App
