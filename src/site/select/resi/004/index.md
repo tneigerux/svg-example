@@ -9,7 +9,6 @@ imgpath: ../../../images/
 himgpath: ../../../../images/hero-images/
 heroupperimg: hero-desk-simple.jpg
 heroupperimgmob: hero-mob-simple.jpg
-
 checkfilename: tweeter.svg
 amazon:
     link: https://www.amazon.com/dp/B089NB883H
@@ -18,7 +17,6 @@ amazon:
 sensorhimgpath: ../../../../images/
 sensorimg: bg-sensor-desk.jpg
 sensorimgmob: bg-sensor-mob.jpg
-
 
 sensorheader: The atendit Sensor
 sensortext1: A key component of the atendit system, the atendit sensor is a Bluetooth Low Energy (BLE) beacon that is custom programmed to briefly transmit information that identifies its location to your mobile phone. The atendit Sensor is activated when the door it is mounted on is moved.
@@ -33,4 +31,5 @@ h3text1: Once your Sensor is linked to the atendit app, you can set up a wide va
 h3text2: You are in control and can change the RNAs anytime.  All the app screens have in app Help screens to easily check on any feature or function you might like to use.
 qasign: App Questions & Answers    
 ---
-## Let your mind pay atendit <sup>®</sup> to the important things! atendit<sup>®</sup>  can send you weekly reminders to put out the garbage or trash!
+## Pay atendit<sup>®</sup> to your family! With atendit<sup>®</sup>, you’ll get an alert every time someone enters your
+house!
