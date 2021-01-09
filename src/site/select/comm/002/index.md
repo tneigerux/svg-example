@@ -8,7 +8,7 @@ imgpath: ../../../images/
 
 himgpath: ../../../../images/hero-images/
 heroupperimg: comm002-dt.jpg
-heroupperimgmob: hero-mob-simple.jpg
+heroupperimgmob: comm002-mob.jpg
 checkfilename: tweeter.svg
 amazon:
     link: https://www.amazon.com/dp/B089NB883H
@@ -26,7 +26,7 @@ sensoramazon:
     text: BUY NOW on Amazon
 
 
-appheader: The atendit iOS Mobile App
+appheader: The free atendit iOS Mobile App
 h3text1: Once your Sensor is linked to the atendit app, you can set up a wide variety of reminders, notices, & alerts (RNAs) based on your personal needs.  The key is that whenever you move the door with the Sensor on it, the app will check to see if you have any RNAs set up for the current date/day/time.
 h3text2: You are in control and can change the RNAs anytime.  All the app screens have in app Help screens to easily check on any feature or function you might like to use.
 qasign: App Questions & Answers 
