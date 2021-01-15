@@ -29,7 +29,7 @@ eventHandler('.expand-form', 'click', function(){
   //IE9 support?
 });
 
-eventHandler('.contact-form', 'submit', () => closeForm());
+// eventHandler('.contact-form', 'submit', () => closeForm());
 eventHandler('.close-form-btn', 'click', () => closeForm());
 document.addEventListener('keydown', (event) => {
   if (event.code == 'Escape') {
