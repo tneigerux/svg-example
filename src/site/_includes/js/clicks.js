@@ -108,6 +108,28 @@ var submitContactForm = () => {
 
 }
 
+var submitSubscribeForm = () => {
+  let url = 'https://api.backendless.com/6D0CC6DE-4FD2-C484-FFC4-F47290F29700/0116A92C-8F97-4098-8F0D-1DAD483D040C/data/MarketingCRM';
+
+  axios.post(url, {
+    registrationSource: 'atendit subscribe',
+    emailAddress: document.getElementById('subscribe-email').value,
+    ownerId: 'DB61EABA-C2BD-07B1-FFF8-7E2ADA93AB00'
+  },
+    {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(response => {
+      console.log('success', response)
+      let subscribeFormEl = document.getElementById("email-sub");
+      subscribeFormEl.reset();
+    })
+    .catch(e => console.log('error occured', e))
+
+}
+
 
 // show-hide answer on the help page
 var qaItems = document.getElementsByClassName("qa-item");

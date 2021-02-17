@@ -8,10 +8,10 @@
     </form> #}
 
     {# BEL form #}
-    <form name="email-sub" id="email-sub" method="POST">
+    <form name="email-sub" id="email-sub" method="POST" onsubmit="submitSubscribeForm();return false">
       <h3>Subscribe to our email updates:</h3>
       <label>email address</label>
-      <input required id="email" type="email" name="email" />
+      <input required id="subscribe-email" type="email" name="subscribe-email" />
       <button class="submit-btn" type="submit">Subscribe</button>
       <button class="cancel-submit-btn" type="button">Nevermind</button>
     </form>
