@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="/css/styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Questrial|Roboto&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>{{ title }} - {{ subtitle }}</title>
   </head>
   <body>
@@ -45,10 +46,6 @@
       {% include "js/customjs.js" %}
     {% endset %}
     <script>{{ js | jsmin | safe }}</script>
-
-    <!-- Start of HubSpot Embed Code -->
-    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/7537504.js"></script>
-    <!-- End of HubSpot Embed Code -->
 
   </body>
 </html>
