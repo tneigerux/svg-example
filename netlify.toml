@@ -12,3 +12,8 @@
   from = "/api/*"
   to = "/.netlify/functions/:splat"
   status = 200
+
+  from = "/get-started"
+  to = "https://youtu.be/U-glsYg40jk"
+  status = 301
+  
