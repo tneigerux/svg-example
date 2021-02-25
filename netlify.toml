@@ -18,3 +18,7 @@
   to = "https://youtu.be/U-glsYg40jk"
   status = 301
   
+[[redirects]]
+  from = "/quick-start"
+  to = "https://youtu.be/U-glsYg40jk"
+  status = 301
