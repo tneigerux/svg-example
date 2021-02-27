@@ -13,7 +13,12 @@
   to = "/.netlify/functions/:splat"
   status = 200
 
+[[redirects]]
   from = "/get-started"
   to = "https://youtu.be/U-glsYg40jk"
   status = 301
   
+[[redirects]]
+  from = "/quick-start"
+  to = "https://youtu.be/U-glsYg40jk"
+  status = 301
