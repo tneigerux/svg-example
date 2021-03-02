@@ -15,10 +15,10 @@
 
 [[redirects]]
   from = "/get-started"
-  to = "https://vimeo.com/517495066"
+  to = "https://player.vimeo.com/video/517495066?allow=%22autoplay;fullscreen%22"
   status = 301
   
 [[redirects]]
   from = "/quick-start"
-  to = "https://vimeo.com/517495066"
+  to = "https://player.vimeo.com/video/517495066?allow=%22autoplay;fullscreen%22"
   status = 301
