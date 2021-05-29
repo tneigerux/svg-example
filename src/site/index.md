@@ -11,7 +11,7 @@ heroupperimg: hero-desk-simple.jpg
 heroupperimgmob: hero-mob-simple.jpg
 checkfilename: tweeter.svg
 amazon:
-    link: https://www.amazon.com/dp/B089NB883H
+    link: https://www.amazon.com/gp/mpc/AWK8I7LXIMDLT
     text: SEE OUR LOW PRICING!
 comparison: 
     sign: How is atendit different?
