@@ -69,4 +69,4 @@ tab3: Security Alerts
 
 ---
 
-## All smartphones have reminders, but atendit is different. Other reminder systems are limited to the calendar, clock, or GPS. The atendit system leverages our atendit sensor, which uses motion detection & bluetooth to remind, notify & alert you based on custom rules you tailor using the atendit app.
+## SVGs are better.

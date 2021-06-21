@@ -23,47 +23,11 @@
       {% include "header.njk" %}
       <div class="main-section">
         <div class="hero">
-          {{ content | safe }}        
-          <div class="usage">
-            <img id="comm-an" class="usage-art comm tab-img" width="2000" height="1000" alt="Commercial Animation" src="/images/key-visual-comm-ani-g.gif">
-            <img id="resi-an" class="usage-art comm tab-img" width="2000" height="1000" alt="Residental Animation" src="/images/key-visual-resi-ani-g.gif">
-          </div>
-          <a href="https://apps.apple.com/us/app/atendit/id1525005462">
-            <img class="app-store app-store-hero" height="80" alt="Soon - iOS App Store" src="/images/app-store-ios.png">
-          </a>
-          {% include "tabsection.njk" %}
+          {{ content | safe }}
         </div>
-        <section class="sidebar">
-          {%- for element in collections.elements -%}
-            <div class="actions {{ element.data.class }}">
-              {{ element.templateContent | safe }}
-            </div>
-          {%- endfor -%}
-        </section>
       </div>
 
-      <div class="email-modal">
-        {% include "layouts/esub-form.njk" %}
-      </div>
-      
       {% include "footer.njk" %}
     </div>
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-161602475-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-161602475-1');
-  </script>
-  
-    {% set js %}
-      {% include "js/core.js" %}
-      {% include "js/clicks.js" %}
-    {% endset %}
-    <script>{{ js | jsmin | safe }}</script>
-
   </body>
 </html>
