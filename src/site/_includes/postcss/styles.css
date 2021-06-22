@@ -96,7 +96,7 @@ h1 {
   margin-top: 0;
   margin-bottom: 0.2em;
   line-height: 1;
-  font-size: 40px;
+  font-size: 0.8em;
   @media (min-width: $wide) {
     font-size: 96px;/* max font-size */
   }
@@ -393,9 +393,8 @@ a:focus {
 }
 
 code {
-  font-size: 0.8em;
-  background-color: mix($text-color,$accent-color, 80%);
-  color: rgb(42, 65, 77);
+  font-size: 1.0em;
+  color: $text-color;
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 6px;
