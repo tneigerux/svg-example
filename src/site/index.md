@@ -49,4 +49,4 @@ In this project, the specially formatted SVG file is called: sprite-sheet.svg an
   </pre>
 
 
-All the SVG assets have been added below as content images. These are all served from a single file (and its single corresponding HTTP request)
+Some of the SVG assets have been added below as content images. These are all served from a single file (and its single corresponding HTTP request).
