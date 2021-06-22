@@ -74,6 +74,8 @@ Code below
 </svg>
 ```
 
+[Actual Example, line 5](https://github.com/tneigerux/svg-example/blob/main/src/site/_includes/header.njk)
+
 ### CSS Background
 
 Code below
@@ -83,3 +85,5 @@ Code below
     background: url("/images/sprite-sheet.svg#v-email") no-repeat;
 }
 ```
+
+[Actual Example, line 523](https://github.com/tneigerux/svg-example/blob/main/src/site/_includes/postcss/styles.css)

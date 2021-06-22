@@ -35,6 +35,8 @@ You can find all the source code at this public repo:
 
 [https://github.com/tneigerux/svg-example/](https://github.com/tneigerux/svg-example/)
 
+There's a bit more detail in the README()
+
 ## SVGs as content - example
 
   <pre>
@@ -42,6 +44,8 @@ You can find all the source code at this public repo:
       &lt;svg width=&quot;240&quot; class=&quot;aoa-icon&quot;&gt;&lt;use xlink:href=&quot;/images/sprite-sheet.svg#aoa&quot;/&gt;&lt;/svg&gt;
     </code>
   </pre>
+
+[Actual Example, line 5](https://github.com/tneigerux/svg-example/blob/main/src/site/_includes/header.njk)
 
 ## SVGs as background style - example
 
@@ -56,3 +60,4 @@ You can find all the source code at this public repo:
 
 All the SVG assets have been added below as content images. These are all served from a single file (and its single corresponding HTTP request)
 
+[Actual Example, line 523](https://github.com/tneigerux/svg-example/blob/main/src/site/_includes/postcss/styles.css)
