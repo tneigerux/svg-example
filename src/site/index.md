@@ -17,7 +17,7 @@ amazon:
 
 # SVGs are better.
 
-On this site all the binary assets - all web assets typically delivered as JPGs, PNGs, or GIFs - are instead served from a single, specially formatted SVG file. The only exception is the dog image here in the hero. Some images, like the dog, can only be served in a raster format. But since flat web design has been a standard for over 10 years, most binary assets are better served as SVGs, which is the web's leading vector format.
+On [this site](https://svg-example.netlify.app/) all the binary assets - all web assets typically delivered as JPGs, PNGs, or GIFs - are instead served from a single, specially formatted SVG file. The only exception is the dog image here in the hero. Some images, like the dog, can only be served in a raster format. But since flat web design has been a standard for over 10 years, most binary assets are better served as SVGs, which is the web's leading vector format.
 
 [More info on Vector vs. Raster formats](https://www.thevisualpro.com/visualpro-blog/vector-vs-raster-whats-the-difference)
 
@@ -29,6 +29,11 @@ In this project, the specially formatted SVG file is called: sprite-sheet.svg an
 
 [Sprite Sheet Source](/images/sprite-sheet.svg)
 
+## Source code:
+
+You can find all the source code at this public repo:
+
+[https://github.com/tneigerux/svg-example/](https://github.com/tneigerux/svg-example/)
 
 ## SVGs as content - example
 
@@ -50,3 +55,4 @@ In this project, the specially formatted SVG file is called: sprite-sheet.svg an
 
 
 All the SVG assets have been added below as content images. These are all served from a single file (and its single corresponding HTTP request)
+
