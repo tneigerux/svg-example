@@ -520,27 +520,6 @@ input {
     align-items: center;
   }
 
-  h3:first-of-type {
-    background: url("/images/sprite-sheet.svg#v-email") no-repeat;
-    cursor: pointer;
-  }
-
-  h3:nth-of-type(2) {
-    background: url("/images/sprite-sheet.svg#v-linkedin") no-repeat;
-  }
-
-  h3:nth-of-type(3) {
-    background: url("/images/sprite-sheet.svg#v-twitter") no-repeat;
-  }
-
-  h3:last-child {
-    background: url("/images/sprite-sheet.svg#v-facebook") no-repeat;
-  }
-
-  .share h3:last-child {
-    background: url("/images/sprite-sheet.svg#v-fb-m") no-repeat;
-  }
-
   @media (min-width: $wide) {
     flex: 0 1 50%;
     padding: 0 10px;
@@ -567,7 +546,8 @@ input {
         padding-left: 104px;    
         background-size: 90px 83px !important;
         height: 90px;
-        margin-bottom: 50px;
+        margin: 5px;
+        margin-bottom: 0;
         line-height: 42px;
         width: 100%;
         font-size: 36px;
