@@ -6,13 +6,13 @@ On [this site](https://svg-example.netlify.app/) all the binary assets - all web
 
 A primary driver of page performance is the quantity of HTTP requests in the page. Each JPG, PNG, or GIF (+ externally referenced JavaScript and external style sheets) on a page generates a coorsponding HTTP request, each slowing the page load slightly.
 
-By building and properly formating a single SVG file, it's possible to significantly reduce the total HTTP requests required to serve a site. The SVG workflow for this site is highly optimized for performance and smooth looking icons. With this comes developer complexity.
+By building and properly formatting a single SVG file, it's possible to significantly reduce the total HTTP requests required to serve a site. The SVG workflow for this site is highly optimized for performance and smooth looking icons. With this comes developer complexity.
 
 The process is highly repetitive and ripe for automation. But before automation can happen, understanding has to come.
 
 For design we use Figma, so there is where our design assets come from, and where our process begins.
 
-This site takes assets from [this project](https://www.figma.com/file/Ce8qzcTTx8s1lX4v8ZYNRR/Working-w-SVGs?node-id=0%3A1) (Access to the HomeServe organization on Figma required.)
+This site takes assets from [this Figma design project](https://www.figma.com/file/Ce8qzcTTx8s1lX4v8ZYNRR/Working-w-SVGs?node-id=0%3A1) (Access to the HomeServe organization on Figma required.)
 
 ## Optimizing Source Icons from Design
 
