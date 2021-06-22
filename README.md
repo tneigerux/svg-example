@@ -1,10 +1,10 @@
 # SVGs are better.
 
-On [this site](https://svg-example.netlify.app/) all the binary assets - all web assets typically delivered as JPGs, PNGs, or GIFs - are instead served from a single, specially formatted SVG file. The only exception is the dog image here in the hero. Some images, like the dog, can only be served in a raster format. But since flat web design has been a standard for over 10 years, most binary assets are better served as SVGs, which is the web's leading vector format.
+On [this site](https://svg-example.netlify.app/) all the binary assets - all web assets typically delivered as JPGs, PNGs, or GIFs - are instead served from a single, specially formatted SVG file. The only exception is the dog image in the hero. Some images, like the dog, can only be served in a raster format. But since flat web design has been a standard for over 10 years, most binary assets are better served as SVGs, which is the web's leading vector format.
 
 [More info on Vector vs. Raster formats](https://www.thevisualpro.com/visualpro-blog/vector-vs-raster-whats-the-difference)
 
-A primary driver of page performance is the quantity of HTTP requests in the page. Each JPG, PNG, or GIF (+ externally referenced JavaScript and external style sheets) on a page generates a coorsponding HTTP request, each slowing the page load slightly.
+A primary driver of page performance is the quantity of HTTP requests in the page. Each JPG, PNG, or GIF (+ externally referenced JavaScript and external style sheets) on a page generates a cooresponding HTTP request, each slowing the page load slightly.
 
 By building and properly formatting a single SVG file, it's possible to significantly reduce the total HTTP requests required to serve a site. The SVG workflow for this site is highly optimized for performance and smooth looking icons. With this comes developer complexity.
 
