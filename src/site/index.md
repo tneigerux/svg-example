@@ -58,6 +58,6 @@ There's a bit more detail in the README()
   </pre>
 
 
-All the SVG assets have been added below as content images. These are all served from a single file (and its single corresponding HTTP request)
+Some of the SVG assets have been added below as content images. These are all served from a single file (and its single corresponding HTTP request).
 
 [Actual Example, line 523](https://github.com/tneigerux/svg-example/blob/main/src/site/_includes/postcss/styles.css#L523)
