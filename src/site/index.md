@@ -23,9 +23,12 @@ On this site all the binary assets - all web assets typically delivered as JPGs,
 
 A primary driver of page performance is the quantity of HTTP requests in the page. Each JPG, PNG, or GIF (+ externally referenced JavaScript and external style sheets) on a page generates a coorsponding HTTP request.
 
-By building and properly formating a single SVG file, it's possible to significantly reduce the total HTTP requests requried to serve a site.
+By building and properly formating a single SVG file, it's possible to significantly reduce the total HTTP requests required to serve a site.
 
-In this project, the specially formated SVG file is called: sprite-sheet.svg and you should look at its source.
+In this project, the specially formatted SVG file is called: sprite-sheet.svg and you should look at its source.
+
+[Sprite Sheet Source](/images/sprite-sheet.svg)
+
 
 ## SVGs as content - example
 
@@ -46,4 +49,4 @@ In this project, the specially formated SVG file is called: sprite-sheet.svg and
   </pre>
 
 
-All the SVG assets have been added below as content images. These are all served from a single file (and one corresponding HTTP request)
+All the SVG assets have been added below as content images. These are all served from a single file (and its single corresponding HTTP request)
