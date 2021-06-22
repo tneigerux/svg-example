@@ -1,6 +1,0 @@
-{
-    "layout" : "../_includes/layouts/help.njk",
-    "tags" : "elements",
-    "templateEngineOverride": "njk,md"
-  }
-  

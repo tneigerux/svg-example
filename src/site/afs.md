@@ -1,5 +1,0 @@
----
-info: Product Information
----
-
-
